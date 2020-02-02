@@ -35,16 +35,3 @@ function holy_cupcakes_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'holy_cupcakes_pingback_header' );
-
-// it is best practice to add theme name in the text domain
-// loading block editor JS
-// array specifies the dependencies: wp gives access to the WP, when dom is ready and when we are editing a post
-
-function holy_cupcakes_enqueue_block_editor_assets() {
-    wp_enqueue_script(
-        'block-editor-js',
-		get_template_directory_uri() . '/assets/js/block-editor.js',
-		array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' )
-    );
-}
-add_action( 'enqueue_block_editor_assets', 'holy_cupcakes_enqueue_block_editor_assets' );
