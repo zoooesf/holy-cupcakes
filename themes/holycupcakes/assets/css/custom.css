@@ -1,0 +1,9 @@
+/* custom css for Holy Cupcakes Theme */
+
+body {
+	background: lightyellow;
+}
+
+.skip-link {
+	display: none;
+}
