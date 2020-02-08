@@ -63,7 +63,38 @@ if (!function_exists('holy_cupcakes_setup')) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
-
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name' => esc_html__( 'Light Cream', 'holycupcakes' ),
+				'slug' => 'lightcream',
+				'color' => '#F9F6EC',
+			),
+			array(
+				'name' => esc_html__( 'Cream', 'holycupcakes' ),
+				'slug' => 'cream',
+				'color' => '#FFEEAA',
+			),
+			array(
+				'name' => esc_html__( 'Dark Brown', 'holycupcakes' ),
+				'slug' => 'darkbrown',
+				'color' => '#886248',
+			),
+			array(
+				'name' => esc_html__( 'Light Brown', 'holycupcakes' ),
+				'slug' => 'lightbrown',
+				'color' => '#9B6F52',
+			),
+			array(
+				'name' => esc_html__( 'White', 'holycupcakes' ),
+				'slug' => 'white',
+				'color' => '#FFFFFF',
+			),
+			array(
+				'name' => esc_html__( 'Black', 'holycupcakes' ),
+				'slug' => 'black',
+				'color' => '#000000',
+			),
+		) );
 		/**
 		 * Add support for core custom logo.
 		 *
