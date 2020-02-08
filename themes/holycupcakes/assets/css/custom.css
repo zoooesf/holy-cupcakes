@@ -9,3 +9,10 @@ body {
 .skip-link {
 	display: none;
 }
+.wp-block-columns{
+	width: 100%;
+}
+.grid-container{
+	max-width: 100vw;
+	padding: 0px;
+}
