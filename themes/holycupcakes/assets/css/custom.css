@@ -20,6 +20,18 @@ body {
 p{
 	font-size: 24px;
 }
+h1{
+	color: #886248;
+}
+/* turning off the entry-title so that we can use a styled H1 in it's place */
+.entry-title{
+	display: none;
+}
+/* changing the block cover image to NOT have an overlay */
+.wp-block-cover-image.has-background-dim:before, .wp-block-cover.has-background-dim:before{
+	opacity: 0;
+}
+/* ******************** Colour Settings ******************** */
 .has-lightcream-color{
     color: #F9F6EC;
 }
