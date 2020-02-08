@@ -18,10 +18,14 @@ body {
 	padding: 0px;
 }
 p{
-	font-size: 24px;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
-h1{
-	color: #886248;
+h1, h2, h3, h4, h5, h6{
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 500;
+	font-style: normal;
 }
 /* turning off the entry-title so that we can use a styled H1 in it's place */
 .entry-title{
