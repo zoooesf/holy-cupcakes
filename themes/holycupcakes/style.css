@@ -19,7 +19,7 @@ body {
 .skip-link {
     display: none;
 }
-
+/* ***************************** Block Styling ***************************** */
 .wp-block-columns {
     width: 100%;
     padding: 60px 120px 60px 120px;
@@ -42,6 +42,11 @@ a {
     font-weight: 500;
     font-style: normal;
 }
+/* changing the block cover image to NOT have an overlay */
+.wp-block-cover-image.has-background-dim:before,
+.wp-block-cover.has-background-dim:before {
+    opacity: 0;
+}
 
 /* turning off the entry-title so that 
     we can use a styled H1 in it's place */
@@ -55,6 +60,7 @@ a {
     color: #886248;
 }
 /* ***************************** Home Page Specific Styling ******************************/
+/* all are for excerpt styling, the three posts at the bottom of the page */
 .homeExcerpt {
     background-color: #f9f6ec;
     padding: 35px 130px 90px 130px;
@@ -78,21 +84,13 @@ a {
     width: 338px;
     height: 190px;
 }
-
 .excerpt {
     width: 293px;
 }
+
 /* ***************************** About Us Specific Styling ***************************** */
 .middleAbout {
     background-color: #f9f6ec;
-}
-
-
-
-/* changing the block cover image to NOT have an overlay */
-.wp-block-cover-image.has-background-dim:before,
-.wp-block-cover.has-background-dim:before {
-    opacity: 0;
 }
 
 /* ******************** Colour Settings ******************** */
