@@ -26,7 +26,6 @@ body {
 }
 
 p {
-    /* font-size: 24px; */
     font-family: brandon-grotesque, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -37,7 +36,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a {
     font-family: brandon-grotesque, sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -48,18 +48,30 @@ h6 {
 .entry-title {
     display: none;
 }
-
+/* targets the seperator inserted under  */
+.hSeparator{
+    width: 100px;
+    border: 1px solid
+}
 /* ***************************** Home Page Specific Styling ******************************/
 .homeExcerpt {
     background-color: #f9f6ec;
+    padding: 35px 130px 90px 130px;
 }
-
-/* ***************************** About Us Specific Styling ***************************** */
-.middleAbout {
-    background-color: #f9f6ec;
+.homeExcerpt a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #886248;
 }
-
-
+.homeExcerpt p{
+    color: #9B6F52;
+    font-size: 24px;
+}
+.eSeparator{
+    width: 50px;
+    color: #886248;
+    border: 1px solid
+}
 /* setting size of thumbnail image for blog posts */
 .thumbnail-img {
     width: 338px;
@@ -69,6 +81,12 @@ h6 {
 .excerpt {
     width: 293px;
 }
+/* ***************************** About Us Specific Styling ***************************** */
+.middleAbout {
+    background-color: #f9f6ec;
+}
+
+
 
 /* changing the block cover image to NOT have an overlay */
 .wp-block-cover-image.has-background-dim:before,

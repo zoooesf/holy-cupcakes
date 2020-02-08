@@ -54,9 +54,9 @@ get_header();
 							<div id="post-<?php echo get_the_ID();?>" class="post-individual">
 							
 							<p class="thumbnail-img"><?php echo get_the_post_thumbnail(); ?></p>
-							<h3><?php echo get_the_title(); ?></h3>
+							<a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
+							<hr class="eSeparator">
 							<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
-							<a href="<?php echo get_permalink(); ?>">Read More</a>
 							</div> 
 							</div>
 							<?php

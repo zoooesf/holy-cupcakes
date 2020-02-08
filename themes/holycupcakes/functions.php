@@ -95,6 +95,7 @@ if (!function_exists('holy_cupcakes_setup')) :
 				'color' => '#000000',
 			),
 		) );
+		add_theme_support( 'disable-custom-colors' );
 		/**
 		 * Add support for core custom logo.
 		 *
@@ -106,6 +107,28 @@ if (!function_exists('holy_cupcakes_setup')) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		));
+		/**
+ * Add support for custom font sizes
+ */
+add_theme_support( 'editor-font-sizes', array(
+    array(
+        'name' => __( 'Large', 'themeLangDomain' ),
+        'size' => 24,
+        'slug' => 'large'
+	),
+    array(
+        'name' => __( 'Regular', 'themeLangDomain' ),
+        'size' => 21,
+        'slug' => 'large'
+	),
+    array(
+        'name' => __( 'Small', 'themeLangDomain' ),
+        'size' => 18,
+        'slug' => 'small'
+	),
+    )
+);
+
 	}
 endif;
 add_action('after_setup_theme', 'holy_cupcakes_setup');
@@ -145,27 +168,7 @@ function holy_cupcakes_widgets_init()
 }
 add_action('widgets_init', 'holy_cupcakes_widgets_init');
 
-/**
- * Add support for custom font sizes
- */
-add_theme_support( 'editor-font-sizes', array(
-    array(
-        'name' => __( 'Large', 'themeLangDomain' ),
-        'size' => 24,
-        'slug' => 'large'
-	),
-    array(
-        'name' => __( 'Regular', 'themeLangDomain' ),
-        'size' => 21,
-        'slug' => 'large'
-	),
-    array(
-        'name' => __( 'Small', 'themeLangDomain' ),
-        'size' => 18,
-        'slug' => 'small'
-	),
-    )
-);
+
 /**
  * Enqueue scripts and styles.
  */
@@ -226,6 +229,6 @@ if (defined('JETPACK__VERSION')) {
 
 // changing the excerpt length of blog posts
 function holy_cupcakes_custom_excerpt_length( $length ) {
-    return 20;
+    return 10;
 }
 add_filter( 'excerpt_length', 'holy_cupcakes_custom_excerpt_length', 999 );
