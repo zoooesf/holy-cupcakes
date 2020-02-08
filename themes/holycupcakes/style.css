@@ -26,7 +26,7 @@ body {
 }
 
 p {
-    font-size: 24px;
+    /* font-size: 24px; */
     font-family: brandon-grotesque, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -123,4 +123,16 @@ h6 {
 
 .has-white-background-color {
     background-color: #ffffff;
+}
+
+/* ******************** Font Size Settings ******************** */
+
+.has-large-font-size{
+    font-size: 24px;
+}
+.has-regular-font-size{
+    font-size: 21px;
+}
+.has-small-font-size{
+    font-size: 18px;
 }

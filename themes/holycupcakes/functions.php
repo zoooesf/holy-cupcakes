@@ -146,6 +146,27 @@ function holy_cupcakes_widgets_init()
 add_action('widgets_init', 'holy_cupcakes_widgets_init');
 
 /**
+ * Add support for custom font sizes
+ */
+add_theme_support( 'editor-font-sizes', array(
+    array(
+        'name' => __( 'Large', 'themeLangDomain' ),
+        'size' => 24,
+        'slug' => 'large'
+	),
+    array(
+        'name' => __( 'Regular', 'themeLangDomain' ),
+        'size' => 21,
+        'slug' => 'large'
+	),
+    array(
+        'name' => __( 'Small', 'themeLangDomain' ),
+        'size' => 18,
+        'slug' => 'small'
+	),
+    )
+);
+/**
  * Enqueue scripts and styles.
  */
 function holy_cupcakes_scripts()
