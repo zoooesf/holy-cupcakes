@@ -165,7 +165,11 @@ function holy_cupcakes_scripts()
 		get_template_directory_uri() . '/assets/css/custom.css',
 		array()
 	);
-
+	// enqueue custom styles
+	wp_enqueue_style(
+		'custom-style',
+		get_template_directory_uri() . '/style.css',
+	);
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
