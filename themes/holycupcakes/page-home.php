@@ -50,7 +50,7 @@ get_header();
 						while( $test_query->have_posts() ){
 							$test_query->the_post();
 							?>
-							<div class="cell small-12 medium-6 large-4">
+							<div class="cell small-12 medium-6 large-4 homeExcerpt">
 							<div id="post-<?php echo get_the_ID();?>" class="post-individual">
 							
 							<p class="thumbnail-img"><?php echo get_the_post_thumbnail(); ?></p>
