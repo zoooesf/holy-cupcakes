@@ -127,18 +127,6 @@ a {
     font-style: normal;
 }
 
-input,
-input:focus,
-[type=text],
-[type=search],
-[type=text]:focus,
-[type=search]:focus {
-    border: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: none;
-}
-
 /* changing the block cover image to NOT have an overlay */
 .wp-block-cover-image.has-background-dim:before,
 .wp-block-cover.has-background-dim:before {
@@ -156,6 +144,34 @@ input:focus,
     width: 100px;
     border: 1px solid;
     color: #886248;
+}
+/* ***************************** Input Styling ***************************** */
+input,
+input:focus,
+[type=text],
+[type=search],
+[type=text]:focus,
+[type=search]:focus {
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+}
+/* styling for input form */
+.form-inner [type=text],
+.form-inner [type=email],
+.form-inner textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f9f6ec;
+}
+
+.form-inner [type=text]:focus{
+    box-shadow: 0 0 5px #cacaca;
+    transition: all 0.1s ease-in-out;
 }
 
 /* ***************************** Home Page Specific Styling ******************************/
