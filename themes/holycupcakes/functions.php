@@ -61,6 +61,16 @@ if (!function_exists('holy_cupcakes_setup')) :
 			'caption',
 		));
 
+		/** 
+		* Add support for block styles
+		*/
+		add_theme_support( 'wp-block-styles' );
+		
+		/** 
+		* Add support for align-wide
+		*/
+		add_theme_support( 'align-wide' );
+		
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
 		add_theme_support( 'editor-color-palette', array(
