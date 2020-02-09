@@ -21,9 +21,49 @@ body {
     display: none;
 }
 
-.grid-container{
-	max-width: 100vw;
-	padding: 0px;
+/* ***************************** Header Styling **************************** */
+.site-header {
+    max-height: 100px;
+    background-color: #886248;
+}
+
+.top-bar {
+    background-color: transparent;
+}
+
+.top-bar ul {
+    background-color: transparent;
+}
+
+.top-bar a {
+    color: #ffeeaa;
+    font-size: 1.5rem;
+}
+
+.top-bar input {
+    background: rgba(255, 238, 170, 0.3);
+    color: color: #ffeeaa;
+}
+
+.top-bar input::placeholder {
+    color: #ffeeaa;
+}
+
+.menu .button {
+    background-color: transparent;
+    height: 40px;
+    padding: 5px;
+    margin-left: -40px;
+}
+
+.menu .button img {
+    height: 80%;
+    width: auto;
+}
+
+.custom-logo {
+    height: 60px;
+    width: auto;
 }
 
 /* ***************************** Block Styling ***************************** */
@@ -49,6 +89,19 @@ a {
     font-weight: 500;
     font-style: normal;
 }
+
+input,
+input:focus,
+[type=text],
+[type=search],
+[type=text]:focus,
+[type=search]:focus {
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+}
+
 /* changing the block cover image to NOT have an overlay */
 .wp-block-cover-image.has-background-dim:before,
 .wp-block-cover.has-background-dim:before {
@@ -60,37 +113,44 @@ a {
 .entry-title {
     display: none;
 }
+
 /* targets the seperator inserted under  */
-.hSeparator{
+.hSeparator {
     width: 100px;
     border: 1px solid;
     color: #886248;
 }
+
 /* ***************************** Home Page Specific Styling ******************************/
 /* all are for excerpt styling, the three posts at the bottom of the page */
 .homeExcerpt {
     background-color: #f9f6ec;
     padding: 35px 130px 90px 130px;
 }
-.homeExcerpt a{
+
+.homeExcerpt a {
     text-decoration: none;
     font-size: 24px;
     color: #886248;
 }
-.homeExcerpt p{
+
+.homeExcerpt p {
     color: #9B6F52;
     font-size: 24px;
 }
-.eSeparator{
+
+.eSeparator {
     width: 50px;
     color: #886248;
     border: 1px solid
 }
+
 /* setting size of thumbnail image for blog posts */
 .thumbnail-img {
     width: 338px;
     height: 190px;
 }
+
 .excerpt {
     width: 293px;
 }
@@ -151,12 +211,14 @@ a {
 
 /* ******************** Font Size Settings ******************** */
 
-.has-large-font-size{
+.has-large-font-size {
     font-size: 24px;
 }
-.has-regular-font-size{
+
+.has-regular-font-size {
     font-size: 21px;
 }
-.has-small-font-size{
+
+.has-small-font-size {
     font-size: 18px;
 }
