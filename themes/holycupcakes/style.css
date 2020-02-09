@@ -10,6 +10,7 @@ License URI: LICENSE
 Text Domain: holycupcakes
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
+
 /* custom css for Holy Cupcakes Theme */
 
 body {
@@ -19,6 +20,12 @@ body {
 .skip-link {
     display: none;
 }
+
+.grid-container{
+	max-width: 100vw;
+	padding: 0px;
+}
+
 /* ***************************** Block Styling ***************************** */
 .wp-block-columns {
     width: 100%;
