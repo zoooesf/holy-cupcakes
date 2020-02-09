@@ -96,7 +96,19 @@ body {
     width: 100;
     padding: 60px 120px 60px 120px;
 } */
-
+.alignfull {
+	margin: 32px calc(50% - 50vw);
+	max-width: 100vw;
+    width: 100vw;
+}
+.page-id-8 .wp-block-columns{
+    width: 75%;
+    margin:  0 auto;
+    padding: 1vh 1vw;
+}
+.wp-block-column p{
+    line-height: normal;
+}
 p {
     font-family: brandon-grotesque, sans-serif;
     font-weight: 400;
