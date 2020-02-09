@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  *
@@ -15,45 +16,74 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
+		<div class="grid-container">
+			<div class="grid-x">
+				<!-- sidebar box -->
+				<div class="large-4 show-for-large sidebar-box">
+					<?php
+					get_sidebar();
+					?>
+				</div>
 
-		<?php
-		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
 				<?php
-			endif;
+				if (have_posts()) :
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+					if (is_home() && !is_front_page()) :
+				?>
+						<div class="large-8 medium-12 grid-x blog-posts-box">
+							<header class="large-12">
+								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+							</header>
+							<!-- blog grid box -->
+						<?php
+					endif;
 
-				/*
+					/* Start the Loop */
+					while (have_posts()) :
+						the_post();
+						?>
+							<div class="card large-6">
+								<img src="assets/img/generic/rectangle-1.jpg">
+								<div class="card-section">
+									<h3><?php the_title(); ?> </h3>
+									<p>
+										<?php
+										// get_template_part('template-parts/content', get_post_type());
+										the_excerpt();
+										?>
+									</p>
+									<a href="<?php get_post_permalink(); ?>">Read More</a>
+								</div>
+							</div>
+
+					<?php
+
+
+						/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+						
 
-			endwhile;
+					endwhile;
 
-			the_posts_navigation();
+					the_posts_navigation();
 
-		else :
+				else :
 
-			get_template_part( 'template-parts/content', 'none' );
+					get_template_part('template-parts/content', 'none');
 
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				endif;
+					?>
+						</div><!-- cell large-8 -->
+			</div><!-- .grid-x -->
+		</div><!-- .grid-container -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
