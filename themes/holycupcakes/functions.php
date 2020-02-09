@@ -119,7 +119,7 @@ add_theme_support( 'editor-font-sizes', array(
     array(
         'name' => __( 'Regular', 'themeLangDomain' ),
         'size' => 21,
-        'slug' => 'large'
+        'slug' => 'regular'
 	),
     array(
         'name' => __( 'Small', 'themeLangDomain' ),
