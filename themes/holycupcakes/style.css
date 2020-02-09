@@ -67,6 +67,10 @@ body {
 }
 
 /* ***************************** Block Styling ***************************** */
+/* .wp-block-columns {
+    width: 100;
+    padding: 60px 120px 60px 120px;
+} */
 
 p {
     font-family: brandon-grotesque, sans-serif;
