@@ -34,21 +34,20 @@
 				<div class="top-bar grid-container" id="site-navigation">
 					<div class="top-bar-left">
 						<?php
-						the_custom_logo();
-						if (is_front_page() && is_home()) :
+						// if there's no custom logo load the title text
+						if (!has_custom_logo()) :
 						?>
-							<!-- <h1 class="site-title"><a href="<?php //echo esc_url(home_url('/')); ?>" rel="home"><?php //bloginfo('name'); ?></a></h1> -->
+							<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
 						<?php
 						else :
-						?>
-							<!-- <p class="site-title"><a href="<?php //echo esc_url(home_url('/')); ?>" rel="home"><?php //bloginfo('name'); ?></a></p> -->
-						<?php
+							// else if there is a custom logo load the logo
+							the_custom_logo();
 						endif;
-						// $holy_cupcakes_description = get_bloginfo('description', 'display');
-						//if ($holy_cupcakes_description && is_customize_preview()) :
+						$holy_cupcakes_description = get_bloginfo('description', 'display');
+						if ($holy_cupcakes_description || is_customize_preview()) :
 						?>
-							<!-- <p class="site-description"><?php //echo $holy_cupcakes_description; /* WPCS: xss ok. */ ?></p> -->
-						<?php //endif; ?>
+							<p class="site-description"><?php echo $holy_cupcakes_description; /* WPCS: xss ok. */ ?></p>
+						<?php endif; ?>
 					</div>
 					<div class="top-bar-left">
 						<?php
