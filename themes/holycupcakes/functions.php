@@ -158,7 +158,7 @@ function holy_cupcakes_widgets_init()
 {
 	register_sidebar(array(
 		'name'          => esc_html__('Sidebar', 'holycupcakes'),
-		'id'            => 'sidebar',
+		'id'            => 'sidebar-1',
 		'description'   => esc_html__('Add widgets here.', 'holycupcakes'),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
