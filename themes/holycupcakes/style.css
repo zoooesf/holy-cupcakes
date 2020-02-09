@@ -131,6 +131,9 @@ p{
     color: #886248;
     font-size: 21px;
 }
+a:hover{
+    color: #FC9885;
+}
 /* changing the block cover image to NOT have an overlay */
 .wp-block-cover-image.has-background-dim:before,
 .wp-block-cover.has-background-dim:before {
