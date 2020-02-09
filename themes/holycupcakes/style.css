@@ -160,19 +160,20 @@ input:focus,
 
 .homeExcerpt a {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 3vh;
     color: #886248;
 }
 
 .homeExcerpt p {
     color: #9B6F52;
-    font-size: 24px;
+    font-size: 2vh;
 }
 
 .eSeparator {
     width: 50px;
     color: #886248;
-    border: 1px solid
+    border: 1px solid;
+    margin: 2vh 0;
 }
 
 /* setting size of thumbnail image for blog posts */
