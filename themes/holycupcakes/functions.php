@@ -175,8 +175,7 @@ add_action('widgets_init', 'holy_cupcakes_widgets_init');
 function holy_cupcakes_scripts()
 {
 
-	// enqueue style.css
-	wp_enqueue_style('holycupcakes-style', get_stylesheet_uri());
+	
 
 	// enqueue foundation styles
 	wp_enqueue_style('holycupcakes-foundation',get_template_directory_uri() . '/assets/css/vendors/foundation.min.css', null, '6.5.1');
@@ -187,7 +186,8 @@ function holy_cupcakes_scripts()
 	// adding sample theme foundation js
 	wp_enqueue_script( 'holycupcakes-foundation', get_template_directory_uri() . '/assets/js/vendors/foundation.min.js', array('jquery', 'holycupcakes-what-input'), '6.5.1', true );
 
-	
+	// enqueue style.css
+	wp_enqueue_style('holycupcakes-style', get_stylesheet_uri());
 	
 
 	// TODO: REMOVE ALL THE COMMENTED STYLE ENQUEUE FUNCTION BELOW IF STYLES ARE WORKING PROPERLY

@@ -43,11 +43,7 @@
 							// else if there is a custom logo load the logo
 							the_custom_logo();
 						endif;
-						$holy_cupcakes_description = get_bloginfo('description', 'display');
-						if ($holy_cupcakes_description || is_customize_preview()) :
 						?>
-							<p class="site-description"><?php echo $holy_cupcakes_description; /* WPCS: xss ok. */ ?></p>
-						<?php endif; ?>
 					</div>
 					<div class="top-bar-left">
 						<?php
