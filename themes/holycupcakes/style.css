@@ -123,9 +123,14 @@ input:focus,
 
 /* ***************************** Home Page Specific Styling ******************************/
 /* all are for excerpt styling, the three posts at the bottom of the page */
+
+.recent-posts-wrapper {
+    background-color: #f9f6ec;
+}
 .homeExcerpt {
     background-color: #f9f6ec;
-    padding: 35px 130px 90px 130px;
+    padding: 20px;
+    margin: 50px auto;
 }
 
 .homeExcerpt a {
