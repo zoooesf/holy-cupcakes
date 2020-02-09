@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the home page
  *
@@ -14,63 +15,64 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<section id="primary" class="content-area">
+	<main id="main" class="site-main">
+		<div class="grid-container">
 			<?php
 
 			/* Start the Loop */
-			while ( have_posts() ) :
-                the_post(); 
-                
-				get_template_part( 'template-parts/content', 'page' );
+			while (have_posts()) :
+				the_post();
+
+				get_template_part('template-parts/content', 'page');
 
 				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) {
+				if (comments_open() || get_comments_number()) {
 					comments_template();
 				}
 
 			endwhile; // End of the loop.
 			?>
-			
-			<?php
-		
-			$args = array( 
-				'post_type'      => 'post', 
-				'posts_per_page' => 3,
-			);
-			$test_query = new WP_Query( $args );
+		</div>
+		<?php
+
+		$args = array(
+			'post_type'      => 'post',
+			'posts_per_page' => 3,
+		);
+		$test_query = new WP_Query($args);
 
 
-			if( $test_query->have_posts() ){
-				?>
-				<div class="recent-posts-wrapper">
-					<div class="grid-container recent-post">
-						<div class="grid-x">
+		if ($test_query->have_posts()) {
+		?>
+			<div class="recent-posts-wrapper">
+				<div class="grid-container recent-post">
+					<div class="grid-x grid-margin-x">
 						<?php
-						while( $test_query->have_posts() ){
+						while ($test_query->have_posts()) {
 							$test_query->the_post();
-							?>
+						?>
 							<div class="cell small-12 medium-6 large-4 homeExcerpt">
-							<div id="post-<?php echo get_the_ID();?>" class="post-individual">
-							
-							<p class="thumbnail-img"><?php echo get_the_post_thumbnail(); ?></p>
-							<a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
-							<hr class="eSeparator">
-							<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
-							</div> 
+								<div id="post-<?php echo get_the_ID(); ?>" class="post-individual">
+
+									<p class="thumbnail-img"><?php echo get_the_post_thumbnail(); ?></p>
+									<a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
+									<hr class="eSeparator">
+									<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
+								</div>
 							</div>
-							<?php
+						<?php
 						}
 						?>
 					</div>
-					</div>
 				</div>
-				<?php
-			}
-			wp_reset_postdata();
-			?>
-		</main><!-- #main -->
-	</section><!-- #primary -->
+			</div>
+		<?php
+		}
+		wp_reset_postdata();
+		?>
+	</main><!-- #main -->
+</section><!-- #primary -->
 
 <?php
 get_footer();
