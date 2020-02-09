@@ -14,6 +14,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 /* custom css for Holy Cupcakes Theme */
 
 body {
+    font-family: brandon-grotesque, sans-serif !important;
     background: white;
 }
 
@@ -22,11 +23,13 @@ body {
 }
 
 /* ***************************** Header Styling **************************** */
+/* main header styling */
 .site-header {
     max-height: 100px;
     background-color: #886248;
 }
 
+/* top-bar styling */
 .top-bar {
     background-color: transparent;
 }
@@ -40,9 +43,10 @@ body {
     font-size: 1.5rem;
 }
 
+/* search input and button */
 .top-bar input {
     background: rgba(255, 238, 170, 0.3);
-    color: color: #ffeeaa;
+    color: #ffeeaa;
 }
 
 .top-bar input::placeholder {
@@ -61,9 +65,30 @@ body {
     width: auto;
 }
 
+/* logo */
 .custom-logo {
     height: 60px;
     width: auto;
+}
+
+/* ***************************** Footer Styling **************************** */
+
+.site-footer {
+    padding-top: 16px;
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 1.1rem;
+    background-color: #ffeeaa;
+}
+
+.site-info {
+    text-align: center;
+    color: #ffeeaa;
+    background-color: #886248;
+    padding: 16px;
+}
+
+.site-info a {
+    color: #ffeeaa;
 }
 
 /* ***************************** Block Styling ***************************** */
