@@ -74,21 +74,74 @@ body {
 /* ***************************** Footer Styling **************************** */
 
 .site-footer {
-    padding-top: 16px;
     font-family: brandon-grotesque, sans-serif;
     font-size: 1.1rem;
-    background-color: #ffeeaa;
+    background-color: #886248;
 }
 
 .site-info {
     text-align: center;
     color: #ffeeaa;
-    background-color: #886248;
-    padding: 16px;
+    background-color: #ffeeaa;
 }
 
 .site-info a {
-    color: #ffeeaa;
+    color:  #ffeeaa;
+}
+#footer-sidebar{
+    padding: 2vh 0;
+}
+
+#footer-sidebar #primary-menu,
+#footer-sidebar h4,
+#footer-sidebar p{
+    display: flex;
+    flex-direction: row;
+}
+
+#footer-sidebar #primary-menu a,
+#footer-sidebar h4{
+    text-align: left;
+    padding: 0.5vh 0;
+    margin: 0;
+    color:  #886248;
+}
+
+#footer-sidebar a,
+#footer-sidebar p{
+    font-size: 2vh;
+}
+
+#footer-sidebar a:hover{
+    text-decoration: underline;
+}
+
+#footer-sidebar p{
+    margin: 0;
+    text-align: left;
+}
+/* ***************************** For Footer Side Bar 1 ***************************** */
+#footer-sidebar1{
+    margin-bottom: 2vh;
+}
+
+#footer-sidebar1 ul li {
+    margin-right: 2vw;
+}
+
+/* ***************************** Bottom Footer Styling ***************************** */
+#copyright{
+    background-color: #886248;
+    width: 100%;
+    padding: 16px;
+}
+
+/* ***************************** For Desktop Styling ***************************** */
+@media screen and (min-width: 40em) {
+    #footer-sidebar #primary-menu{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* ***************************** Block Styling ***************************** */
@@ -135,6 +188,7 @@ p{
 }
 a:hover{
     color: #FC9885;
+    
 }
 
 input,
@@ -183,7 +237,8 @@ input:focus,
 /* styling for input form */
 .form-inner [type=text],
 .form-inner [type=email],
-.form-inner textarea {
+.form-inner textarea,
+#footer-sidebar2 .menu li input {
     width: 100%;
     padding: 15px;
     margin-bottom: 10px;
@@ -192,7 +247,8 @@ input:focus,
     background: #f9f6ec;
 }
 
-.form-inner [type=text]:focus{
+.form-inner [type=text]:focus,
+#footer-sidebar2 .menu li input:focus{
     box-shadow: 0 0 5px #cacaca;
     transition: all 0.1s ease-in-out;
 }
