@@ -97,6 +97,20 @@ body {
     padding: 60px 120px 60px 120px;
 } */
 
+.alignfull {
+	margin: 32px calc(50% - 50vw);
+	max-width: 100vw;
+    width: 100vw;
+}
+.page-id-8 .wp-block-columns{
+    width: 75%;
+    margin:  0 auto;
+    padding: 1vh 1vw;
+}
+.wp-block-column p{
+    line-height: normal;
+}
+
 p {
     font-family: brandon-grotesque, sans-serif;
     font-weight: 400;
@@ -109,10 +123,18 @@ h3,
 h4,
 h5,
 h6,
-a {
+a{
     font-family: brandon-grotesque, sans-serif;
     font-weight: 500;
     font-style: normal;
+    color: #886248;
+}
+p{
+    color: #886248;
+    font-size: 21px;
+}
+a:hover{
+    color: #FC9885;
 }
 
 input,
@@ -146,6 +168,35 @@ input:focus,
     color: #886248;
 }
 
+/* ***************************** Input Styling ***************************** */
+input,
+input:focus,
+[type=text],
+[type=search],
+[type=text]:focus,
+[type=search]:focus {
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+}
+/* styling for input form */
+.form-inner [type=text],
+.form-inner [type=email],
+.form-inner textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f9f6ec;
+}
+
+.form-inner [type=text]:focus{
+    box-shadow: 0 0 5px #cacaca;
+    transition: all 0.1s ease-in-out;
+}
+
 /* ***************************** Home Page Specific Styling ******************************/
 /* all are for excerpt styling, the three posts at the bottom of the page */
 
@@ -160,19 +211,20 @@ input:focus,
 
 .homeExcerpt a {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 3vh;
     color: #886248;
 }
 
 .homeExcerpt p {
     color: #9B6F52;
-    font-size: 24px;
+    font-size: 2vh;
 }
 
 .eSeparator {
     width: 50px;
     color: #886248;
-    border: 1px solid
+    border: 1px solid;
+    margin: 2vh 0;
 }
 
 /* setting size of thumbnail image for blog posts */
