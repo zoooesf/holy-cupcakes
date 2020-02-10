@@ -74,26 +74,25 @@ body {
 /* ***************************** Footer Styling **************************** */
 
 .site-footer {
-    padding-top: 16px;
     font-family: brandon-grotesque, sans-serif;
     font-size: 1.1rem;
-    background-color: #ffeeaa;
+    background-color: #886248;
 }
 
 .site-info {
     text-align: center;
     color: #ffeeaa;
-    background-color: #886248;
-    padding: 16px;
+    background-color: #ffeeaa;
 }
 
 .site-info a {
-    color: #ffeeaa;
+    color:  #ffeeaa;
 }
 #footer-sidebar{
     display: flex;
     flex-flow: row wrap;
     width: 100%;
+    padding: 16px;
 }
 #footer-sidebar1, #footer-sidebar3{
     width: 30%;
@@ -101,19 +100,24 @@ body {
 #footer-sidebar2{
     width: 40%;
 }
-#footer-sidebar1 #primary-menu, #footer-sidebar1 h4{
+#footer-sidebar #primary-menu, #footer-sidebar h4{
     display: flex;
     flex-direction: column;
 }
-#footer-sidebar1 #primary-menu a,  #footer-sidebar1 h4{
+#footer-sidebar1 #primary-menu a,  #footer-sidebar h4{
     text-align: left;
     padding: 0.5vh 0;
     margin: 0;
+    color:  #886248;
 }
-#footer-sidebar1 h4{
-    color: #FFEEAA;
+#footer-sidebar h4{
+    color: #886248;
 }
-
+#copyright{
+    background-color: #886248;
+    width: 100%;
+    padding: 16px;
+}
 /* ***************************** Block Styling ***************************** */
 /* .wp-block-columns {
     width: 100;

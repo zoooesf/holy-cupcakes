@@ -40,6 +40,7 @@
 						dynamic_sidebar('footer-sidebar-2');
 						}
 					?>
+					<h4>Search for Goodies!</h4>
 					<div>
 						<ul class="menu">
 							<li><input type="text" placeholder="Search"></li>
@@ -54,7 +55,8 @@
 					?>
 				</div>
 			</div>
-
+			</div> <!-- .grid-container -->
+			<div id="copyright">
 			<a href="<?php echo esc_url(__('https://wordpress.org/', 'holycupcakes')); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
@@ -66,7 +68,8 @@
 			/* translators: 1: Theme name, 2: Theme author. */
 			printf(esc_html__('Theme: %1$s by %2$s.', 'holycupcakes'), 'Holy Cupcakes', '<a href="/">WP Doctors</a>');
 			?>
-		</div> <!-- .grid-container -->
+			</div>
+		
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
