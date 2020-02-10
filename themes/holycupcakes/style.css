@@ -90,6 +90,29 @@ body {
 .site-info a {
     color: #ffeeaa;
 }
+#footer-sidebar{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+#footer-sidebar1, #footer-sidebar3{
+    width: 30%;
+}
+#footer-sidebar2{
+    width: 40%;
+}
+#footer-sidebar1 #primary-menu, #footer-sidebar1 h4{
+    display: flex;
+    flex-direction: column;
+}
+#footer-sidebar1 #primary-menu a,  #footer-sidebar1 h4{
+    text-align: left;
+    padding: 0.5vh 0;
+    margin: 0;
+}
+#footer-sidebar1 h4{
+    color: #FFEEAA;
+}
 
 /* ***************************** Block Styling ***************************** */
 /* .wp-block-columns {
