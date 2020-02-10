@@ -16,6 +16,45 @@
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
 		<div class="grid-container">
+			<div id="footer-sidebar" class="secondary">
+				<div id="footer-sidebar1">
+					<?php
+						if(is_active_sidebar('footer-sidebar-1')){
+						dynamic_sidebar('footer-sidebar-1');
+						}
+					?>
+					<h4>Quick links</h4>
+					<?php
+						wp_nav_menu(array(
+							'theme_location' => 'menu',
+							'menu_id'        => 'primary-menu',
+							'container'		 => 'ul',
+							'container_class' => 'menu',
+
+						));
+					?>
+				</div>
+				<div id="footer-sidebar2">
+					<?php
+						if(is_active_sidebar('footer-sidebar-2')){
+						dynamic_sidebar('footer-sidebar-2');
+						}
+					?>
+					<div>
+						<ul class="menu">
+							<li><input type="text" placeholder="Search"></li>
+						</ul>
+					</div>
+				</div>
+				<div id="footer-sidebar3">
+					<?php
+						if(is_active_sidebar('footer-sidebar-3')){
+						dynamic_sidebar('footer-sidebar-3');
+						}
+					?>
+				</div>
+			</div>
+
 			<a href="<?php echo esc_url(__('https://wordpress.org/', 'holycupcakes')); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
