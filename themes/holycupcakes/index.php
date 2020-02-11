@@ -44,14 +44,15 @@ get_header();
 					/* Start the Loop */
 					while (have_posts()) :
 						the_post();
+						
 						?>
 							<div class="card large-6">
-								<!-- <img src="assets/img/generic/rectangle-1.jpg"> -->
+								
+							<?php echo get_the_post_thumbnail(); ?>
 								<div class="card-section">
 									<h3><?php the_title(); ?> </h3>
 									<p class="blogExcerpt">
 										<?php
-										// get_template_part('template-parts/content', get_post_type());
 										the_excerpt();
 										?>
 									</p>
