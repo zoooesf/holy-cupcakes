@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,25 +12,80 @@
 
 ?>
 
-	</div><!-- #content -->
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'holycupcakes' ) ); ?>">
+</div><!-- #content -->
+<footer id="colophon" class="site-footer">
+	<div class="site-info">
+		<div class="grid-container">
+			<div id="footer-sidebar" class="secondary grid-x">
+				<div class="cell small-12 medium-3 large-3 ">
+					<div id="footer-sidebar1">
+						<?php
+						if(is_active_sidebar('footer-sidebar-1')){
+						dynamic_sidebar('footer-sidebar-1');
+						}
+						?>
+						<h4>Quick links</h4>
+						<?php
+						wp_nav_menu(array(
+							'theme_location' => 'menu',
+							'menu_id'        => 'primary-menu',
+							'container'		 => 'ul',
+							'container_class' => 'menu',
+
+						));
+						?>
+					</div>
+				</div>
+				<div class="cell small-12 medium-5 large-5 ">
+					<div id="footer-sidebar2">
+						<?php
+						if(is_active_sidebar('footer-sidebar-2')){
+						dynamic_sidebar('footer-sidebar-2');
+						}
+						?>
+						<h4>Search for Goodies!</h4>
+						<div>
+							<ul class="menu">
+								<li><input type="text" placeholder="Search"></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="cell small-12 medium-4 large-4 ">
+					<div id="footer-sidebar3">
+						<?php
+						if(is_active_sidebar('footer-sidebar-3')){
+						dynamic_sidebar('footer-sidebar-3');
+						}
+						?>
+						<h4>Contact</h4>
+						<p>123 Bloor St. W, Oshawa ON L2E 4G5</p>
+						<p>(905)-123-4567</p>
+						<p>info@holycupcakes.com</p>
+						<p>hollycupcakes.ca</p>
+					</div>
+				</div>
+			</div>
+		</div> <!-- .grid-container -->
+		<div id="copyright">
+			<a href="<?php echo esc_url(__('https://wordpress.org/', 'holycupcakes')); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'holycupcakes' ), 'WordPress' );
+				printf(esc_html__('Proudly powered by %s', 'holycupcakes'), 'WordPress');
 				?>
 			</a>
 			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'holycupcakes' ), 'holycupcakes', '<a href="http://wp-doctors.com">WP Doctors</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+			<?php
+			/* translators: 1: Theme name, 2: Theme author. */
+			printf(esc_html__('Theme: %1$s by %2$s.', 'holycupcakes'), 'Holy Cupcakes', '<a href="/">WP Doctors</a>');
+			?>
+		</div>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
