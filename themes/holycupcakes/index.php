@@ -21,7 +21,7 @@ get_header();
 		<div class="grid-container">
 			<div class="grid-x">
 				<!-- sidebar box -->
-				<div class="large-4 show-for-large sidebar-box">
+				<div class="large-4 grid-margin-x show-for-large sidebar-box">
 					<?php
 					get_sidebar();
 					?>
