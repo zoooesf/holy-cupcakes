@@ -59,9 +59,9 @@
 						}
 						?>
 						<h4>Contact</h4>
-						<p>123 Bloor St. W, ON L2E 4G5</p>
+						<p>123 Bloor St. W, Oshawa ON L2E 4G5</p>
 						<p>(905)-123-4567</p>
-						<p>hollycupcakes@hotmail.com</p>
+						<p>info@holycupcakes.com</p>
 						<p>hollycupcakes.ca</p>
 					</div>
 				</div>

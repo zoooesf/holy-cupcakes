@@ -278,6 +278,6 @@ if (defined('JETPACK__VERSION')) {
 
 // changing the excerpt length of blog posts
 function holy_cupcakes_custom_excerpt_length( $length ) {
-    return 10;
+    return 30;
 }
 add_filter( 'excerpt_length', 'holy_cupcakes_custom_excerpt_length', 999 );

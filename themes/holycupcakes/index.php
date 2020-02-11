@@ -46,16 +46,16 @@ get_header();
 						the_post();
 						?>
 							<div class="card large-6">
-								<img src="assets/img/generic/rectangle-1.jpg">
+								<!-- <img src="assets/img/generic/rectangle-1.jpg"> -->
 								<div class="card-section">
 									<h3><?php the_title(); ?> </h3>
-									<p>
+									<p class="blogExcerpt">
 										<?php
 										// get_template_part('template-parts/content', get_post_type());
 										the_excerpt();
 										?>
 									</p>
-									<a href="<?php get_post_permalink(); ?>">Read More</a>
+									<a class="blogBtn" href="<?php get_post_permalink(); ?>">continue reading</a>
 								</div>
 							</div>
 
@@ -87,3 +87,4 @@ get_header();
 
 <?php
 get_footer();
+
