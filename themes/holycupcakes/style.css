@@ -374,21 +374,21 @@ input:focus,
     font-size: large;
     position: absolute;
     left: 5%;
-    top: 85%;
+    top: 90%;
     text-align: center;
+    margin: 0px;
 }
 .blogBtn:hover{
     background-color: #F9F6EC;
     border: 1px solid #FC9885;
 }
 .blogExcerpt{
-    display: flex;
-    flex-direction: column;
     background-color: #F9F6EC;
+    /* height: 100%; */
 }
 .blogCard{
-    margin: 5px;
-    height: 500px;
+    margin: 25px;
+    height: 460px;
     position: relative;
 }
 .blogExcerpt h3{
