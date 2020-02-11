@@ -36,6 +36,7 @@ get_header();
 						<div class="large-8 medium-12 grid-x blog-posts-box">
 							<header class="large-12">
 								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+								<hr class="blogHr">
 							</header>
 							<!-- blog grid box -->
 						<?php
@@ -44,14 +45,15 @@ get_header();
 					/* Start the Loop */
 					while (have_posts()) :
 						the_post();
+						
 						?>
-							<div class="card large-6">
-								<!-- <img src="assets/img/generic/rectangle-1.jpg"> -->
-								<div class="card-section">
+							<div class="card large-5 blogCard">
+								
+							<?php echo get_the_post_thumbnail(); ?>
+								<div class="card-section blogExcerpt">
 									<h3><?php the_title(); ?> </h3>
-									<p class="blogExcerpt">
+									<p>
 										<?php
-										// get_template_part('template-parts/content', get_post_type());
 										the_excerpt();
 										?>
 									</p>

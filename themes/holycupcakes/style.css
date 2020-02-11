@@ -381,18 +381,37 @@ input:focus,
 /* ******************** Blog Styling ******************** */
 .blogBtn {
     width: 200px;
-    height: 36px;
+    /* height: 36px; */
     background-color: #FC9885;
     border-radius: 5px;
     color: #ffffff;
     padding: 0px 15px 5px 15px;
     font-size: large;
+    position: absolute;
+    left: 5%;
+    top: 90%;
+    text-align: center;
+    margin: 0px;
+}
+.blogBtn:hover{
+    background-color: #F9F6EC;
+    border: 1px solid #FC9885;
 }
 
 .blogExcerpt {
     background-color: #F9F6EC;
 }
-
+.blogCard{
+    margin: 25px;
+    height: 460px;
+    position: relative;
+}
+.blogExcerpt h3{
+    margin: 0px;
+}
+.blogHr{
+    border: 0.5px solid #886248;
+}
 
 /* ******************** Sidebar Styling ****************** */
 .sidebar-box {
