@@ -57,7 +57,7 @@ get_header();
 										the_excerpt();
 										?>
 									</p>
-									<a class="blogBtn" href="<?php get_post_permalink(); ?>">continue reading</a>
+									<a class="blogBtn" href="<?php echo get_post_permalink(); ?>">continue reading</a>
 								</div>
 							</div>
 
