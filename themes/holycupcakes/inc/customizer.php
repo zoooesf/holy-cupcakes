@@ -138,6 +138,16 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 			'placeholder' => esc_html__( '(123-456-7890)', 'holy_cupcakes' )
 		)
 	) );
+			// For Dynamic Contact Info (Phone)
+	$wp_customize->add_control( 'holy_cupcakes_email_address', array(
+		'label' => esc_html__( 'Email Address', 'holy_cupcakes' ),
+		'description' => esc_html__( 'Add Email Adress', 'holy_cupcakes' ),
+		'section' => 'holy_cupcakes_email_section',
+		'type' => 'input',
+		'input_attrs' => array(
+			'placeholder' => esc_html__( 'info@email.com', 'holy_cupcakes' )
+		)
+	) );
 			// For Dynamic Address for Footer
 	$wp_customize->add_control( 'holy_cupcakes_address_input', array(
 		'label' => esc_html__( 'Address', 'holy_cupcakes' ),
