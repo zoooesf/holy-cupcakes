@@ -31,6 +31,11 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'title' => esc_html__( 'Social Media', 'holy_cupcakes' ),
 		'capability' => 'edit_theme_options',
 	) );
+		// For Dynamic Contact Info
+	$wp_customize->add_panel( 'holy_cupcakes_contact_info_panel', array(
+		'title' => esc_html__( 'Contact Information', 'holy_cupcakes' ),
+		'capability' => 'edit_theme_options',
+	) );
 		// for Dynamic Address for footer
 	$wp_customize->add_panel( 'holy_cupcakes_address_panel', array(
 		'title' => esc_html__( 'Store Address', 'holy_cupcakes' ),
@@ -43,12 +48,24 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'title' => esc_html__( 'Facebook', 'holy_cupcakes' ),
 		'capability' => 'edit_theme_options',
 		'panel' => 'holy_cupcakes_social_media_panel'
-	) );
+	) );	
 		// For Dynamic Social Media (instagram)
 	$wp_customize->add_section( 'holy_cupcakes_instagram_section', array(
 		'title' => esc_html__( 'Instagram', 'holy_cupcakes' ),
 		'capability' => 'edit_theme_options',
 		'panel' => 'holy_cupcakes_social_media_panel'
+	) );
+		// For Dynamic Contact Info (Phone Number)
+	$wp_customize->add_section( 'holy_cupcakes_phone_section', array(
+		'title' => esc_html__( 'Phone Number' , 'holy_cupcakes' ),
+		'capability' => 'edit_theme_options',
+		'panel' => 'holy_cupcakes_contact_info_panel'
+	) );
+		// For Dynamic Contact Info (Email)
+	$wp_customize->add_section( 'holy_cupcakes_email_section', array(
+		'title' => esc_html__( 'Email' , 'holy_cupcakes' ),
+		'capability' => 'edit_theme_options',
+		'panel' => 'holy_cupcakes_contact_info_panel'
 	) );
 		// For Dynamic Address for footer
 	$wp_customize->add_section( 'holy_cupcakes_address_section', array(
@@ -70,12 +87,26 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'default' => '',
 		'sanitize_callback' => 'esc_url_raw',
 	));
+		// For Dynamic Contact Info (Phone)
+	$wp_customize->add_setting( 'holy_cupcakes_phone_number', array(
+		'transport' => 'refresh',
+		'default' => '',
+		'sanitize_callback' => 'absint',
+	));
+		// For Dynamic Contact Info (Email)
+	$wp_customize->add_setting( 'holy_cupcakes_email_address', array(
+		'transport' => 'refresh',
+		'default' => '',
+		'sanitize_callback' => 'sanitize_email',
+	));
 		// For Dynamic Address for Footer
 	$wp_customize->add_setting( 'holy_cupcakes_address_input', array(
 		'transport' => 'refresh',
 		'default' => '',
 		'sanitize_callback' => 'esc_url_raw',
 	));
+
+
 	// controls
 		// For Dynamic Social Media (facebook)
 	$wp_customize->add_control( 'holy_cupcakes_facebook_url', array(
@@ -97,11 +128,21 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 			'placeholder' => esc_html__( 'https://instagram.com', 'holy_cupcakes' )
 		)
 	) );
+			// For Dynamic Contact Info (Phone)
+	$wp_customize->add_control( 'holy_cupcakes_phone_number', array(
+		'label' => esc_html__( 'Phone Number', 'holy_cupcakes' ),
+		'description' => esc_html__( 'Add Phone Number', 'holy_cupcakes' ),
+		'section' => 'holy_cupcakes_phone_section',
+		'type' => 'input',
+		'input_attrs' => array(
+			'placeholder' => esc_html__( '(123-456-7890)', 'holy_cupcakes' )
+		)
+	) );
 			// For Dynamic Address for Footer
 	$wp_customize->add_control( 'holy_cupcakes_address_input', array(
 		'label' => esc_html__( 'Address', 'holy_cupcakes' ),
 		'description' => esc_html__( 'Add your address below', 'holy_cupcakes' ),
-		'section' => 'holy_cupcakes_address_input',
+		'section' => 'holy_cupcakes_address_section',
 		'type' => 'input',
 		'input_attrs' => array(
 			'placeholder' => esc_html__( 'Address Line 1', 'holy_cupcakes' ),
