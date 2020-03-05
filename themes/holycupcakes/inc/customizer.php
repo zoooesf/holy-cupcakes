@@ -24,19 +24,22 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 			'render_callback' => 'holy_cupcakes_customize_partial_blogdescription',
 		) );
 	}
-// For Dynamic Social Media 
+
 	// panels
+		// For Dynamic Social Media 
 	$wp_customize->add_panel( 'holy_cupcakes_social_media_panel', array(
 		'title' => esc_html__( 'Social Media', 'holy_cupcakes' ),
 		'capability' => 'edit_theme_options',
 	) );
 
 	// Sections
+		// For Dynamic Social Media (facebook)
 	$wp_customize->add_section( 'holy_cupcakes_facebook_section', array(
 		'title' => esc_html__( 'Facebook', 'holy_cupcakes' ),
 		'capability' => 'edit_theme_options',
 		'panel' => 'holy_cupcakes_social_media_panel'
 	) );
+		// For Dynamic Social Media (instagram)
 	$wp_customize->add_section( 'holy_cupcakes_instagram_section', array(
 		'title' => esc_html__( 'Instagram', 'holy_cupcakes' ),
 		'capability' => 'edit_theme_options',
@@ -44,17 +47,20 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 	) );
 
 	// settings
+		// For Dynamic Social Media (facebook)
 	$wp_customize->add_setting( 'holy_cupcakes_facebook_url', array(
 		'transport' => 'refresh',
 		'default' => '',
 		'sanitize_callback' => 'esc_url_raw',
 	));
+		// For Dynamic Social Media (instagram)
 	$wp_customize->add_setting( 'holy_cupcakes_instagram_url', array(
 		'transport' => 'refresh',
 		'default' => '',
 		'sanitize_callback' => 'esc_url_raw',
 	));
 	// controls
+		// For Dynamic Social Media (facebook)
 	$wp_customize->add_control( 'holy_cupcakes_facebook_url', array(
 		'label' => esc_html__( 'URL', 'holy_cupcakes' ),
 		'description' => esc_html__( 'Add URL to display Facebook icon/link', 'holy_cupcakes' ),
@@ -64,6 +70,7 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 			'placeholder' => esc_html__( 'https://facebook.com', 'holy_cupcakes' )
 		)
 	) );
+			// For Dynamic Social Media (instagram)
 	$wp_customize->add_control( 'holy_cupcakes_instagram_url', array(
 		'label' => esc_html__( 'URL', 'holy_cupcakes' ),
 		'description' => esc_html__( 'Add URL to display Instagram icon/link', 'holy_cupcakes' ),
