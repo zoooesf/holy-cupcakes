@@ -128,7 +128,7 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'esc_url_raw',
 	));
 
-	// For Dynamic Address for Footer // Province
+	// For Dynamic Address for Footer // Postal Code
 	$wp_customize->add_setting( 'holy_cupcakes_address_postal_code', array(
 		'transport' => 'refresh',
 		'default' => '',
