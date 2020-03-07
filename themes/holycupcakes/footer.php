@@ -64,7 +64,7 @@
 						<?php if ( get_theme_mod( 'holy_cupcakes_email_address' ) || get_theme_mod( 'holy_cupcakes_phone_number' ) ) {?>
 						<?php if ( get_theme_mod( 'holy_cupcakes_email_address' ) ) {?>
 							<p class="email"><a href="<?php echo get_theme_mod( 'holy_cupcakes_email_address' ); ?>"><?php echo esc_html__( 'Email', 'holy_cupcakes' ); ?> </a></p>
-							<?php if ( get_theme_mod( 'coffee_corner_twitter_url' ) ) {?>
+							<?php if ( get_theme_mod( 'holy_cupcakes_phone_number' ) ) {?>
 	<p class="phone">
 		<a href="<?php echo get_theme_mod( 'holy_cupcakes_phone_number' ); ?>"><?php echo esc_html__( 'Phone', 'holy_cupcakes' ); ?> </a>
 	</p>
