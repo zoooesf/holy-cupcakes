@@ -168,7 +168,7 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 			'placeholder' => esc_html__( '123-456-7890', 'holy_cupcakes' )
 		)
 	) );
-			// For Dynamic Contact Info (Phone)
+			// For Dynamic Contact Info (Email)
 	$wp_customize->add_control( 'holy_cupcakes_email_address', array(
 		'label' => esc_html__( 'Email Address', 'holy_cupcakes' ),
 		'description' => esc_html__( 'Add Email Adress', 'holy_cupcakes' ),
@@ -178,6 +178,7 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 			'placeholder' => esc_html__( 'info@email.com', 'holy_cupcakes' )
 		)
 	) );
+
 			// For Dynamic Address for Footer
 	$wp_customize->add_control( 'holy_cupcakes_address_line1', array(
 		'label' => esc_html__( 'Enter your address below', 'holy_cupcakes' ),
@@ -189,8 +190,7 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		)
 	) );
 	$wp_customize->add_control( 'holy_cupcakes_address_line2', array(
-		'label' => esc_html__( 'Address Line 2', 'holy_cupcakes' ),
-		'description' => esc_html__( 'Address Line 1', 'holy_cupcakes' ),
+		'description' => esc_html__( 'Address Line 2', 'holy_cupcakes' ),
 		'section' => 'holy_cupcakes_address_section',
 		'type' => 'input',
 		'input_attrs' => array(
@@ -198,7 +198,6 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		)
 	) );
 	$wp_customize->add_control( 'holy_cupcakes_address_city', array(
-		'label' => esc_html__( 'City', 'holy_cupcakes' ),
 		'description' => esc_html__( 'City', 'holy_cupcakes' ),
 		'section' => 'holy_cupcakes_address_section',
 		'type' => 'input',
@@ -207,7 +206,6 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		)
 	) );
 	$wp_customize->add_control( 'holy_cupcakes_address_province', array(
-		'label' => esc_html__( 'Province', 'holy_cupcakes' ),
 		'description' => esc_html__( 'Province', 'holy_cupcakes' ),
 		'section' => 'holy_cupcakes_address_section',
 		'type' => 'input',
@@ -216,7 +214,6 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		)
 	) );
 	$wp_customize->add_control( 'holy_cupcakes_address_postal_code', array(
-		'label' => esc_html__( 'Postal Code', 'holy_cupcakes' ),
 		'description' => esc_html__( 'Postal Code', 'holy_cupcakes' ),
 		'section' => 'holy_cupcakes_address_section',
 		'type' => 'input',
