@@ -64,10 +64,10 @@
 						<!-- to insert dynamic info into footer -->
 						<?php if ( get_theme_mod( 'holy_cupcakes_email_address' ) || get_theme_mod( 'holy_cupcakes_phone_number' ) ) {?>
 							<?php if ( get_theme_mod( 'holy_cupcakes_email_address' ) ) {?>
-								<p class="email"><?php echo get_theme_mod( 'holy_cupcakes_email_address' ); echo esc_html__( '', 'holy_cupcakes' ); ?> </a></p>
+								<p class="email"><?php echo get_theme_mod( 'holy_cupcakes_email_address' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
 							<?php } ?>
 							<?php if ( get_theme_mod( 'holy_cupcakes_phone_number' ) ) {?>
-								<p class="phone"><a href="<?php echo get_theme_mod( 'holy_cupcakes_phone_number' ); ?>"><?php echo esc_html__( 'Phone', 'holy_cupcakes' ); ?> </a></p>
+								<p class="phone"><?php echo get_theme_mod( 'holy_cupcakes_phone_number' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
 							<?php } ?>
 						<?php } ?>
 						<!-- <p>info@holycupcakes.com</p> -->

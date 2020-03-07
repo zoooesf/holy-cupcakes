@@ -135,7 +135,7 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'section' => 'holy_cupcakes_phone_section',
 		'type' => 'input',
 		'input_attrs' => array(
-			'placeholder' => esc_html__( '(123)456-7890', 'holy_cupcakes' )
+			'placeholder' => esc_html__( '123-456-7890', 'holy_cupcakes' )
 		)
 	) );
 			// For Dynamic Contact Info (Phone)
