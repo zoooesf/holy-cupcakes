@@ -51,6 +51,12 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'capability' => 'edit_theme_options',
 		'panel' => 'holy_cupcakes_social_media_panel'
 	) );
+		// For Dynamic Social Media (twitter)
+	$wp_customize->add_section( 'holy_cupcakes_twitter_section', array(
+		'title' => esc_html__( 'Twitter', 'holy_cupcakes' ),
+		'capability' => 'edit_theme_options',
+		'panel' => 'holy_cupcakes_social_media_panel'
+	) );
 		// For Dynamic Contact Info (Phone Number)
 	$wp_customize->add_section( 'holy_cupcakes_phone_section', array(
 		'title' => esc_html__( 'Phone Number' , 'holy_cupcakes' ),
@@ -79,6 +85,12 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 	));
 		// For Dynamic Social Media (instagram)
 	$wp_customize->add_setting( 'holy_cupcakes_instagram_url', array(
+		'transport' => 'refresh',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+		// For Dynamic Social Media (twitter)
+	$wp_customize->add_setting( 'holy_cupcakes_twitter_url', array(
 		'transport' => 'refresh',
 		'default' => '',
 		'sanitize_callback' => 'esc_url_raw',
@@ -152,6 +164,16 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'type' => 'input',
 		'input_attrs' => array(
 			'placeholder' => esc_html__( 'https://instagram.com', 'holy_cupcakes' )
+		)
+	) );
+			// For Dynamic Social Media (twitter)
+	$wp_customize->add_control( 'holy_cupcakes_twitter_url', array(
+		'label' => esc_html__( 'URL', 'holy_cupcakes' ),
+		'description' => esc_html__( 'Add URL to display Twitter icon/link', 'holy_cupcakes' ),
+		'section' => 'holy_cupcakes_twitter_section',
+		'type' => 'input',
+		'input_attrs' => array(
+			'placeholder' => esc_html__( 'https://twitter.com', 'holy_cupcakes' )
 		)
 	) );
 			// For Dynamic Contact Info (Phone)
