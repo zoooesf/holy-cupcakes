@@ -300,9 +300,19 @@ input:focus,
 }
 
 /* setting size of thumbnail image for blog posts */
-.thumbnail-img {
+/* .thumbnail-img {
     width: 338px;
     height: 190px;
+} */
+.thumbnail-img {
+    align-items: center;
+    width:100%;
+    height:190px; 
+    overflow: hidden
+}
+.thumbnail-img img{
+    width: 100%;
+    height: auto;
 }
 
 .excerpt {
@@ -408,7 +418,7 @@ input:focus,
 }
 .blogCard img{
     width: 100%;
-    height: 156px;
+    height: 185px;
     object-fit: cover;
 }
 .blogExcerpt h3{
