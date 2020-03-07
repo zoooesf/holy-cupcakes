@@ -31,11 +31,7 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'title' => esc_html__( 'Social Media', 'holy_cupcakes' ),
 		'capability' => 'edit_theme_options',
 	) );
-		// For Dynamic Contact Info
-	$wp_customize->add_panel( 'holy_cupcakes_contact_info_panel', array(
-		'title' => esc_html__( 'Contact Information', 'holy_cupcakes' ),
-		'capability' => 'edit_theme_options',
-	) );
+
 		// for Dynamic Address for footer
 	$wp_customize->add_panel( 'holy_cupcakes_address_panel', array(
 		'title' => esc_html__( 'Store Info', 'holy_cupcakes' ),
