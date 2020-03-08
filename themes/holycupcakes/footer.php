@@ -60,8 +60,17 @@
 						?>
 						<h4>Contact</h4>
 						<p>123 Bloor St. W, Oshawa ON L2E 4G5</p>
-						<p>(905)-123-4567</p>
-						<p>info@holycupcakes.com</p>
+						<!-- <p>(905)-123-4567</p> -->
+						<!-- to insert dynamic info into footer -->
+						<?php if ( get_theme_mod( 'holy_cupcakes_email_address' ) || get_theme_mod( 'holy_cupcakes_phone_number' ) ) {?>
+							<?php if ( get_theme_mod( 'holy_cupcakes_email_address' ) ) {?>
+								<p class="email"><?php echo get_theme_mod( 'holy_cupcakes_email_address' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+							<?php } ?>
+							<?php if ( get_theme_mod( 'holy_cupcakes_phone_number' ) ) {?>
+								<p class="phone"><?php echo get_theme_mod( 'holy_cupcakes_phone_number' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+							<?php } ?>
+						<?php } ?>
+						<!-- <p>info@holycupcakes.com</p> -->
 						<p>hollycupcakes.ca</p>
 					</div>
 				</div>

@@ -33,8 +33,8 @@ get_header();
 
 					if (is_home() && !is_front_page()) :
 				?>
-						<div class="large-8 medium-12 grid-x blog-posts-box">
-							<header class="large-12">
+						<div class="large-8 medium-12 grid-x align-justify blog-posts-box">
+							<header class="large-12 medium-12 small-12">
 								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 								<hr class="blogHr">
 							</header>
@@ -47,8 +47,10 @@ get_header();
 						the_post();
 
 						?>
-							<div class="card large-5 blogCard">
-								<?php
+
+							<div class="card large-5 medium-5 small-10 blogCard">
+								
+                <?php
 								if (has_post_thumbnail()) {
 								?>
 									<div class="thumbnail-img">
