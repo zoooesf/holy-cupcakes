@@ -27,4 +27,35 @@ add_filter('loop_shop_columns', 'loop_columns', 999);
 
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
+
+/**
+ * Display Sale Price Before Regular Price
+ */
+
+if (!function_exists('holy_cupcakes_price_display')) {
+
+    function holy_cupcakes_price_display($price_amt, $regular_price, $sale_price) {
+        $html_price = '<p class="price">';
+        if (($price_amt == $sale_price) && ($sale_price != 0)) {
+            $html_price .= '<ins>' . woocommerce_price($sale_price) . '</ins>';
+            $html_price .= '<del>' . woocommerce_price($regular_price) . '</del>';
+        }
+        $html_price .= '</p>';
+        return $html_price;
+    }
+
+}
+
+function holy_cupcakes_simple_product_price_html($price, $product) {
+    if ($product->is_type('simple')) {
+        $regular_price = $product->regular_price;
+        $sale_price = $product->sale_price;
+        $price_amt = $product->price;
+        return holy_cupcakes_price_display($price_amt, $regular_price, $sale_price);
+    } else {
+        return $price;
+    }
+}
+add_filter('woocommerce_get_price_html', 'holy_cupcakes_simple_product_price_html', 100, 2);
+
 ?>

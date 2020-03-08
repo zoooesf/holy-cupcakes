@@ -528,10 +528,12 @@ li.product a{
 }
 del{
     color: gray;
-    margin-right: 0.5em;
+    margin-left: 0.5em;
+    font-size:1.1rem;
 }
 ins{
     text-decoration: none;
+    font-size:1.5rem;
 }
 /* single product span price */
 .single-product span.onsale:first-child{
