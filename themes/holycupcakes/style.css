@@ -15,7 +15,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 body {
     font-family: brandon-grotesque, sans-serif !important;
-    background: white;
+    background-color: white;
 }
 
 .skip-link {
@@ -73,6 +73,11 @@ body {
 .custom-logo {
     height: 60px;
     width: auto;
+}
+/* cart icon */
+.mini-cart-wrapper{
+    content: '&#x1F6D2';
+    background-color: #ffeeaa;
 }
 
 /* ***************************** Footer Styling **************************** */
@@ -481,4 +486,63 @@ input:focus,
     background: #fff;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+/* ******************** Woo Commercer Products Styling ****************** */
+ul.products{
+    max-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+li.product{
+    /* padding: 0.5em; */
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+    position: relative;
+}
+.products a.button{
+    width: 50%;
+    background-color: #FC9885;
+    border-radius: 5px;
+}
+span.onsale,
+section.related.products span.onsale{
+    background-color: #FC9885;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    color: #fff;
+}
+li.product a{
+    display: absolute;
+}
+del{
+    color: gray;
+    margin-left: 0.5em;
+    font-size:1.1rem;
+}
+ins{
+    text-decoration: none;
+    font-size:1.5rem;
+}
+/* single product span price */
+.single-product span.onsale:first-child{
+    position: relative;
+    top:80px;
+    z-index: 3;
+}
+@media screen and (max-width: 40em) {
+    li.product{
+        width: 100%;
+    }
 }
