@@ -36,6 +36,7 @@ body {
 /* top-bar styling */
 .top-bar {
     background-color: transparent;
+    flex-direction: row;
 }
 
 .top-bar ul {
@@ -51,6 +52,10 @@ body {
 .top-bar input {
     background: rgba(255, 238, 170, 0.3);
     color: #ffeeaa;
+}
+
+.top-bar input[type=submit] {
+    display: none;
 }
 
 .top-bar input::placeholder {
@@ -78,6 +83,12 @@ body {
 .mini-cart-wrapper{
     content: '&#x1F6D2';
     background-color: #ffeeaa;
+}
+
+@media print, screen and (max-width:40em) {
+    .top-bar {
+        flex-direction: column;
+    }
 }
 
 /* ***************************** Footer Styling **************************** */
@@ -444,7 +455,7 @@ input:focus,
     background-color: #f9f6ec;
 }
 
-.widget-area .screen-reader-text {
+.screen-reader-text {
     display: none;
 }
 
