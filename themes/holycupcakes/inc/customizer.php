@@ -31,14 +31,10 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'title' => esc_html__( 'Social Media', 'holy_cupcakes' ),
 		'capability' => 'edit_theme_options',
 	) );
-		// For Dynamic Contact Info
-	$wp_customize->add_panel( 'holy_cupcakes_contact_info_panel', array(
-		'title' => esc_html__( 'Contact Information', 'holy_cupcakes' ),
-		'capability' => 'edit_theme_options',
-	) );
+
 		// for Dynamic Address for footer
 	$wp_customize->add_panel( 'holy_cupcakes_address_panel', array(
-		'title' => esc_html__( 'Store Address', 'holy_cupcakes' ),
+		'title' => esc_html__( 'Store Info', 'holy_cupcakes' ),
 		'capability' => 'edit_theme_options',
 	) );
 
@@ -55,17 +51,23 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'capability' => 'edit_theme_options',
 		'panel' => 'holy_cupcakes_social_media_panel'
 	) );
+		// For Dynamic Social Media (twitter)
+	$wp_customize->add_section( 'holy_cupcakes_twitter_section', array(
+		'title' => esc_html__( 'Twitter', 'holy_cupcakes' ),
+		'capability' => 'edit_theme_options',
+		'panel' => 'holy_cupcakes_social_media_panel'
+	) );
 		// For Dynamic Contact Info (Phone Number)
 	$wp_customize->add_section( 'holy_cupcakes_phone_section', array(
 		'title' => esc_html__( 'Phone Number' , 'holy_cupcakes' ),
 		'capability' => 'edit_theme_options',
-		'panel' => 'holy_cupcakes_contact_info_panel'
+		'panel' => 'holy_cupcakes_address_panel'
 	) );
 		// For Dynamic Contact Info (Email)
 	$wp_customize->add_section( 'holy_cupcakes_email_section', array(
 		'title' => esc_html__( 'Email' , 'holy_cupcakes' ),
 		'capability' => 'edit_theme_options',
-		'panel' => 'holy_cupcakes_contact_info_panel'
+		'panel' => 'holy_cupcakes_address_panel'
 	) );
 		// For Dynamic Address for footer
 	$wp_customize->add_section( 'holy_cupcakes_address_section', array(
@@ -87,6 +89,12 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'default' => '',
 		'sanitize_callback' => 'esc_url_raw',
 	));
+		// For Dynamic Social Media (twitter)
+	$wp_customize->add_setting( 'holy_cupcakes_twitter_url', array(
+		'transport' => 'refresh',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	));
 		// For Dynamic Contact Info (Phone)
 	$wp_customize->add_setting( 'holy_cupcakes_phone_number', array(
 		'transport' => 'refresh',
@@ -99,12 +107,42 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 		'default' => '',
 		'sanitize_callback' => 'sanitize_email',
 	));
-		// For Dynamic Address for Footer
-	$wp_customize->add_setting( 'holy_cupcakes_address_input', array(
+	
+	// For Dynamic Address for Footer // Line 1
+	$wp_customize->add_setting( 'holy_cupcakes_address_line1', array(
 		'transport' => 'refresh',
 		'default' => '',
 		'sanitize_callback' => 'esc_url_raw',
 	));
+	
+	// For Dynamic Address for Footer // Line 2
+	$wp_customize->add_setting( 'holy_cupcakes_address_line2', array(
+		'transport' => 'refresh',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+	
+	// For Dynamic Address for Footer // City
+	$wp_customize->add_setting( 'holy_cupcakes_address_city', array(
+		'transport' => 'refresh',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+
+	// For Dynamic Address for Footer // Province
+	$wp_customize->add_setting( 'holy_cupcakes_address_province', array(
+		'transport' => 'refresh',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+
+	// For Dynamic Address for Footer // Postal Code
+	$wp_customize->add_setting( 'holy_cupcakes_address_postal_code', array(
+		'transport' => 'refresh',
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+	
 
 
 	// controls
@@ -128,6 +166,16 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 			'placeholder' => esc_html__( 'https://instagram.com', 'holy_cupcakes' )
 		)
 	) );
+			// For Dynamic Social Media (twitter)
+	$wp_customize->add_control( 'holy_cupcakes_twitter_url', array(
+		'label' => esc_html__( 'URL', 'holy_cupcakes' ),
+		'description' => esc_html__( 'Add URL to display Twitter icon/link', 'holy_cupcakes' ),
+		'section' => 'holy_cupcakes_twitter_section',
+		'type' => 'input',
+		'input_attrs' => array(
+			'placeholder' => esc_html__( 'https://twitter.com', 'holy_cupcakes' )
+		)
+	) );
 			// For Dynamic Contact Info (Phone)
 	$wp_customize->add_control( 'holy_cupcakes_phone_number', array(
 		'label' => esc_html__( 'Phone Number', 'holy_cupcakes' ),
@@ -138,7 +186,7 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 			'placeholder' => esc_html__( '123-456-7890', 'holy_cupcakes' )
 		)
 	) );
-			// For Dynamic Contact Info (Phone)
+			// For Dynamic Contact Info (Email)
 	$wp_customize->add_control( 'holy_cupcakes_email_address', array(
 		'label' => esc_html__( 'Email Address', 'holy_cupcakes' ),
 		'description' => esc_html__( 'Add Email Adress', 'holy_cupcakes' ),
@@ -148,9 +196,10 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 			'placeholder' => esc_html__( 'info@email.com', 'holy_cupcakes' )
 		)
 	) );
+
 			// For Dynamic Address for Footer
-	$wp_customize->add_control( 'holy_cupcakes_address_input', array(
-		'label' => esc_html__( 'Enter your Address Line 1 Below', 'holy_cupcakes' ),
+	$wp_customize->add_control( 'holy_cupcakes_address_line1', array(
+		'label' => esc_html__( 'Enter your address below', 'holy_cupcakes' ),
 		'description' => esc_html__( 'Address Line 1', 'holy_cupcakes' ),
 		'section' => 'holy_cupcakes_address_section',
 		'type' => 'input',
@@ -158,55 +207,39 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 			'placeholder' => esc_html__( 'Address Line 1', 'holy_cupcakes' )
 		)
 	) );
-	$wp_customize->add_control( 'holy_cupcakes_address_input', array(
-		'label' => esc_html__( 'Address Line 2', 'holy_cupcakes' ),
-		'description' => esc_html__( 'Enter your Address Line 2 Below', 'holy_cupcakes' ),
+	$wp_customize->add_control( 'holy_cupcakes_address_line2', array(
+		'description' => esc_html__( 'Address Line 2', 'holy_cupcakes' ),
 		'section' => 'holy_cupcakes_address_section',
 		'type' => 'input',
 		'input_attrs' => array(
 			'placeholder' => esc_html__( 'Address Line 2', 'holy_cupcakes' )
 		)
 	) );
-	$wp_customize->add_control( 'holy_cupcakes_address_input', array(
-		'label' => esc_html__( 'City', 'holy_cupcakes' ),
-		'description' => esc_html__( 'Enter your City Below', 'holy_cupcakes' ),
+	$wp_customize->add_control( 'holy_cupcakes_address_city', array(
+		'description' => esc_html__( 'City', 'holy_cupcakes' ),
 		'section' => 'holy_cupcakes_address_section',
 		'type' => 'input',
 		'input_attrs' => array(
 			'placeholder' => esc_html__( 'City', 'holy_cupcakes' ),
 		)
 	) );
-	$wp_customize->add_control( 'holy_cupcakes_address_input', array(
-		'label' => esc_html__( 'Province', 'holy_cupcakes' ),
-		'description' => esc_html__( 'Enter your Province Below', 'holy_cupcakes' ),
+	$wp_customize->add_control( 'holy_cupcakes_address_province', array(
+		'description' => esc_html__( 'Province', 'holy_cupcakes' ),
 		'section' => 'holy_cupcakes_address_section',
 		'type' => 'input',
 		'input_attrs' => array(
 			'placeholder' => esc_html__( 'Province', 'holy_cupcakes' )
 		)
 	) );
-	$wp_customize->add_control( 'holy_cupcakes_address_input', array(
-		'label' => esc_html__( 'Postal Code', 'holy_cupcakes' ),
-		'description' => esc_html__( 'Enter your Postal Code Below', 'holy_cupcakes' ),
+	$wp_customize->add_control( 'holy_cupcakes_address_postal_code', array(
+		'description' => esc_html__( 'Postal Code', 'holy_cupcakes' ),
 		'section' => 'holy_cupcakes_address_section',
 		'type' => 'input',
 		'input_attrs' => array(
 			'placeholder' => esc_html__( 'Postal Code', 'holy_cupcakes' )
 		)
 	) );
-	// $wp_customize->add_control( 'holy_cupcakes_address_input', array(
-	// 	'label' => esc_html__( 'Address', 'holy_cupcakes' ),
-	// 	'description' => esc_html__( 'Add your address below', 'holy_cupcakes' ),
-	// 	'section' => 'holy_cupcakes_address_section',
-	// 	'type' => 'input',
-	// 	'input_attrs' => array(
-	// 		'placeholder' => esc_html__( 'Address Line 1', 'holy_cupcakes' ),
-	// 		'placeholder' => esc_html__( 'Address Line 2', 'holy_cupcakes' ),
-	// 		'placeholder' => esc_html__( 'City', 'holy_cupcakes' ),
-	// 		'placeholder' => esc_html__( 'Provence', 'holy_cupcakes' ),
-	// 		'placeholder' => esc_html__( 'Postal Code', 'holy_cupcakes' )
-	// 	)
-	// ) );
+	
 }
 add_action( 'customize_register', 'holy_cupcakes_customize_register' );
 
