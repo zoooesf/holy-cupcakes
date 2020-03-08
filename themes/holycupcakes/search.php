@@ -53,11 +53,15 @@ get_header();
 										<p>
 											<?php
 											the_excerpt();
-											$price = get_post_meta(get_the_ID(), '_price', true);
-											echo wc_price($price);
+											$link_text = 'continue reading';
+											if (get_post_type() == 'product') {
+												$price = get_post_meta(get_the_ID(), '_price', true);
+												echo wc_price($price);
+												$link_text = 'view product';
+											}
 											?>
 										</p>
-										<a class="blogBtn" href="<?php echo get_post_permalink(); ?>">continue reading</a>
+										<a class="blogBtn" href="<?php echo get_post_permalink(); ?>"></a>
 									</div>
 								</div>
 					<?php
