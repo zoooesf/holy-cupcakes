@@ -53,6 +53,8 @@ get_header();
 										<p>
 											<?php
 											the_excerpt();
+											$price = get_post_meta(get_the_ID(), '_price', true);
+											echo wc_price($price);
 											?>
 										</p>
 										<a class="blogBtn" href="<?php echo get_post_permalink(); ?>">continue reading</a>
