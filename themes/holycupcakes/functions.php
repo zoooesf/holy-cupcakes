@@ -202,6 +202,15 @@ function holy_cupcakes_widgets_init()
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+	register_sidebar( array(
+		'name' => 'Header Widget',
+		'id' => 'header-widget',
+		'description' => 'Appears in the header',
+		'before_widget' => '<p>',
+		'after_widget' => '</p>',
+		'before_title' => '<span>',
+		'after_title' => '</span>',
+	) );
 	
 }
 add_action('widgets_init', 'holy_cupcakes_widgets_init');
