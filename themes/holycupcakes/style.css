@@ -305,12 +305,14 @@ input:focus,
     height: 190px;
 } */
 .thumbnail-img {
+    display: flex;
     align-items: center;
-    width:100%;
-    height:190px; 
+    width: 100%;
+    height: 190px;
     overflow: hidden
 }
-.thumbnail-img img{
+
+.thumbnail-img img {
     width: 100%;
     height: auto;
 }
@@ -403,7 +405,8 @@ input:focus,
     text-align: center;
     margin: 0px;
 }
-.blogBtn:hover{
+
+.blogBtn:hover {
     background-color: #F9F6EC;
     border: 1px solid #FC9885;
 }
@@ -411,15 +414,18 @@ input:focus,
 .blogExcerpt {
     background-color: #F9F6EC;
 }
-.blogCard{
+
+.blogCard {
     margin: 25px;
     height: 460px;
     position: relative;
 }
-.blogExcerpt h3{
+
+.blogExcerpt h3 {
     margin: 0px;
 }
-.blogHr{
+
+.blogHr {
     border: 0.5px solid #886248;
 }
 
