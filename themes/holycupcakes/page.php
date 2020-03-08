@@ -18,7 +18,7 @@ get_header();
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
-		<div class="grid-container grid-y">
+		<div class="grid-container">
 			<?php
 			while (have_posts()) :
 				the_post();
