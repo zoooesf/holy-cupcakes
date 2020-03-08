@@ -36,27 +36,30 @@ get_header();
 						/* Start the Loop */
 						while (have_posts()) :
 							the_post();
+							if (get_post_type() != 'page') {
+
 						?>
-							<div class="card large-5 medium-5 small-10 blogCard">
-								<?php
-								if (has_post_thumbnail()) {
-								?>
-									<div class="thumbnail-img">
-										<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_caption(); ?>" />
+								<div class="card large-5 medium-5 small-10 blogCard">
+									<?php
+									if (has_post_thumbnail()) {
+									?>
+										<div class="thumbnail-img">
+											<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_caption(); ?>" />
+										</div>
+									<?php
+									} ?>
+									<div class="card-section blogExcerpt">
+										<h3><?php the_title(); ?> </h3>
+										<p>
+											<?php
+											the_excerpt();
+											?>
+										</p>
+										<a class="blogBtn" href="<?php echo get_post_permalink(); ?>">continue reading</a>
 									</div>
-								<?php
-								} ?>
-								<div class="card-section blogExcerpt">
-									<h3><?php the_title(); ?> </h3>
-									<p>
-										<?php
-										the_excerpt();
-										?>
-									</p>
-									<a class="blogBtn" href="<?php echo get_post_permalink(); ?>">continue reading</a>
 								</div>
-							</div>
 					<?php
+							}
 							/**
 							 * Run the loop for the search to output the results.
 							 * If you want to overload this in a child theme then include a file
