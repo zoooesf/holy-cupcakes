@@ -22,6 +22,10 @@ body {
     display: none;
 }
 
+.screen-reader-text {
+    display: none;
+}
+
 /* ***************************** Header Styling **************************** */
 /* main header styling */
 .site-header {
@@ -407,6 +411,10 @@ input:focus,
 
 
 /* ******************** Blog Styling ******************** */
+.page-title {
+    display: block;
+}
+
 .blogBtn {
     width: 200px;
     /* height: 36px; */
@@ -454,10 +462,6 @@ input:focus,
     padding: 10px 50px;
     margin-bottom: 0.5rem;
     background-color: #f9f6ec;
-}
-
-.screen-reader-text {
-    display: none;
 }
 
 .widget-title {
