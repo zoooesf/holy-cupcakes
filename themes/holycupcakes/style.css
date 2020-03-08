@@ -15,7 +15,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 body {
     font-family: brandon-grotesque, sans-serif !important;
-    background: white;
+    background-color: #f9f6ec;
 }
 
 .skip-link {
@@ -486,9 +486,6 @@ input:focus,
     background: #fff;
     padding: 5px 10px;
     border-radius: 5px;
-}
-body{
-    background-color: #f9f6ec;
 }
 
 /* ******************** Woo Commercer Products Styling ****************** */
