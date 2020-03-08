@@ -61,7 +61,7 @@ get_header();
 											}
 											?>
 										</p>
-										<a class="blogBtn" href="<?php echo get_post_permalink(); ?>"></a>
+										<a class="blogBtn" href="<?php echo get_post_permalink(); ?>"><?php echo $link_text; ?></a>
 									</div>
 								</div>
 					<?php
