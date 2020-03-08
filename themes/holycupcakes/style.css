@@ -441,6 +441,7 @@ input:focus,
 .widget-area {
     min-height: 100%;
     padding: 10px 50px;
+    margin-bottom: 0.5rem;
     background-color: #f9f6ec;
 }
 
@@ -450,7 +451,7 @@ input:focus,
 
 .widget-title {
     border-bottom: 2px solid #9B6F52;
-    margin: 1.5rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
     display: inline-block;
 }
 
@@ -478,12 +479,14 @@ input:focus,
 }
 
 .tagcloud {
-    margin-top: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 .tag-cloud-link {
     font-size: 1rem !important;
     background: #fff;
+    margin-right: 3px;
+    line-height: 25px;
     padding: 5px 10px;
     border-radius: 5px;
 }
