@@ -64,7 +64,7 @@ get_header();
 										<a class="blogBtn" href="<?php echo get_post_permalink(); ?>"><?php echo $link_text; ?></a>
 									</div>
 								</div>
-					<?php
+						<?php
 							}
 							/**
 							 * Run the loop for the search to output the results.
@@ -74,14 +74,16 @@ get_header();
 						// get_template_part( 'template-parts/content', 'search' );
 
 						endwhile;
+						?>
+						<div class="large-8 medium-12 small-12 align-center">
+							<?php the_posts_navigation(); ?>
+						</div>
+					<?php
+				else :
 
-						the_posts_navigation();
+					get_template_part('template-parts/content', 'none');
 
-					else :
-
-						get_template_part('template-parts/content', 'none');
-
-					endif;
+				endif;
 					?>
 					</div><!-- cell large-8 -->
 			</div><!-- .grid-x -->
