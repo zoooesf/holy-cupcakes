@@ -282,3 +282,18 @@ function holy_cupcakes_custom_excerpt_length( $length ) {
 		else return 20;
 }
 add_filter( 'excerpt_length', 'holy_cupcakes_custom_excerpt_length', 999 );
+
+/**
+ * WooCommerce
+ */
+require get_template_directory() . '/inc/woocommerce.php';
+
+/** * Change number or products per row to 3
+ */
+
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 3; // 3 products per row
+	}
+}
+add_filter('loop_shop_columns', 'loop_columns', 999);
