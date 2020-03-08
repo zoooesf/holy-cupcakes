@@ -456,6 +456,7 @@ input:focus,
 }
 
 .widget-area input[type=search] {
+    font-size: 1.3rem;
     background: #ffffff;
 }
 
