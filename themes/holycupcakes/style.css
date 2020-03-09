@@ -423,16 +423,6 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: center;
     margin: 0px;
 }
-.single_add_to_cart_button:hover,
-.input-text.qty.text,
-.products a.button:hover,
-.coupon button:hover,
-.checkout-button:hover,
-.blogBtn:hover {
-    background-color: #F9F6EC;
-    border: 1px solid #FC9885;
-    color:#FC9885;
-}
 
 .blogExcerpt {
     background-color: #F9F6EC;
@@ -507,6 +497,26 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* ******************** Woo Commercer Products Styling ****************** */
+/* button */
+.checkout-button:hover,
+.input-text.qty.text,
+[type=submit]:hover{
+    background-color: #F9F6EC;
+    border: 1px solid #FC9885;
+    color:#FC9885;
+    transition: all 0.25s ease-in;
+}
+.checkout-button,
+[type=submit]{
+    padding: 0.5em 1.5em;
+    background-color: #FC9885;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.5s ease-out;
+}
+.single_add_to_cart_button{
+    margin-top: 1em;
+}
 ul.products{
     max-width: 100%;
     display: flex;
@@ -647,14 +657,7 @@ td.actions{
     font-size: 20px;
     margin-left: 5px;
 }
-.single_add_to_cart_button,
-.coupon button,
-.checkout-button{
-    padding: 0.5em 1.5em;
-    background-color: #FC9885;
-    border-radius: 5px;
-    font-size: 18px;
-}
+
 th{
     font-size: 20px;
 }
@@ -677,7 +680,10 @@ tr{
     width: 30%;
     margin: 0 1em;
 }
-
+.wc-proceed-to-checkout{
+    display: flex;
+    justify-content: flex-end;
+}
 /* checkout page */
 .woocommerce-info{
     margin: 1em 0;
@@ -686,18 +692,20 @@ tr{
 .woocommerce-billing-fields__field-wrapper{
     background: #f9f6ec;
     padding: 1em;
-    width: 50%;
 }
 .woocommerce-billing-fields__field-wrapper .form-row label{
     font-size: 24px;
     color: #886248;
 }
-.wc-proceed-to-checkout{
-    display: flex;
-    justify-content: flex-end;
+span.select2.select2-container.select2-container--default.span.selection{
+    padding: 0.5em 0;
+    height: 10vh;
 }
 
 /* SINGLE PRODUCTS PAGE */
+nav.woocommerce-breadcrumb a:hover{
+    color:#FC9885;
+}
 nav.woocommerce-breadcrumb{
     margin-top: 2em;
     font-size: 2.5vh;
