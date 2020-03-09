@@ -79,6 +79,8 @@ body {
 }
 
 /* logo */
+.woocommerce-page .custom-logo,
+.woocommerce .custom-logo,
 .custom-logo {
     height: 60px;
     width: auto;
