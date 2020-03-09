@@ -520,7 +520,6 @@ ul.products{
 }
 
 li.product{
-    /* padding: 0.5em; */
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -650,4 +649,10 @@ thead{
 }
 tr{
     background-color: #f9f6ec;
+}
+
+/* checkout page */
+.woocommerce-billing-fields__field-wrapper{
+    background: #f9f6ec;
+    padding: 1em;
 }
