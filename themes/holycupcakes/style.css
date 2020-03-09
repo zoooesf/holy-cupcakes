@@ -578,3 +578,12 @@ span input,
     width: 100%;
     justify-content: space-around;
 }
+.woocommerce.columns-3 ul.products li.product{
+    background-color: #f9f6ec;
+    padding-bottom: 2em;
+}
+.woocommerce.columns-3 ul.products li.product h2,
+.woocommerce ul.products li.product .price,
+.woocommerce ul.products li.product .button{
+    margin: 0.25em 1em ;
+}
