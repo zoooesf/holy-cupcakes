@@ -672,6 +672,10 @@ tr{
     font-size: 24px;
     color: #886248;
 }
+.wc-proceed-to-checkout{
+    display: flex;
+    justify-content: flex-end;
+}
 
 /* SINGLE PRODUCTS PAGE */
 nav.woocommerce-breadcrumb{
