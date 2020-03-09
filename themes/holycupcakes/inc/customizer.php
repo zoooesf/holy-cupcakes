@@ -112,7 +112,7 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'holy_cupcakes_address_line1', array(
 		'transport' => 'refresh',
 		'default' => '',
-		'sanitize_callback' => 'esc_url_raw',
+		'sanitize_callback' => 'wp_filter_nohtml_kses',
 	));
 	
 	// For Dynamic Address for Footer // Line 2

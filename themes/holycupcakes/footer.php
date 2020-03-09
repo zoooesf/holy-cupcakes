@@ -58,6 +58,7 @@
 						dynamic_sidebar('footer-sidebar-3');
 						}
 						?>
+						<h4>Contact</h4>
 						<?php if ( get_theme_mod( 'holy_cupcakes_address_line1' ) || get_theme_mod( 'holy_cupcakes_address_line2' ) || get_theme_mod( 'holy_cupcakes_address_city' ) || get_theme_mod( 'holy_cupcakes_address_province' ) || get_theme_mod( 'holy_cupcakes_address_postal_code' ) ) {?>
 
 							<?php if ( get_theme_mod( 'holy_cupcakes_address_line1' ) ) {?>
@@ -66,7 +67,7 @@
 
 							<?php } ?>
 							<?php } ?>
-						<h4>Contact</h4>
+						
 						<!-- <p>123 Bloor St. W, Oshawa ON L2E 4G5</p> -->
 						<!-- <p>(905)-123-4567</p> -->
 						<!-- to insert dynamic info into footer -->
