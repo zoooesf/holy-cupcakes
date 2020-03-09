@@ -63,9 +63,21 @@
 
 							<?php if ( get_theme_mod( 'holy_cupcakes_address_line1' ) ) {?>
 								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_line1' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
-
-
 							<?php } ?>
+							<?php if ( get_theme_mod( 'holy_cupcakes_address_line2' ) ) {?>
+								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_line2' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+							<?php } ?>
+							<?php if ( get_theme_mod( 'holy_cupcakes_address_city' ) ) {?>
+								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_city' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+							<?php } ?>
+							<?php if ( get_theme_mod( 'holy_cupcakes_address_province' ) ) {?>
+								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_province' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+							<?php } ?>
+							<?php if ( get_theme_mod( 'holy_cupcakes_address_postal_code' ) ) {?>
+								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_postal_code' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+							<?php } ?>
+
+
 							<?php } ?>
 						
 						<!-- <p>123 Bloor St. W, Oshawa ON L2E 4G5</p> -->
