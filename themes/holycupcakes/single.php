@@ -10,16 +10,16 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
 		<div class="grid-container">
-		<div class="grid-x">
-		<aside class="large-3">
-		<?php
+			<div class="grid-x">
+				<div class="large-4 grid-margin-x show-for-large sidebar-box">
+					<?php
 					get_sidebar();
 					?>
-		</aside>
-		<section class="large-9">
+				</div>
+		<section class="large-8 medium-12 grid-x align-justify">
 		<?php
 		while ( have_posts() ) :
 			the_post();
