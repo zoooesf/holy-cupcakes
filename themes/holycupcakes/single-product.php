@@ -20,11 +20,11 @@ get_header( 'shop' ); ?>
                 <div class="large-12 small-12 grid-x">
                     
                     <?php while ( have_posts() ) : the_post(); ?>
-                    <div class="large-6 small-12">
+                    <div class="large-6 medium-5 small-12">
                         <?php do_action( 'woocommerce_before_single_product_summary' );?>
                     </div>
 
-                    <div class="large-6 small-12 product_right_summary">
+                    <div class="large-6 medium-7 small-12 product_right_summary">
                     <h3>
                         <?php the_title(); ?>
                     </h3>
