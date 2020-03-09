@@ -405,7 +405,9 @@ input:focus,
     text-align: center;
     margin: 0px;
 }
-
+.eSeparator{
+    width: 100%;
+}
 .blogBtn:hover {
     background-color: #F9F6EC;
     border: 1px solid #FC9885;
