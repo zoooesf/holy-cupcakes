@@ -263,7 +263,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* styling for input form */
-
+span input,
 .form-inner [type=text],
 .form-inner [type=email],
 .form-inner textarea,
@@ -641,13 +641,15 @@ th
     border-radius: 10px;
     margin: 0;
 }
-.input-text{
+.form-row span input.input-text{
     width: 100%;
     padding: 15px;
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
-    background: white;
+    background:#f9f6ec;
+    color: #886248;
+    font-size: 24px;
 }
 td.actions{
     background-color: #f1f1f1;
@@ -689,9 +691,12 @@ tr{
     margin: 1em 0;
     font-size: 24px;
 }
+input{
+
+}
 .woocommerce-billing-fields__field-wrapper{
-    background: #f9f6ec;
-    padding: 1em;
+    background: transparent;
+    /* padding: 1em; */
 }
 .woocommerce-billing-fields__field-wrapper .form-row label{
     font-size: 24px;
@@ -700,6 +705,27 @@ tr{
 span.select2.select2-container.select2-container--default.span.selection{
     padding: 0.5em 0;
     height: 10vh;
+}
+span.select2-billing_country-container.select2-selection__rendered{
+    padding: 1em;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: inherit;
+}
+.select2-container--open .select2-dropdown--below,
+.select2-container--default .select2-selection--single{
+    border: 1px solid #886248;
+}
+.select2-container--open .select2-dropdown--below{
+    padding-top: 1em;
+    border-top: none;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected] {
+    background-color: #f9f6ec;
+    color: #886248;
+}
+[data-selected]:focus{
+    outline: none;
 }
 
 /* SINGLE PRODUCTS PAGE */
