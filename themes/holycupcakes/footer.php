@@ -58,8 +58,16 @@
 						dynamic_sidebar('footer-sidebar-3');
 						}
 						?>
+						<?php if ( get_theme_mod( 'holy_cupcakes_address_line1' ) || get_theme_mod( 'holy_cupcakes_address_line2' ) || get_theme_mod( 'holy_cupcakes_address_city' ) || get_theme_mod( 'holy_cupcakes_address_province' ) || get_theme_mod( 'holy_cupcakes_address_postal_code' ) ) {?>
+
+							<?php if ( get_theme_mod( 'holy_cupcakes_address_line1' ) ) {?>
+								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_line1' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+
+
+							<?php } ?>
+							<?php } ?>
 						<h4>Contact</h4>
-						<p>123 Bloor St. W, Oshawa ON L2E 4G5</p>
+						<!-- <p>123 Bloor St. W, Oshawa ON L2E 4G5</p> -->
 						<!-- <p>(905)-123-4567</p> -->
 						<!-- to insert dynamic info into footer -->
 						<?php if ( get_theme_mod( 'holy_cupcakes_email_address' ) || get_theme_mod( 'holy_cupcakes_phone_number' ) ) {?>
