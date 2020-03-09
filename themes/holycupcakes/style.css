@@ -510,12 +510,28 @@ ul.products{
     display: flex;
     flex-flow: row wrap;
 }
+
+.woocommerce-loop-product__title{
+    margin: 0.5em;
+}
+.woocommerce-LoopProduct-link.woocommerce-loop-product__link span p,
+.products a.button{
+    margin: 0.25em 1em;
+}
+
 li.product{
     /* padding: 0.5em; */
     display: flex;
     flex-direction: column;
-    width: 33.33%;
+    width: 30%;
     position: relative;
+    background-color: #f9f6ec;
+    margin: 1.565%;
+    padding-bottom: 1em;
+    box-shadow: 1px 1px 5px rgba(165, 164, 164, 0.3)
+}
+.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{
+    width: 100%;
 }
 .products a.button{
     width: 50%;
@@ -542,14 +558,17 @@ section.related.products span.onsale{
 li.product a{
     display: absolute;
 }
-del{
-    color: gray;
+.woocommerce-loop-product__title{
+    font-size: 30px;
+}
+del span.woocommerce-Price-amount.amount{
+    color: gray ;
     margin-left: 0.5em;
-    font-size:1.1rem;
+    font-size:0.7rem;
 }
 ins{
     text-decoration: none;
-    font-size:1.5rem;
+    font-size:1.2rem;
 }
 /* single product span price */
 .single-product span.onsale:first-child{
@@ -609,7 +628,7 @@ th
     background: white;
 }
 td.actions{
-    background-color: #f1f1f1;
+    background-color: #f9f6ec;
 }
 .coupon label{
     font-size: 20px;
@@ -624,6 +643,11 @@ td.actions{
     font-size: 18px;
 }
 th{
-    font-size: 20px;
+    font-size: 22px;
 }
-
+thead{
+    background-color: #ffeeaa ;
+}
+tr{
+    background-color: #f9f6ec;
+}
