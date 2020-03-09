@@ -14,12 +14,12 @@ get_header();
 		<main id="main" class="site-main">
 		<div class="grid-container">
 		<div class="grid-x">
-		<!-- <aside class="large-2"> -->
+		<aside class="large-3">
 		<?php
 					get_sidebar();
 					?>
-		<!-- </aside> -->
-		<section class="large-10">
+		</aside>
+		<section class="large-9">
 		<?php
 		while ( have_posts() ) :
 			the_post();
