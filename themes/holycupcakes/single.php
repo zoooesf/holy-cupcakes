@@ -13,11 +13,13 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 		<div class="grid-container">
-		<aside>
+		<div class="grid-x">
+		<!-- <aside class="large-2"> -->
 		<?php
 					get_sidebar();
 					?>
-		</aside>
+		<!-- </aside> -->
+		<section class="large-10">
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -35,8 +37,9 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
+</section>
 		</main><!-- #main -->
+		</div>
 	</div><!-- #primary -->
 
 <?php
