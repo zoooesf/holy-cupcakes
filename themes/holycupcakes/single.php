@@ -19,7 +19,7 @@ get_header();
 					get_sidebar();
 					?>
 				</div>
-		<section class="large-8 medium-12 grid-x align-justify">
+		<section class="large-8 medium-12 grid-x align-justify blog">
 		<?php
 		while ( have_posts() ) :
 			the_post();
