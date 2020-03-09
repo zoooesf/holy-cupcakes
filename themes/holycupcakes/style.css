@@ -225,18 +225,6 @@ a:hover {
     color: #FC9885;
 }
 
-input,
-input:focus,
-[type=text],
-[type=search],
-[type=text]:focus,
-[type=search]:focus {
-    border: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: none;
-}
-
 /* changing the block cover image to NOT have an overlay */
 .wp-block-cover-image.has-background-dim:before,
 .wp-block-cover.has-background-dim:before {
@@ -268,8 +256,14 @@ input:focus,
     background: rgba(255, 255, 255, 0.3);
     box-shadow: none;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
 
 /* styling for input form */
+
 .form-inner [type=text],
 .form-inner [type=email],
 .form-inner textarea,
@@ -429,10 +423,13 @@ input:focus,
     text-align: center;
     margin: 0px;
 }
-
+.products a.button:hover,
+.coupon button:hover,
+.checkout-button:hover,
 .blogBtn:hover {
     background-color: #F9F6EC;
     border: 1px solid #FC9885;
+    color:#FC9885;
 }
 
 .blogExcerpt {
@@ -565,3 +562,68 @@ ins{
         width: 100%;
     }
 }
+
+/* CART PAGE */
+.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents thead th{
+    
+    height: 10vh;
+    color: #9B6F52;
+    font-size: 20px;
+}
+td.product-remove{
+    font-size: 40px;
+}
+td.product-name{
+    font-size: 20px;
+}
+.shop_table img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{
+    width: 30%;
+    height: 30%;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    border-radius: 5px;
+}
+span.woocommerce-Price-amount.amount,
+.coupon label,
+th
+{
+    color: #886248;
+    font-weight: bold;
+}
+.input-text.qty.text{
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+    color: #886248;
+    outline: #886248;
+    border-radius: 10px;
+    margin: 0;
+}
+.input-text{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+}
+td.actions{
+    background-color: #f1f1f1;
+}
+.coupon label{
+    font-size: 20px;
+    margin-left: 5px;
+}
+.coupon button,
+.checkout-button{
+    margin-top: 0.5em;
+    padding: 0.5em 1.5em;
+    background-color: #FC9885;
+    border-radius: 5px;
+    font-size: 18px;
+}
+th{
+    font-size: 20px;
+}
+
