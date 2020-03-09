@@ -58,4 +58,6 @@ function holy_cupcakes_simple_product_price_html($price, $product) {
 }
 add_filter('woocommerce_get_price_html', 'holy_cupcakes_simple_product_price_html', 100, 2);
 
+
+
 ?>

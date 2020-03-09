@@ -652,7 +652,18 @@ tr{
 }
 
 /* checkout page */
+.woocommerce-info{
+    /* background-color: #FFEEAA; */
+    /* padding: 1em; */
+    margin: 1em 0;
+    font-size: 24px;
+}
 .woocommerce-billing-fields__field-wrapper{
     background: #f9f6ec;
     padding: 1em;
+    width: 50%;
+}
+.woocommerce-billing-fields__field-wrapper .form-row label{
+    font-size: 24px;
+    color: #886248;
 }
