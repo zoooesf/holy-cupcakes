@@ -1,6 +1,8 @@
 <?php
 /**
  * The Template for displaying all single products
+ * 
+ * @package Holy_Cupcakes
  */
 
 get_header( 'shop' ); ?>
