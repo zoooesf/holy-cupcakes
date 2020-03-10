@@ -15,7 +15,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 body {
     font-family: brandon-grotesque, sans-serif !important;
-    background-color: white;
+    background-color: white !important;
 }
 
 .skip-link {
@@ -606,4 +606,29 @@ span.posted_in{
 }
 .woocommerce ul.products li.product .button{
     margin-bottom: 1em;
+}
+
+/*tabs */
+.tabs{
+    border: none;
+    
+}
+.woocommerce div.product .woocommerce-tabs ul{
+    border: none;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li{
+    background-color:rgb(251, 238, 186);
+    color:#9B6F52;
+    padding: 0.25em 2em;
+    outline: none;
+    
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active{
+    background-color: #f9f6ec;
+    color: #886248;
+    border-bottom-color:#F9F6EC;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{
+    color: #886248;
+    
 }
