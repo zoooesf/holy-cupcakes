@@ -31,7 +31,9 @@ body {
     width: auto;
     word-wrap: normal !important;
 }
-
+.pageTitle{
+    display: none;
+}
 /* ***************************** Header Styling **************************** */
 /* main header styling */
 .site-header {
@@ -115,7 +117,7 @@ screen and (max-width:40em) {
 
 footer .button.primary {
     background-color: #ffeeaa;
-    border: 2px solid #886248;
+    /* border: 2px solid #886248; */
     color: #886248;
 }
 
@@ -125,7 +127,12 @@ footer .button.primary:focus {
     background-color: #FC9885;
     color: #ffffff;
 }
-#wsf-2-field-9, #wsf-1-field-7{
+#wsf-2-field-9{
+    background-color: #FC9885;
+    color: #ffffff;
+    border: none;
+}
+button.wsf-button.wsf-button-primary{
     background-color: #FC9885;
     color: #ffffff;
     border: none;
@@ -635,7 +642,9 @@ span input,
     top:auto;
     left: auto;
 }
-
+.products li{
+    border: 1px solid #e6e6e6;
+}
 .woocommerce-product-gallery__trigger{
     display: none;
 }
