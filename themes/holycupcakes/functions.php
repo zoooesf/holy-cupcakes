@@ -202,6 +202,15 @@ function holy_cupcakes_widgets_init()
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+	register_sidebar( array(
+		'name' => 'Header Widget',
+		'id' => 'header-widget',
+		'description' => 'Appears in the header',
+		'before_widget' => '<p>',
+		'after_widget' => '</p>',
+		'before_title' => '<span>',
+		'after_title' => '</span>',
+	) );
 	
 }
 add_action('widgets_init', 'holy_cupcakes_widgets_init');
@@ -282,3 +291,18 @@ function holy_cupcakes_custom_excerpt_length( $length ) {
 		else return 20;
 }
 add_filter( 'excerpt_length', 'holy_cupcakes_custom_excerpt_length', 999 );
+
+/**
+ * WooCommerce
+ */
+require get_template_directory() . '/inc/woocommerce.php';
+
+/** * Change number or products per row to 3
+ */
+
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 3; // 3 products per row
+	}
+}
+add_filter('loop_shop_columns', 'loop_columns', 999);
