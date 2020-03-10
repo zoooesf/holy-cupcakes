@@ -103,6 +103,17 @@ body {
     background-color: #886248;
 }
 
+footer .button.primary {
+    background-color: #ffeeaa;
+    border: 2px solid #886248;
+    color: #886248;
+}
+
+footer .button.primary:hover {
+    background-color: #FC9885;
+    color: #ffffff;
+}
+
 .site-info {
     text-align: center;
     color: #ffeeaa;
@@ -484,11 +495,10 @@ input[type=number]::-webkit-outer-spin-button {
 .widget-area input[type=submit],
 .button,
 .button.primary {
-    height: 36px;
     background-color: #FC9885;
     border-radius: 5px;
     color: #ffffff;
-    padding: 5px 15px 5px 15px;
+    padding: 10px 15px;
     font-size: large;
 }
 
