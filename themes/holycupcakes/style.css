@@ -798,3 +798,8 @@ tbody tr:nth-child(even){
 .woocommerce form .form-row .input-text, .woocommerce-page form .form-row .input-text{
     background-color: white;
 }
+.woocommerce form .form-row input.input-text,
+.woocommerce form label{
+    color: #886248;
+    font-size: 18px;
+}
