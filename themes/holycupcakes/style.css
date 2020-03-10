@@ -725,4 +725,12 @@ td.product-thumbnail{
 .woocommerce table.shop_table th{ 
     margin: 0;
 }
-
+/* BILLING FORM STYLING */
+form #customer_details{
+    background-color: #f9f6ec;
+    padding: 0 2em 2em 2em;
+    border-radius: 10px;
+}
+form #customer_details input{
+    background-color: white;
+}
