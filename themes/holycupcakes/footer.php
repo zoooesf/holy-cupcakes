@@ -43,11 +43,7 @@
 							dynamic_sidebar('footer-sidebar-2');
 						}
 						?>
-						<h4>Search for Goodies!</h4>
 						<div>
-							<ul class="menu">
-								<li><input type="text" placeholder="Search"></li>
-							</ul>
 							<?php if (get_theme_mod('holy_cupcakes_facebook_url') || get_theme_mod('holy_cupcakes_twitter_url')) { ?>
 								<ul class="social-media">
 									<?php if (get_theme_mod('holy_cupcakes_facebook_url')) { ?>
