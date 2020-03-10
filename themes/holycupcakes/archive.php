@@ -16,7 +16,7 @@ get_header();
 		<div class="grid-container">
 			<div class="grid-x">
 				<!-- sidebar box -->
-				<div class="large-4 grid-margin-x show-for-large sidebar-box">
+				<div class="cell large-4 grid-margin-x show-for-large sidebar-box">
 					<?php
 					get_sidebar();
 					?>
@@ -26,8 +26,9 @@ get_header();
 				if (have_posts()) :
 				?>
 					<!-- .page-header -->
-					<div class="large-8 medium-12 grid-x align-justify blog-posts-box">
-						<header class="large-12 medium-12 small-12">
+					<div class="cell large-8 medium-12 align-justify blog-posts-box">
+						<div class="grid-x">
+						<header class="cell large-12 medium-12 small-12">
 							<h1 class="page-title screen-reader-text"><?php the_archive_title(); ?></h1>
 							<hr class="blogHr">
 						</header>
@@ -37,7 +38,7 @@ get_header();
 						while (have_posts()) :
 							the_post();
 						?>
-							<div class="card large-5 medium-5 small-10 blogCard">
+							<div class="cell card large-5 medium-5 small-10 blogCard">
 								<?php
 								if (has_post_thumbnail()) {
 								?>
@@ -67,14 +68,16 @@ get_header();
 						endwhile;
 
 						the_posts_navigation();
-
-					else :
-
-						get_template_part('template-parts/content', 'none');
-
-					endif;
-					?>
+						?>
+						<div>
 					</div><!-- cell large-8 -->
+				<?php
+				else :
+
+					get_template_part('template-parts/content', 'none');
+
+				endif;
+				?>
 			</div><!-- .grid-x -->
 		</div><!-- .grid-container -->
 	</main><!-- #main -->
