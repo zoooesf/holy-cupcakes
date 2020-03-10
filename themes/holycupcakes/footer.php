@@ -20,8 +20,8 @@
 				<div class="cell small-12 medium-3 large-3 ">
 					<div id="footer-sidebar1">
 						<?php
-						if(is_active_sidebar('footer-sidebar-1')){
-						dynamic_sidebar('footer-sidebar-1');
+						if (is_active_sidebar('footer-sidebar-1')) {
+							dynamic_sidebar('footer-sidebar-1');
 						}
 						?>
 						<h4>Quick links</h4>
@@ -38,44 +38,87 @@
 				</div>
 				<div class="cell small-12 medium-5 large-5 ">
 					<div id="footer-sidebar2">
-						<?php
-						if(is_active_sidebar('footer-sidebar-2')){
-						dynamic_sidebar('footer-sidebar-2');
-						}
-						?>
-						<h4>Search for Goodies!</h4>
 						<div>
-							<ul class="menu">
-								<li><input type="text" placeholder="Search"></li>
-							</ul>
+							<h4>Subscribe to our newsletter!</h4>
+							<?php
+							if (is_active_sidebar('footer-sidebar-2')) {
+								dynamic_sidebar('footer-sidebar-2');
+							}
+							?>
+						</div>
+						<div>
+							<?php if (get_theme_mod('holy_cupcakes_facebook_url') || get_theme_mod('holy_cupcakes_twitter_url')) { ?>
+								<div class="social-media">
+									<?php if (get_theme_mod('holy_cupcakes_facebook_url')) { ?>
+										<!-- <li class="facebook"> -->
+										<a href="<?php echo get_theme_mod('holy_cupcakes_facebook_url'); ?>"><?php echo esc_html__('', 'holy_cupcakes'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/facebook.svg'; ?>" title="<?php echo esc_html__('', 'holy_cupcakes'); ?>" height="50" width="50"> </a>
+										<!-- </li> -->
+										<!-- <li class="twitter"> -->
+										<a href="<?php echo get_theme_mod('holy_cupcakes_twitter_url'); ?>"><?php echo esc_html__('', 'holy_cupcakes'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/twitter.svg'; ?>" title="<?php echo esc_html__('', 'holy_cupcakes'); ?>" height="50" width="50"> </a>
+										<!-- </li> -->
+										<!-- <li class="instagram"> -->
+										<a href="<?php echo get_theme_mod('holy_cupcakes_instagram_url'); ?>"><?php echo esc_html__('', 'holy_cupcakes'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/instagram.svg'; ?>" title="<?php echo esc_html__('', 'holy_cupcakes'); ?>" height="50" width="50"> </a>
+										<!-- </li> -->
+									<?php } ?>
+
+								<?php } ?>
+								</div>
 						</div>
 					</div>
 				</div>
 				<div class="cell small-12 medium-4 large-4 ">
 					<div id="footer-sidebar3">
 						<?php
-						if(is_active_sidebar('footer-sidebar-3')){
-						dynamic_sidebar('footer-sidebar-3');
+						if (is_active_sidebar('footer-sidebar-3')) {
+							dynamic_sidebar('footer-sidebar-3');
 						}
 						?>
 						<h4>Contact</h4>
-						<p>123 Bloor St. W, Oshawa ON L2E 4G5</p>
-						<!-- <p>(905)-123-4567</p> -->
-						<!-- to insert dynamic info into footer -->
-						<?php if ( get_theme_mod( 'holy_cupcakes_email_address' ) || get_theme_mod( 'holy_cupcakes_phone_number' ) ) {?>
-							<?php if ( get_theme_mod( 'holy_cupcakes_email_address' ) ) {?>
-								<p class="email"><?php echo get_theme_mod( 'holy_cupcakes_email_address' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
-							<?php } ?>
-							<?php if ( get_theme_mod( 'holy_cupcakes_phone_number' ) ) {?>
-								<p class="phone"><?php echo get_theme_mod( 'holy_cupcakes_phone_number' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+						<?php if (get_theme_mod('holy_cupcakes_address_line1') || get_theme_mod('holy_cupcakes_address_line2') || get_theme_mod('holy_cupcakes_address_city') || get_theme_mod('holy_cupcakes_address_province') || get_theme_mod('holy_cupcakes_address_postal_code')) { ?>
+
+							<?php if (get_theme_mod('holy_cupcakes_address_line1')) { ?>
+								<p class="address">
+									<?php echo get_theme_mod('holy_cupcakes_address_line1');
+									echo esc_html__('', 'holy_cupcakes'); ?>,
+								<?php } ?>
+								<?php if (get_theme_mod('holy_cupcakes_address_line2')) { ?>
+									<?php echo get_theme_mod('holy_cupcakes_address_line2');
+									echo esc_html__('', 'holy_cupcakes'); ?>
+								<?php } ?>
+								<?php if (get_theme_mod('holy_cupcakes_address_city')) { ?>
+									<?php echo get_theme_mod('holy_cupcakes_address_city');
+									echo esc_html__('', 'holy_cupcakes'); ?>,
+								<?php } ?>
+								<?php if (get_theme_mod('holy_cupcakes_address_province')) { ?>
+									<?php echo get_theme_mod('holy_cupcakes_address_province');
+									echo esc_html__('', 'holy_cupcakes'); ?>
+								<?php } ?>
+								<?php if (get_theme_mod('holy_cupcakes_address_postal_code')) { ?>
+									<?php echo get_theme_mod('holy_cupcakes_address_postal_code');
+									echo esc_html__('', 'holy_cupcakes'); ?>
+								</p>
 							<?php } ?>
 						<?php } ?>
-						<!-- <p>info@holycupcakes.com</p> -->
+
+						<?php if (get_theme_mod('holy_cupcakes_email_address') || get_theme_mod('holy_cupcakes_phone_number')) { ?>
+							<?php if (get_theme_mod('holy_cupcakes_email_address')) { ?>
+								<p class="email">
+									<?php echo get_theme_mod('holy_cupcakes_email_address');
+									echo esc_html__('', 'holy_cupcakes'); ?>
+								</p>
+							<?php } ?>
+							<?php if (get_theme_mod('holy_cupcakes_phone_number')) { ?>
+								<p class="phone">
+									<?php echo get_theme_mod('holy_cupcakes_phone_number');
+									echo esc_html__('', 'holy_cupcakes'); ?>
+								</p>
+							<?php } ?>
+						<?php } ?>
 						<p>hollycupcakes.ca</p>
 					</div>
 				</div>
 			</div>
-		</div> <!-- .grid-container -->
+		</div>
 		<div id="copyright">
 			<a href="<?php echo esc_url(__('https://wordpress.org/', 'holycupcakes')); ?>">
 				<?php

@@ -85,13 +85,15 @@ body {
     height: 60px;
     width: auto;
 }
+
 /* cart icon */
-.mini-cart-wrapper{
+.mini-cart-wrapper {
     content: '&#x1F6D2';
     background-color: #ffeeaa;
 }
 
-@media print, screen and (max-width:40em) {
+@media print,
+screen and (max-width:40em) {
     .top-bar {
         flex-direction: column;
     }
@@ -103,6 +105,19 @@ body {
     font-family: brandon-grotesque, sans-serif;
     font-size: 1.1rem;
     background-color: #886248;
+}
+
+footer .button.primary {
+    background-color: #ffeeaa;
+    border: 2px solid #886248;
+    color: #886248;
+}
+
+footer .button.primary:hover,
+footer .button.primary:active,
+footer .button.primary:focus {
+    background-color: #FC9885;
+    color: #ffffff;
 }
 
 .site-info {
@@ -143,9 +158,14 @@ body {
     text-decoration: underline;
 }
 
-#footer-sidebar p {
+#footer-sidebar {
     margin: 0;
     text-align: left;
+}
+
+.social-media img {
+    width: 24px;
+    margin-right: 20px;
 }
 
 /* ***************************** For Footer Side Bar 1 ***************************** */
@@ -162,6 +182,12 @@ body {
     background-color: #886248;
     width: 100%;
     padding: 16px;
+}
+
+.email-consent>div>div {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
 /* ***************************** For Desktop Styling ***************************** */
@@ -251,17 +277,20 @@ input,
 input:focus,
 [type=text],
 [type=search],
+[type=email],
 [type=text]:focus,
 [type=search]:focus {
     border: none;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #886248;
     box-shadow: none;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* styling for input form */
@@ -391,6 +420,46 @@ span input,
     background-color: #ffffff;
 }
 
+/* ******************** Contact Us Page form ****************** */
+#ws-form-1 input[type=text],
+#ws-form-1 input[type=email],
+#ws-form-1 input[type=tel],
+#ws-form-1 textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f9f6ec;
+    transition: all 0.5s ease-in-out;
+    box-shadow: inset 0 0 2px #cacaca;
+}
+
+#ws-form-1 input:focus,
+#ws-form-1 textarea:focus {
+    box-shadow: 0 0 5px #cacaca;
+}
+
+#ws-form-1 .button.primary {
+    background-color: #FC9885;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: large;
+    transition: all 0.5s ease-in-out;
+}
+
+#ws-form-1 .button.primary:hover {
+    box-shadow: 0 0 5px #cacaca;
+}
+
+.callout.success {
+    border-radius: 5px;
+    background-color: #ffeeaa;
+    color: #886248;
+    font-weight: 800;
+}
+
 /* ******************** Font Size Settings ******************** */
 
 .has-large-font-size {
@@ -426,6 +495,19 @@ span input,
     margin: 0px;
 }
 
+.eSeparator {
+    width: 100%;
+}
+
+.products a.button:hover,
+.coupon button:hover,
+.checkout-button:hover,
+.blogBtn:hover {
+    background-color: #F9F6EC;
+    border: 1px solid #FC9885;
+    color: #FC9885;
+}
+
 .blogExcerpt {
     background-color: #F9F6EC;
 }
@@ -435,6 +517,7 @@ span input,
     height: 460px;
     position: relative;
 }
+
 .blogExcerpt h3 {
     margin: 0px;
 }
@@ -466,12 +549,13 @@ span input,
     background: #ffffff;
 }
 
-.widget-area input[type=submit] {
-    height: 36px;
+.widget-area input[type=submit],
+.button,
+.button.primary {
     background-color: #FC9885;
     border-radius: 5px;
     color: #ffffff;
-    padding: 0px 15px 5px 15px;
+    padding: 10px 15px;
     font-size: large;
 }
 
@@ -524,7 +608,6 @@ span input,
     color: white;
 }
 
-
 /* PRODUCT PAGE */
 .woocommerce span.onsale{
     background: #FC9885;
@@ -537,6 +620,7 @@ span input,
     top:auto;
     left: auto;
 }
+
 .woocommerce-product-gallery__trigger{
     display: none;
 }
@@ -679,6 +763,7 @@ thead tr{
 tbody tr:nth-child(even){
     background-color: #f9f6ec;
 }
+
 .woocommerce table.shop_table td{
     border-color: inherit;
 }
@@ -725,6 +810,7 @@ td.product-thumbnail{
 .woocommerce table.shop_table th{ 
     margin: 0;
 }
+
 /* BILLING FORM STYLING */
 form #customer_details{
     background-color: #f9f6ec;
@@ -740,6 +826,7 @@ form #customer_details input{
     border: none;
     height: 3.5vh;
 }
+
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single{
     border: 1px solid #886248;
 }
