@@ -759,3 +759,33 @@ form #customer_details input{
     margin: 0.5em 0;
     background-color: #F9F6EC;
 }
+.woocommerce table.shop_table tbody th, .woocommerce table.shop_table tfoot td, .woocommerce table.shop_table tfoot th{
+    color: #886248;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.woocommerce table.shop_table tbody{
+    color:#886248
+}
+tr.cart_item{
+    background-color: white;
+}
+
+.shop_table.woocommerce-checkout-review-order-table tfoot{
+    background: #f9f6ec
+}
+.shop_table.woocommerce-checkout #payment ul.payment_methods,
+tbody tr:nth-child(even){
+    background-color: white;
+}
+
+.woocommerce-info{
+    border: none;
+    background-color: #fff4d2;
+    font-size: 18px
+}
+.woocommerce-info::before{
+    color: inherit
+}
+
