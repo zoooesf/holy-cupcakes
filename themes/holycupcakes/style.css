@@ -141,9 +141,13 @@ body {
     text-decoration: underline;
 }
 
-#footer-sidebar p {
+#footer-sidebar  {
     margin: 0;
     text-align: left;
+}
+.social-media img{
+    width: 20px;
+    margin-right: 15px;
 }
 
 /* ***************************** For Footer Side Bar 1 ***************************** */
@@ -423,6 +427,11 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: center;
     margin: 0px;
 }
+
+.eSeparator{
+    width: 100%;
+}
+
 .products a.button:hover,
 .coupon button:hover,
 .checkout-button:hover,
@@ -448,12 +457,10 @@ input[type=number]::-webkit-outer-spin-button {
 .blogHr {
     border: 0.5px solid #886248;
 }
-
 /* ******************** Sidebar Styling ****************** */
 .sidebar-box {
     padding-right: 2.5vw;
 }
-
 .widget-area {
     min-height: 100%;
     padding: 10px 50px;
