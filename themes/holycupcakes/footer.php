@@ -91,13 +91,8 @@
 							<?php if ( get_theme_mod( 'holy_cupcakes_address_postal_code' ) ) {?>
 								<?php echo get_theme_mod( 'holy_cupcakes_address_postal_code' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
 							<?php } ?>
-
-
 							<?php } ?>
-						
-						<!-- <p>123 Bloor St. W, Oshawa ON L2E 4G5</p> -->
-						<!-- <p>(905)-123-4567</p> -->
-						<!-- to insert dynamic info into footer -->
+
 						<?php if ( get_theme_mod( 'holy_cupcakes_email_address' ) || get_theme_mod( 'holy_cupcakes_phone_number' ) ) {?>
 							<?php if ( get_theme_mod( 'holy_cupcakes_email_address' ) ) {?>
 								<p class="email"><?php echo get_theme_mod( 'holy_cupcakes_email_address' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
@@ -106,12 +101,11 @@
 								<p class="phone"><?php echo get_theme_mod( 'holy_cupcakes_phone_number' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
 							<?php } ?>
 						<?php } ?>
-						<!-- <p>info@holycupcakes.com</p> -->
 						<p>hollycupcakes.ca</p>
 					</div>
 				</div>
 			</div>
-		</div> <!-- .grid-container -->
+		</div> 
 		<div id="copyright">
 			<a href="<?php echo esc_url(__('https://wordpress.org/', 'holycupcakes')); ?>">
 				<?php
