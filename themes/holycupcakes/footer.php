@@ -62,19 +62,19 @@
 						<?php if ( get_theme_mod( 'holy_cupcakes_address_line1' ) || get_theme_mod( 'holy_cupcakes_address_line2' ) || get_theme_mod( 'holy_cupcakes_address_city' ) || get_theme_mod( 'holy_cupcakes_address_province' ) || get_theme_mod( 'holy_cupcakes_address_postal_code' ) ) {?>
 
 							<?php if ( get_theme_mod( 'holy_cupcakes_address_line1' ) ) {?>
-								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_line1' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_line1' ); echo esc_html__( '', 'holy_cupcakes' ); ?>, 
 							<?php } ?>
 							<?php if ( get_theme_mod( 'holy_cupcakes_address_line2' ) ) {?>
-								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_line2' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+								<?php echo get_theme_mod( 'holy_cupcakes_address_line2' ); echo esc_html__( '', 'holy_cupcakes' ); ?>
 							<?php } ?>
 							<?php if ( get_theme_mod( 'holy_cupcakes_address_city' ) ) {?>
-								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_city' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+								<?php echo get_theme_mod( 'holy_cupcakes_address_city' ); echo esc_html__( '', 'holy_cupcakes' ); ?>, 
 							<?php } ?>
 							<?php if ( get_theme_mod( 'holy_cupcakes_address_province' ) ) {?>
-								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_province' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+								<?php echo get_theme_mod( 'holy_cupcakes_address_province' ); echo esc_html__( '', 'holy_cupcakes' ); ?>
 							<?php } ?>
 							<?php if ( get_theme_mod( 'holy_cupcakes_address_postal_code' ) ) {?>
-								<p class="address"><?php echo get_theme_mod( 'holy_cupcakes_address_postal_code' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
+								<?php echo get_theme_mod( 'holy_cupcakes_address_postal_code' ); echo esc_html__( '', 'holy_cupcakes' ); ?></p>
 							<?php } ?>
 
 
