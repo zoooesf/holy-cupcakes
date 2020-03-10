@@ -686,6 +686,13 @@ td.product-thumbnail{
 .woocommerce table.cart td.actions, .woocommerce-page #content table.cart td.actions, .woocommerce-page table.cart td.actionss{
     padding: 1em;
 }
+.woocommerce table.shop_table tfoot th,
+.woocommerce table.shop_table,
+.woocommerce table.shop_table tfoot td,
+.woocommerce table.shop_table td {
+    border: inherit;
+    border-collapse: collapse;
+}
 
 .woocommerce-checkout #payment ul.payment_methods {
     border-bottom: 1px solid #FC9885
