@@ -47,7 +47,7 @@
 						<div>
 							<ul class="menu">
 								<li><input type="text" placeholder="Search"></li>
-							</ul>
+								</ul>
 							<?php if ( get_theme_mod( 'holy_cupcakes_facebook_url' ) || get_theme_mod( 'holy_cupcakes_twitter_url' ) ) {?>
 <ul class="social-media">
 <?php if ( get_theme_mod( 'holy_cupcakes_facebook_url' ) ) {?>
@@ -61,7 +61,7 @@
 	<a href="<?php echo get_theme_mod( 'holy_cupcakes_instagram_url' ); ?>"><?php echo esc_html__( '', 'holy_cupcakes' ); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/instagram.svg'; ?>" title="<?php echo esc_html__( '', 'holy_cupcakes' ); ?>" height="50" width="50"> </a>
 	<!-- </li> -->
 <?php } ?>
-</ul>
+
 <?php } ?>
 						</div>
 					</div>
