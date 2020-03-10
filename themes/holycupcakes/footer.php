@@ -53,16 +53,12 @@
 <?php if ( get_theme_mod( 'holy_cupcakes_facebook_url' ) ) {?>
 	<li class="facebook">
 		<a href="<?php echo get_theme_mod( 'holy_cupcakes_facebook_url' ); ?>"><?php echo esc_html__( 'Facebook', 'holy_cupcakes' ); ?> <img src="<?php echo get_template_directory_uri() . '/assests/img/facebook-icon.png'; ?>" title="<?php echo esc_html__( 'Facebook', 'holy_cupcakes' ); ?>" height="50" width="50"> </a>
-		
 	</li>
 	<li class="twitter">
-	<a href="<?php echo get_theme_mod( 'holy_cupcakes_twitter_url' ); ?>"><?php echo esc_html__( 'Facebook', 'holy_cupcakes' ); ?> <img src="<?php echo get_template_directory_uri() . '/assests/img/twitter-icon.png'; ?>" title="<?php echo esc_html__( 'Twitter', 'holy_cupcakes' ); ?>" height="50" width="50"> </a>
-		
+	<a href="<?php echo get_theme_mod( 'holy_cupcakes_twitter_url' ); ?>"><?php echo esc_html__( 'Twitter', 'holy_cupcakes' ); ?> <img src="<?php echo get_template_directory_uri() . '/assests/img/twitter-icon.png'; ?>" title="<?php echo esc_html__( 'Twitter', 'holy_cupcakes' ); ?>" height="50" width="50"> </a>
 	</li>
-<?php } ?>
-<?php if ( get_theme_mod( 'coffee_corner_twitter_url' ) ) {?>
-	<li class="facebook">
-		<a href="<?php echo get_theme_mod( 'coffee_corner_twitter_url' ); ?>"><?php echo esc_html__( 'Twitter', 'coffee_corner' ); ?> </a>
+	<li class="instagram">
+	<a href="<?php echo get_theme_mod( 'holy_cupcakes_instagram_url' ); ?>"><?php echo esc_html__( 'Instagram', 'holy_cupcakes' ); ?> <img src="<?php echo get_template_directory_uri() . '/assests/img/instagram-icon.png'; ?>" title="<?php echo esc_html__( 'Instagram', 'holy_cupcakes' ); ?>" height="50" width="50"> </a>
 	</li>
 <?php } ?>
 </ul>
