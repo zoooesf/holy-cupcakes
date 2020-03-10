@@ -38,14 +38,16 @@
 				</div>
 				<div class="cell small-12 medium-5 large-5 ">
 					<div id="footer-sidebar2">
-						<?php
-						if (is_active_sidebar('footer-sidebar-2')) {
-							dynamic_sidebar('footer-sidebar-2');
-						}
-						?>
+						<div>
+							<?php
+							if (is_active_sidebar('footer-sidebar-2')) {
+								dynamic_sidebar('footer-sidebar-2');
+							}
+							?>
+						</div>
 						<div>
 							<?php if (get_theme_mod('holy_cupcakes_facebook_url') || get_theme_mod('holy_cupcakes_twitter_url')) { ?>
-								<ul class="social-media">
+								<div class="social-media">
 									<?php if (get_theme_mod('holy_cupcakes_facebook_url')) { ?>
 										<!-- <li class="facebook"> -->
 										<a href="<?php echo get_theme_mod('holy_cupcakes_facebook_url'); ?>"><?php echo esc_html__('', 'holy_cupcakes'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/facebook.svg'; ?>" title="<?php echo esc_html__('', 'holy_cupcakes'); ?>" height="50" width="50"> </a>
@@ -59,6 +61,7 @@
 									<?php } ?>
 
 								<?php } ?>
+								</div>
 						</div>
 					</div>
 				</div>
