@@ -734,3 +734,28 @@ form #customer_details{
 form #customer_details input{
     background-color: white;
 }
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: #886248;
+    border: none;
+    height: 3.5vh;
+}
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single{
+    border: 1px solid #886248;
+}
+.select2-container--open .select2-dropdown--below{
+    border: 1px solid #886248;
+    border-top: none
+}
+.select2-container--default .select2-results__option[data-selected=true],
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected]{
+    background-color: #FFEEAA;
+    color: #886248;
+}
+.select2-container--default .select2-results__option[data-selected=true]:focus{
+    outline: none;
+}
+.select2-search--dropdown .select2-search__field {
+    margin: 0.5em 0;
+    background-color: #F9F6EC;
+}
