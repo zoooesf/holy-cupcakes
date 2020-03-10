@@ -436,6 +436,20 @@ input[type=number]::-webkit-outer-spin-button {
 #ws-form-1 input:focus,
 #ws-form-1 textarea:focus {
     box-shadow: 0 0 5px #cacaca;
+}
+
+#ws-form-1 .button.primary {
+    background-color: #FC9885;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: large;
+    transition: all 0.5s ease-in-out;
+}
+
+#ws-form-1 .button.primary:hover {
+    box-shadow: 0 0 5px #cacaca;
+}
 
 /* ******************** Font Size Settings ******************** */
 
