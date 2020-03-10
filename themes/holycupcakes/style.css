@@ -177,6 +177,12 @@ footer .button.primary:hover {
     padding: 16px;
 }
 
+.site-footer #wsf-1-field-wrapper-2 > div > div {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
 /* ***************************** For Desktop Styling ***************************** */
 @media screen and (min-width: 40em) {
     #footer-sidebar #primary-menu {
