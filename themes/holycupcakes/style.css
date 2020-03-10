@@ -789,3 +789,12 @@ tbody tr:nth-child(even){
     color: inherit
 }
 
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea{
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+.woocommerce form .form-row .input-text, .woocommerce-page form .form-row .input-text{
+    background-color: white;
+}
