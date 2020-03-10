@@ -19,7 +19,7 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 		<div class="grid-container">
-		<?php if (get_the_title() != 'About Us' && get_the_title() != 'Contact Us'){
+		<?php if (get_the_title() != 'About Us' && get_the_title() != 'Contact Us' & get_the_title() != 'Cart'){
 			?> <h1> <?php echo get_the_title(); ?> </h1>
 			<hr class="eSeparator"> <?php
 		} 
