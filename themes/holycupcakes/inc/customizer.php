@@ -99,7 +99,7 @@ function holy_cupcakes_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'holy_cupcakes_phone_number', array(
 		'transport' => 'refresh',
 		'default' => '',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'wp_filter_nohtml_kses',
 	));
 		// For Dynamic Contact Info (Email)
 	$wp_customize->add_setting( 'holy_cupcakes_email_address', array(
