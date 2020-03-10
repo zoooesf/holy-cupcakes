@@ -52,7 +52,9 @@ get_header();
 										<h3><?php the_title(); ?> </h3>
 										<p>
 											<?php
-											the_excerpt();
+											if (get_post_type() == 'post') {
+												the_excerpt();
+											}
 											$link_text = 'continue reading';
 											if (get_post_type() == 'product') {
 												$price = get_post_meta(get_the_ID(), '_price', true);
