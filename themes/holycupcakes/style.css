@@ -253,11 +253,13 @@ input,
 input:focus,
 [type=text],
 [type=search],
+[type=email],
 [type=text]:focus,
 [type=search]:focus {
     border: none;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #886248;
     box-shadow: none;
 }
 input[type=number]::-webkit-inner-spin-button, 
@@ -479,12 +481,14 @@ input[type=number]::-webkit-outer-spin-button {
     background: #ffffff;
 }
 
-.widget-area input[type=submit] {
+.widget-area input[type=submit],
+.button,
+.button.primary {
     height: 36px;
     background-color: #FC9885;
     border-radius: 5px;
     color: #ffffff;
-    padding: 0px 15px 5px 15px;
+    padding: 5px 15px 5px 15px;
     font-size: large;
 }
 
