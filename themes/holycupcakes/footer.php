@@ -39,6 +39,7 @@
 				<div class="cell small-12 medium-5 large-5 ">
 					<div id="footer-sidebar2">
 						<div>
+							<h4>Subscribe to our newsletter!</h4>
 							<?php
 							if (is_active_sidebar('footer-sidebar-2')) {
 								dynamic_sidebar('footer-sidebar-2');
@@ -76,8 +77,9 @@
 						<?php if (get_theme_mod('holy_cupcakes_address_line1') || get_theme_mod('holy_cupcakes_address_line2') || get_theme_mod('holy_cupcakes_address_city') || get_theme_mod('holy_cupcakes_address_province') || get_theme_mod('holy_cupcakes_address_postal_code')) { ?>
 
 							<?php if (get_theme_mod('holy_cupcakes_address_line1')) { ?>
-								<p class="address"><?php echo get_theme_mod('holy_cupcakes_address_line1');
-													echo esc_html__('', 'holy_cupcakes'); ?>,
+								<p class="address">
+									<?php echo get_theme_mod('holy_cupcakes_address_line1');
+									echo esc_html__('', 'holy_cupcakes'); ?>,
 								<?php } ?>
 								<?php if (get_theme_mod('holy_cupcakes_address_line2')) { ?>
 									<?php echo get_theme_mod('holy_cupcakes_address_line2');
@@ -93,18 +95,23 @@
 								<?php } ?>
 								<?php if (get_theme_mod('holy_cupcakes_address_postal_code')) { ?>
 									<?php echo get_theme_mod('holy_cupcakes_address_postal_code');
-									echo esc_html__('', 'holy_cupcakes'); ?></p>
+									echo esc_html__('', 'holy_cupcakes'); ?>
+								</p>
 							<?php } ?>
 						<?php } ?>
 
 						<?php if (get_theme_mod('holy_cupcakes_email_address') || get_theme_mod('holy_cupcakes_phone_number')) { ?>
 							<?php if (get_theme_mod('holy_cupcakes_email_address')) { ?>
-								<p class="email"><?php echo get_theme_mod('holy_cupcakes_email_address');
-													echo esc_html__('', 'holy_cupcakes'); ?></p>
+								<p class="email">
+									<?php echo get_theme_mod('holy_cupcakes_email_address');
+									echo esc_html__('', 'holy_cupcakes'); ?>
+								</p>
 							<?php } ?>
 							<?php if (get_theme_mod('holy_cupcakes_phone_number')) { ?>
-								<p class="phone"><?php echo get_theme_mod('holy_cupcakes_phone_number');
-													echo esc_html__('', 'holy_cupcakes'); ?></p>
+								<p class="phone">
+									<?php echo get_theme_mod('holy_cupcakes_phone_number');
+									echo esc_html__('', 'holy_cupcakes'); ?>
+								</p>
 							<?php } ?>
 						<?php } ?>
 						<p>hollycupcakes.ca</p>
