@@ -451,6 +451,13 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 0 0 5px #cacaca;
 }
 
+.callout.success {
+    border-radius: 5px;
+    background-color: #ffeeaa;
+    color: #886248;
+    font-weight: 800;
+}
+
 /* ******************** Font Size Settings ******************** */
 
 .has-large-font-size {
