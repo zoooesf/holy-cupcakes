@@ -632,3 +632,27 @@ span.posted_in{
     color: #886248;
     
 }
+.woocommerce div.product .woocommerce-tabs ul.tabs li a{
+    color: #886248;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs{
+    margin: 0;
+    padding: 0;
+}
+.woocommerce div.product .woocommerce-tabs ul{
+    outline: none;
+}
+.woocommerce-Tabs-panel h2{
+    font-size: 2em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #FC9885;
+}
+.woocommerce div.product .woocommerce-tabs ul li{
+    color: #886248;
+}
+.woocommerce div.product .woocommerce-tabs .panel{
+    padding: 2em;
+    background-color: #f9f6ec;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
