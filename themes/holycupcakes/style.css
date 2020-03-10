@@ -499,7 +499,7 @@ span input,
 }
 
 /* ******************** Woo Commercer Products Styling ****************** */
-/* button */
+/* BUTTON */
 .woocommerce button.button.alt:hover,
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
 .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,
@@ -523,7 +523,9 @@ span input,
     transition: all 0.5s ease-out;
     color: white;
 }
-/* products page */
+
+
+/* PRODUCT PAGE */
 .woocommerce span.onsale{
     background: #FC9885;
     border-radius: 50%;
@@ -572,7 +574,9 @@ span.posted_in{
     color: #886248;
     font-weight: bold;
 }
-/* cart image */
+
+
+/* CART IMAGE */
 .woocommerce table.cart img, .woocommerce-page #content table.cart img, .woocommerce-page table.cart img {
     width: 30%;
     height: auto;
@@ -587,7 +591,9 @@ span.posted_in{
     color: #fff;
 }
 
-/* form styles */
+
+
+/* CHECKOUT FORM STYLING */
 .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
     background-color: #f9f6ec;
 }
@@ -608,7 +614,10 @@ span.posted_in{
     margin-bottom: 1em;
 }
 
-/*tabs */
+
+
+/*PRODUCTS DESCRIPTION TABS */
+
 .tabs{
     border: none;
     
@@ -657,7 +666,7 @@ span.posted_in{
     border-bottom-right-radius: 10px;
 }
 
-/* cart page */
+/* CART PAGE */
 
 thead tr{
     color: #9B6F52;
