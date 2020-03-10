@@ -24,6 +24,12 @@ body {
 
 .screen-reader-text {
     display: none;
+    clip: unset !important;
+    height: auto;
+    overflow: auto;
+    position: unset !important;
+    width: auto;
+    word-wrap: normal !important;
 }
 
 /* ***************************** Header Styling **************************** */
