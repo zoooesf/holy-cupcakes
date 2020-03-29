@@ -296,7 +296,10 @@ add_filter( 'excerpt_length', 'holy_cupcakes_custom_excerpt_length', 999 );
  * WooCommerce
  */
 require get_template_directory() . '/inc/woocommerce.php';
-
+/**
+ * Registering custom post types.
+ */
+require get_template_directory() . '/inc/post-types.php';
 /** * Change number or products per row to 3
  */
 
