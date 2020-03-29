@@ -51,48 +51,7 @@ function holy_cupcakes_init_post_types() {
     );
 
     register_post_type( 'holy_cupcakes_book', $args );
-    // event
-    $labels = array(
-        'name'                  => esc_html__( 'Events', 'holy_cupcakes' ),
-        'singular_name'         => esc_html__( 'Event', 'holy_cupcakes' ),
-        'menu_name'             => esc_html__( 'Events', 'holy_cupcakes' ),
-        'name_admin_bar'        => esc_html__( 'Event', 'holy_cupcakes' ),
-        'add_new'               => esc_html__( 'Add New', 'holy_cupcakes' ),
-        'add_new_item'          => esc_html__( 'Add New Event', 'holy_cupcakes' ),
-        'new_item'              => esc_html__( 'New Event', 'holy_cupcakes' ),
-        'edit_item'             => esc_html__( 'Edit Event', 'holy_cupcakes' ),
-        'view_item'             => esc_html__( 'View Event', 'holy_cupcakes' ),
-        'all_items'             => esc_html__( 'All Events', 'holy_cupcakes' ),
-        'search_items'          => esc_html__( 'Search Events', 'holy_cupcakes' ),
-        'parent_item_colon'     => esc_html__( 'Parent Events:', 'holy_cupcakes' ),
-        'not_found'             => esc_html__( 'No events found.', 'holy_cupcakes' ),
-        'not_found_in_trash'    => esc_html__( 'No events found in Trash.', 'holy_cupcakes' ),
-        'archives'              => esc_html__( 'Event archives', 'holy_cupcakes' ),
-        'insert_into_item'      => esc_html__( 'Insert into Recipe', 'holy_cupcakes' ),
-        'uploaded_to_this_item' => esc_html__( 'Uploaded to this Recipe', 'holy_cupcakes' ),
-        'filter_items_list'     => esc_html__( 'Filter events list', 'holy_cupcakes' ),
-        'items_list_navigation' => esc_html__( 'Events list navigation', 'holy_cupcakes' ),
-        'items_list'            => esc_html__( 'Events list', 'holy_cupcakes' ),
-    );
-
-    $args = array(
-        'labels'             => $labels,
-        'public'             => true,
-        'publicly_queryable' => true,
-        'show_ui'            => true,
-        'show_in_menu'       => true,
-        'query_var'          => true,
-        'rewrite'            => array( 'slug' =>  'events' ),
-        'capability_type'    => 'post',
-        'has_archive'        => false,
-        'hierarchical'       => false,
-        'menu_position'      => null,
-        'menu_icon'          => 'dashicons-calendar-alt',
-        'show_in_rest'       => true,
-        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-    );
-
-    register_post_type( 'holy_cupcakes_event', $args );
+    
 }
 
 add_action( 'init', 'holy_cupcakes_init_post_types' );
