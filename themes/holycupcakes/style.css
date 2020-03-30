@@ -555,6 +555,11 @@ span input,
 
 
 /* ******************** Blog Styling ******************** */
+
+.blog {
+    padding-bottom: 20px;
+}
+
 .page-title {
     display: block;
 }
