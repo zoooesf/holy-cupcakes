@@ -959,3 +959,25 @@ li{
 #recipe blockquote p{
     color: #886248;
 }
+
+/* RECIPE ARCHIVE PAGE STYLING */
+#recipeCard{
+    margin: 25px;
+    height: 460px;
+    position: relative;
+
+}
+.recipeBtn {
+    width: 200px;
+    /* height: 36px; */
+    background-color: #FC9885;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 0px 15px 5px 15px;
+    font-size: large;
+    position: absolute;
+    left: 5%;
+    top: 90%;
+    text-align: center;
+    margin: 0px;
+}

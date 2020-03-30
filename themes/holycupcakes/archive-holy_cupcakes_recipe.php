@@ -38,7 +38,7 @@ get_header();
 						while (have_posts()) :
 							the_post();
 						?>
-							<div class="cell card large-5 medium-5 small-10 blogCard">
+							<div class="cell card large-5 medium-5 small-10 recipeCard">
 								<?php
 								if (has_post_thumbnail()) {
 								?>
@@ -54,7 +54,7 @@ get_header();
 										the_excerpt();
 										?>
 									</p>
-									<a class="blogBtn" href="<?php echo get_post_permalink(); ?>">continue reading</a>
+									<a class="recipeBtn" href="<?php echo get_post_permalink(); ?>">continue reading</a>
 								</div>
 							</div>
 					<?php
