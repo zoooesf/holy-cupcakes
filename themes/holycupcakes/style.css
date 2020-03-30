@@ -731,6 +731,7 @@ span input,
 [type=submit] {
     padding: 0.5em 1.5em;
     background-color: #FC9885;
+    border: 1px solid #FC9885;
     border-radius: 5px;
     font-size: 18px;
     transition: all 0.5s ease-out;
@@ -762,6 +763,10 @@ span input,
     display: none;
 }
 
+.woocommerce ul.products li.product a img {
+    margin-bottom: 0;
+}
+
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
     font-size: 24px;
 }
@@ -776,8 +781,9 @@ span input,
 
 .woocommerce div.product p.price del,
 .woocommerce ul.products li.product .price del {
-    color: gray;
+    color: #886248;
     font-size: 14px;
+    font-weight: 600;
 }
 
 .woocommerce div.product p.price ins {
@@ -840,7 +846,7 @@ span.posted_in {
 .woocommerce ul.products li,
 .woocommerce.columns-3 ul.products li.product {
     background-color: #f9f6ec;
-    padding-bottom: 2em;
+    /* padding-bottom: 2em; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -851,10 +857,11 @@ span.posted_in {
 .woocommerce ul.products li.product .price,
 .woocommerce ul.products li.product .button {
     /* margin: 0.25em 1em ; */
-    margin: auto 1em 0.25em 1em;
+    margin: auto 1em auto 1em;
 }
 
 .woocommerce ul.products li.product .button {
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 
