@@ -77,6 +77,13 @@ body {
     order: 1;
 }
 
+.title-bar .menu-icon::after,
+.title-bar .menu-icon:hover::after {
+    background: #FC9885;
+    -webkit-box-shadow: 0 7px 0 #FC9885, 0 14px 0 #FC9885;
+    box-shadow: 0 7px 0 #FC9885, 0 14px 0 #FC9885;
+}
+
 /* search input and button */
 .top-bar input {
     background: rgba(255, 238, 170, 0.3);
