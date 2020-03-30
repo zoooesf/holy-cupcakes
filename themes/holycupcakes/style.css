@@ -119,6 +119,7 @@ footer .button.primary {
     background-color: #ffeeaa;
     /* border: 2px solid #886248; */
     color: #886248;
+    width: auto;
 }
 
 footer .button.primary:hover,
