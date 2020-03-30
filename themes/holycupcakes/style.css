@@ -223,9 +223,13 @@ button.wsf-button.wsf-button-primary{
         display: flex;
         flex-direction: column;
     }
+
+    #footer-sidebar3 {
+        margin-left: 40px;
+    }
 }
 
-/* ***************************** For Mobile Styling ***************************** */
+/* ***************************** For Tablet/mobile Styling ***************************** */
 @media screen and (max-width: 64em) {
     .social-media {
         display: flex;
