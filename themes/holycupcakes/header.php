@@ -32,7 +32,19 @@
 			<div class="site-branding">
 				<div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="medium">
 					<button class="menu-icon" type="button" data-toggle="site-navigation"></button>
-					<div class="title-bar-title">Menu</div>
+					<div class="title-bar-title">
+						<?php
+						// if there's no custom logo load the title text
+						if (!has_custom_logo()) :
+						?>
+							<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+						<?php
+						else :
+							// else if there is a custom logo load the logo
+							the_custom_logo();
+						endif;
+						?>
+					</div>
 				</div>
 				<div class="top-bar grid-container" id="site-navigation">
 					<div class="top-bar-left hide-for-small-only">
