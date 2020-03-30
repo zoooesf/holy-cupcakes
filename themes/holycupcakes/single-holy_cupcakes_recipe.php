@@ -20,11 +20,13 @@ get_header();
 		<div class="grid-container">
 			<div class="grid-x" id="recipe">
 				<div class="large-4 grid-margin-x show-for-large sidebar-box">
+					<!-- add sidebar for blog navigation -->
 					<?php
 					get_sidebar();
 					?>
 				</div>
 		<section class="large-8 medium-12 grid-x align-justify blog">
+			<!-- blog content -->
 		<?php
 		while ( have_posts() ) :
 			the_post();
