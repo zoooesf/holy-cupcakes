@@ -190,6 +190,12 @@ button.wsf-button.wsf-button-primary{
     text-align: left;
 }
 
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
 .social-media img {
     width: 24px;
     margin-right: 20px;
@@ -227,15 +233,6 @@ button.wsf-button.wsf-button-primary{
 
     #footer-sidebar3 {
         margin-left: 40px;
-    }
-}
-
-/* ***************************** For Tablet/mobile Styling ***************************** */
-@media screen and (max-width: 64em) {
-    .social-media {
-        display: flex;
-        justify-content: center;
-        margin: 10px auto;
     }
 }
 
