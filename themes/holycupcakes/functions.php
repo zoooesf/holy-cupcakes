@@ -232,6 +232,9 @@ function holy_cupcakes_scripts()
 
 	// adding holycupcakes foundation js
 	wp_enqueue_script( 'holycupcakes-foundation', get_template_directory_uri() . '/assets/js/vendors/foundation.min.js', array('jquery', 'holycupcakes-what-input'), '6.5.1', true );
+	
+	// adding app.js
+	wp_enqueue_script( 'holycupcakes-script', get_template_directory_uri() . '/assets/js/app.js', array('jquery', 'holycupcakes-foundation'), '6.5.1', true );
 
 	// enqueue style.css
 	wp_enqueue_style('holycupcakes-style', get_stylesheet_uri());
