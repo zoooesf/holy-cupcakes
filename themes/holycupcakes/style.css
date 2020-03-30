@@ -68,6 +68,11 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.title-bar .menu-icon {
+    margin-left: auto;
+    order: 1;
+}
+
 /* search input and button */
 .top-bar input {
     background: rgba(255, 238, 170, 0.3);
