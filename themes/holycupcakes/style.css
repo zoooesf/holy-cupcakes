@@ -132,17 +132,18 @@ screen and (min-width:64em) {
 }
 
 @media print,
+screen and (max-width:64em) {
+    .top-bar input[type=submit] {
+        display: unset;
+        background: #FC9885;
+        color: #ffeeaa;
+    }
+}
+
+@media print,
 screen and (max-width:40em) {
     .top-bar {
         flex-direction: column;
-    }
-
-    .top-bar input[type=submit] {
-        display: none;
-    }
-    .top-bar input {
-        background: rgba(255, 238, 170, 0.3);
-        color: #ffeeaa;
     }
 }
 
