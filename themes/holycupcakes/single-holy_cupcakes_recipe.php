@@ -13,7 +13,9 @@ get_header();
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
-				<img id="recipeBanner" src="http://holycupcake.local/wp-content/uploads/2020/03/skinnyBanner.jpg" alt="Cupcakes in a line">
+	<div class="wp-block-cover alignfull has-background-dim" style="background-image:url(http://holycupcake.local/wp-content/uploads/2020/02/brooke-lark.jpg)"><div class="wp-block-cover__inner-container">
+<p class="has-text-align-center has-large-font-size"></p>
+</div></div>
 		<div class="grid-container">
 			<div class="grid-x" id="recipe">
 				<div class="large-4 grid-margin-x show-for-large sidebar-box">
