@@ -33,8 +33,10 @@ get_header();
 
 			endwhile; // End of the loop.
 			?>
-		</div><!-- .grid-container -->
+		</div>
+		<!-- section to add three blog excerpts to bottom of home page -->
 		<?php
+
 
 		$args = array(
 			'post_type'      => 'post',
