@@ -30,8 +30,8 @@
 
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
-				<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-					<button class="menu-icon" type="button" data-toggle="example-menu"></button>
+				<div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="medium">
+					<button class="menu-icon" type="button" data-toggle="site-navigation"></button>
 					<div class="title-bar-title">Menu</div>
 				</div>
 				<div class="top-bar grid-container" id="site-navigation">
