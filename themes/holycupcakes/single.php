@@ -28,14 +28,12 @@ get_header();
 						<h1><?php echo get_the_title(); ?></h1>
 						<hr class="eSeparator">
 						<?php get_template_part('template-parts/content', get_post_type()); ?>
-						<div> 
-							<h4>More Posts</h4>
 							<?php
-							the_post_navigation();
-							?>
-						</div>
+							the_post_navigation(array(
+								'prev_text' => 'Previous: %title',
+								'next_text' => 'Next: %title',
+							));
 
-					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
 					// if ( comments_open() || get_comments_number() ) :
 					// 	comments_template();
