@@ -68,6 +68,10 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.title-bar .custom-logo {
+    padding: 5px;
+}
+
 .title-bar .menu-icon {
     margin-left: auto;
     order: 1;
