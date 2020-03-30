@@ -136,6 +136,14 @@ screen and (max-width:40em) {
     .top-bar {
         flex-direction: column;
     }
+
+    .top-bar input[type=submit] {
+        display: none;
+    }
+    .top-bar input {
+        background: rgba(255, 238, 170, 0.3);
+        color: #ffeeaa;
+    }
 }
 
 /* ***************************** Footer Styling **************************** */
