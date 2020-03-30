@@ -177,7 +177,7 @@ button.wsf-button.wsf-button-primary{
 }
 
 #footer-sidebar {
-    margin: 0;
+    margin: auto 1rem;
     text-align: left;
 }
 
