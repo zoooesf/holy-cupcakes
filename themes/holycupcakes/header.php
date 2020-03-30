@@ -30,7 +30,7 @@
 
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
-				<div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="medium">
+				<div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="large">
 					<button class="menu-icon" type="button" data-toggle="site-navigation"></button>
 					<div class="title-bar-title">
 						<?php
@@ -47,7 +47,7 @@
 					</div>
 				</div>
 				<div class="top-bar grid-container" id="site-navigation">
-					<div class="top-bar-left hide-for-small-only">
+					<div class="top-bar-left show-for-large-only">
 						<?php
 						// if there's no custom logo load the title text
 						if (!has_custom_logo()) :
