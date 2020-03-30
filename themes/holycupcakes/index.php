@@ -28,23 +28,23 @@ get_header();
 				</div>
 
 
-				<?php
-				if (have_posts()) :
+				<div class="large-8 medium-12 grid-x align-justify blog-posts-box">
+					<?php
+					if (have_posts()) :
 
-					if (is_home() && !is_front_page()) :
-				?>
-						<div class="large-8 medium-12 grid-x align-justify blog-posts-box">
+						if (is_home() && !is_front_page()) :
+					?>
 							<header class="large-12 medium-12 small-12">
 								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 								<hr class="blogHr">
 							</header>
 							<!-- blog grid box -->
 						<?php
-					endif;
+						endif;
 
-					/* Start the Loop */
-					while (have_posts()) :
-						the_post();
+						/* Start the Loop */
+						while (have_posts()) :
+							the_post();
 
 						?>
 
@@ -72,24 +72,24 @@ get_header();
 					<?php
 
 
-					/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
+						/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
 
 
-					endwhile;
+						endwhile;
 
-					the_posts_navigation();
+						the_posts_navigation();
 
-				else :
+					else :
 
-					get_template_part('template-parts/content', 'none');
+						get_template_part('template-parts/content', 'none');
 
-				endif;
+					endif;
 					?>
-						</div><!-- cell large-8 -->
+				</div><!-- cell large-8 -->
 			</div><!-- .grid-x -->
 		</div><!-- .grid-container -->
 	</main><!-- #main -->
