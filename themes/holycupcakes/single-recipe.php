@@ -1,7 +1,8 @@
 <?php
 /**
+ * Template Name: Single Recipe
+ * Template Post Type: post, page, recipe
  * The template for displaying all recipe posts
- *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package Holy_Cupcakes
