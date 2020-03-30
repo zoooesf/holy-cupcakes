@@ -30,9 +30,24 @@
 
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
-
+				<div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="large">
+					<button class="menu-icon" type="button" data-toggle="site-navigation"></button>
+					<div class="title-bar-title">
+						<?php
+						// if there's no custom logo load the title text
+						if (!has_custom_logo()) :
+						?>
+							<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+						<?php
+						else :
+							// else if there is a custom logo load the logo
+							the_custom_logo();
+						endif;
+						?>
+					</div>
+				</div>
 				<div class="top-bar grid-container" id="site-navigation">
-					<div class="top-bar-left">
+					<div class="top-bar-left show-for-large-only">
 						<?php
 						// if there's no custom logo load the title text
 						if (!has_custom_logo()) :
@@ -46,15 +61,17 @@
 						?>
 					</div>
 					<div class="top-bar-left">
-						<?php
-						wp_nav_menu(array(
-							'theme_location' => 'menu',
-							'menu_id'        => 'primary-menu',
-							'container'		 => 'ul',
-							'container_class' => 'menu',
+						<ul class="dropdown menu" data-dropdown-menu>
+							<?php
+							wp_nav_menu(array(
+								'theme_location' => 'menu',
+								'menu_id'        => 'primary-menu',
+								'container'		 => 'ul',
+								'menu_class' => 'menu vertical',
 
-						));
-						?>
+							));
+							?>
+						</ul>
 					</div>
 					<div class="top-bar-right">
 						<?php
