@@ -341,8 +341,8 @@ span input,
 
 .homeExcerpt {
     background-color: #f9f6ec;
-    padding: 20px;
-    margin: 50px auto;
+    padding: 10px 20px;
+    margin: 25px auto 10px;
 }
 
 .homeExcerpt a {
