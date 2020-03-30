@@ -64,8 +64,8 @@ get_header();
 											?>
 										</p>
 										<a class="blogBtn" href="<?php echo get_post_permalink(); ?>"><?php echo $link_text; ?></a>
-									</div>
-								</div>
+									</div><!-- .blogexcerpt -->
+								</div><!-- .blogCard -->
 						<?php
 							}
 							/**
@@ -80,14 +80,12 @@ get_header();
 						<div class="large-8 medium-12 small-12 align-center">
 							<?php the_posts_navigation(); ?>
 						</div>
-					<?php
+					</div><!-- .cell large-8 blog-posts-box-->
+				<?php
 				else :
-
 					get_template_part('template-parts/content', 'none');
-
 				endif;
-					?>
-					</div><!-- cell large-8 -->
+				?>
 			</div><!-- .grid-x -->
 		</div><!-- .grid-container -->
 	</main><!-- #main -->
