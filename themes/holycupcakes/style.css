@@ -945,6 +945,9 @@ li{
 #recipe{
     color: #886248;
 }
+#recipe li{
+    list-style: unset;
+}
 #recipe blockquote{
     background-color: #F9F6EC;
     padding: 20px;
