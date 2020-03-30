@@ -940,3 +940,8 @@ li{
 .woocommerce-MyAccount-navigation ul{
     margin: 0;
 }
+
+/* RECIPE SINGLE PAGE STYLING */
+#recipe blockquote{
+    background-color: #F9F6EC
+}
