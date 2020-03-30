@@ -35,7 +35,7 @@
 					<div class="title-bar-title">Menu</div>
 				</div>
 				<div class="top-bar grid-container" id="site-navigation">
-					<div class="top-bar-left">
+					<div class="top-bar-left hide-for-small-only">
 						<?php
 						// if there's no custom logo load the title text
 						if (!has_custom_logo()) :
