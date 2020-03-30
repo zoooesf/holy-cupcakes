@@ -186,6 +186,7 @@ button.wsf-button.wsf-button-primary{
     margin-right: 20px;
 }
 
+
 /* ***************************** For Footer Side Bar 1 ***************************** */
 #footer-sidebar1 {
     margin-bottom: 2vh;
@@ -213,6 +214,15 @@ button.wsf-button.wsf-button-primary{
     #footer-sidebar #primary-menu {
         display: flex;
         flex-direction: column;
+    }
+}
+
+/* ***************************** For Mobile Styling ***************************** */
+@media screen and (max-width: 40em) {
+    .social-media {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px auto;
     }
 }
 
