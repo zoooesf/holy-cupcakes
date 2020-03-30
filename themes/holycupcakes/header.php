@@ -51,7 +51,7 @@
 							'theme_location' => 'menu',
 							'menu_id'        => 'primary-menu',
 							'container'		 => 'ul',
-							'container_class' => 'menu',
+							'menu_class' => 'menu vertical',
 
 						));
 						?>
