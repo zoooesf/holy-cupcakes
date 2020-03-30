@@ -28,7 +28,7 @@ get_header();
 				</div>
 
 
-				<div class="large-8 medium-12 grid-x align-justify blog-posts-box">
+				<div class="large-8 medium-12 small-12 grid-x align-justify blog-posts-box">
 					<?php
 					if (have_posts()) :
 

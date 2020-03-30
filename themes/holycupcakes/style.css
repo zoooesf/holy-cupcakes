@@ -1112,3 +1112,9 @@ li {
 .woocommerce-MyAccount-navigation ul {
     margin: 0;
 }
+
+/* ******************************* 404 Page styles ************************ */
+.grid-404 {
+    background-color: #f9f6ec;
+    padding-bottom: 40px;
+}
