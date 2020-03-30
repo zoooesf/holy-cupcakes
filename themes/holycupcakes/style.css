@@ -943,5 +943,9 @@ li{
 
 /* RECIPE SINGLE PAGE STYLING */
 #recipe blockquote{
-    background-color: #F9F6EC
+    background-color: #F9F6EC;
+    color: #886248;
+}
+#recipe blockquote p{
+    color: #886248;
 }
