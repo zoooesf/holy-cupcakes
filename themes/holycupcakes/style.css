@@ -167,6 +167,10 @@ button.wsf-button.wsf-button-primary{
     color: #886248;
 }
 
+#footer-sidebar h4 {
+    font-weight: bold;
+}
+
 #footer-sidebar a,
 #footer-sidebar p {
     font-size: 1rem;
@@ -222,11 +226,11 @@ button.wsf-button.wsf-button-primary{
 }
 
 /* ***************************** For Mobile Styling ***************************** */
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 64em) {
     .social-media {
         display: flex;
-        justify-content: space-evenly;
-        margin: 20px auto;
+        justify-content: center;
+        margin: 10px auto;
     }
 }
 
