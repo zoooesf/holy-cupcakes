@@ -47,7 +47,7 @@
 					</div>
 				</div>
 				<div class="top-bar grid-container" id="site-navigation">
-					<div class="top-bar-left show-for-large-only">
+					<div class="top-bar-left show-for-large">
 						<?php
 						// if there's no custom logo load the title text
 						if (!has_custom_logo()) :
