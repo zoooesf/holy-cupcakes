@@ -50,7 +50,7 @@ function holy_cupcakes_init_post_types() {
         'supports'           => array( 'title', 'author', 'thumbnail', 'excerpt','ingredients','instructions', 'comments' ),
     );
 
-    register_post_type( 'holy_cupcakes_book', $args );
+    register_post_type( 'holy_cupcakes_recipe', $args );
     
 }
 
