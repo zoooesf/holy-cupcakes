@@ -965,11 +965,11 @@ li{
     margin: 25px;
     height: 500px;
     position: relative;
+    background-color: #F9F6EC;
 
 }
 .recipeBtn {
     width: 200px;
-    /* height: 36px; */
     background-color: #FC9885;
     border-radius: 5px;
     color: #ffffff;
@@ -980,4 +980,9 @@ li{
     top: 90%;
     text-align: center;
     margin: 0px;
+}
+.recipeBtn:hover{
+    background-color: #F9F6EC;
+    border: 1px solid #FC9885;
+    color: #FC9885;
 }
