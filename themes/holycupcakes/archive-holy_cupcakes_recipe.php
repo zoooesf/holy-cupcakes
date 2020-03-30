@@ -29,7 +29,7 @@ get_header();
 					<div class="cell large-8 medium-12 align-justify blog-posts-box">
 						<div class="grid-x">
 						<header class="cell large-12 medium-12 small-12">
-							<h1 class="page-title screen-reader-text"><?php the_archive_title(); ?></h1>
+							<h1 class="page-title screen-reader-text">Recipes</h1>
 							<hr class="blogHr">
 						</header>
 
