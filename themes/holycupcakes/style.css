@@ -947,6 +947,7 @@ li{
 }
 #recipe li{
     list-style: unset;
+    margin-bottom: 10px;
 }
 #recipe blockquote{
     background-color: #F9F6EC;
