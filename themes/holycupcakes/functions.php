@@ -73,6 +73,8 @@ if (!function_exists('holy_cupcakes_setup')) :
 		
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
+		
+		// Add theme support for custom colours
 		add_theme_support( 'editor-color-palette', array(
 			array(
 				'name' => esc_html__( 'Light Cream', 'holycupcakes' ),
