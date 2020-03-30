@@ -47,7 +47,7 @@ function holy_cupcakes_init_post_types() {
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-buddicons-community',
         'show_in_rest'       => true,
-        'supports'           => array( 'title', 'author', 'thumbnail', 'excerpt','ingredients','instructions', 'comments' ),
+        'supports'           => array( 'title', 'author', 'editor', 'thumbnail', 'excerpt', 'ingredients', 'instructions', 'comments' ),
     );
 
     register_post_type( 'holy_cupcakes_recipe', $args );
