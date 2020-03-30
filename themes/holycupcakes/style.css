@@ -145,6 +145,19 @@ screen and (max-width:40em) {
     .top-bar {
         flex-direction: column;
     }
+
+    .top-bar form {
+        display: flex;
+    }
+
+    .top-bar form input {
+        margin-right: 0;
+    }
+
+    .top-bar form input[type=search] {
+        margin-bottom: 0;
+        margin-right: 2.75em;
+    }
 }
 
 /* ***************************** Footer Styling **************************** */
