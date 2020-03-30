@@ -46,15 +46,17 @@
 						?>
 					</div>
 					<div class="top-bar-left">
-						<?php
-						wp_nav_menu(array(
-							'theme_location' => 'menu',
-							'menu_id'        => 'primary-menu',
-							'container'		 => 'ul',
-							'menu_class' => 'menu vertical',
+						<ul class="dropdown menu" data-dropdown-menu>
+							<?php
+							wp_nav_menu(array(
+								'theme_location' => 'menu',
+								'menu_id'        => 'primary-menu',
+								'container'		 => 'ul',
+								'menu_class' => 'menu vertical',
 
-						));
-						?>
+							));
+							?>
+						</ul>
 					</div>
 					<div class="top-bar-right">
 						<?php
