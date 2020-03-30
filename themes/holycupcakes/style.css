@@ -560,12 +560,40 @@ span input,
     padding-bottom: 20px;
 }
 
+.blog .entry-meta {
+    font-style: italic;
+}
+
 .blog .post-thumbnail {
     padding: 20px 0;
 }
 
 .page-title {
     display: block;
+}
+
+.cat-links, .tags-links, .edit-link {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f9f6ec;
+    font-size: 1.1rem;
+}
+
+.post-navigation {
+    display: inline-block;
+    padding: 20px 0 0px;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .blogBtn {
