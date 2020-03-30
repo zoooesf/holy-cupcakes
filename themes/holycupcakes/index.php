@@ -49,8 +49,8 @@ get_header();
 						?>
 
 							<div class="card large-5 medium-5 small-10 blogCard">
-								
-                <?php
+
+								<?php
 								if (has_post_thumbnail()) {
 								?>
 									<div class="thumbnail-img">
