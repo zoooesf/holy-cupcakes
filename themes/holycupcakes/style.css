@@ -942,6 +942,9 @@ li{
 }
 
 /* RECIPE SINGLE PAGE STYLING */
+#recipe{
+    color: #886248;
+}
 #recipe blockquote{
     background-color: #F9F6EC;
     padding: 20px;
