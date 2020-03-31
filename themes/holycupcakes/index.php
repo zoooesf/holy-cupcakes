@@ -18,11 +18,13 @@ get_header();
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
+		<!-- container for blogs page  -->
 		<div class="grid-container">
 			<div class="grid-x">
 				<!-- sidebar box -->
 				<div class="large-4 grid-margin-x show-for-large sidebar-box">
 					<?php
+					// loading sidebar
 					get_sidebar();
 					?>
 				</div>
@@ -31,7 +33,7 @@ get_header();
 				<div class="large-8 medium-12 small-12 grid-x align-justify blog-posts-box">
 					<?php
 					if (have_posts()) :
-
+						// loading header if page is not the homepage
 						if (is_home() && !is_front_page()) :
 					?>
 							<header class="large-12 medium-12 small-12">
@@ -48,9 +50,11 @@ get_header();
 
 						?>
 
+							<!-- container for blog card -->
 							<div class="card large-5 medium-5 small-10 blogCard">
 
 								<?php
+								// loading post thumbnail image
 								if (has_post_thumbnail()) {
 								?>
 									<div class="thumbnail-img">
@@ -58,6 +62,7 @@ get_header();
 									</div>
 								<?php
 								} ?>
+								<!-- loading blog excerpt -->
 								<div class="card-section blogExcerpt">
 									<h3><?php the_title(); ?> </h3>
 									<p>
@@ -65,6 +70,7 @@ get_header();
 										the_excerpt();
 										?>
 									</p>
+									<!-- link to the post -->
 									<a class="blogBtn" href="<?php echo get_post_permalink(); ?>">continue reading</a>
 								</div>
 							</div>

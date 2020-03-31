@@ -30,8 +30,11 @@
 
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
+				<!-- responsive header nav -->
 				<div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="large">
+					<!-- menu button -->
 					<button class="menu-icon" type="button" data-toggle="site-navigation"></button>
+					<!-- container for the logo - mobile/tablet only -->
 					<div class="title-bar-title">
 						<?php
 						// if there's no custom logo load the title text
@@ -47,6 +50,7 @@
 					</div>
 				</div>
 				<div class="top-bar grid-container" id="site-navigation">
+					<!-- container for logo - desktop only -->
 					<div class="top-bar-left show-for-large">
 						<?php
 						// if there's no custom logo load the title text
@@ -60,9 +64,11 @@
 						endif;
 						?>
 					</div>
+					<!-- container for the menu -->
 					<div class="top-bar-left">
 						<ul class="dropdown menu" data-dropdown-menu>
 							<?php
+							// loading the menu
 							wp_nav_menu(array(
 								'theme_location' => 'menu',
 								'menu_id'        => 'primary-menu',
@@ -73,6 +79,7 @@
 							?>
 						</ul>
 					</div>
+					<!-- container for the search widget -->
 					<div class="top-bar-right">
 						<?php
 						if (is_active_sidebar('header-widget')) {

@@ -18,7 +18,9 @@ get_header();
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
+		<!-- grid container for page contents -->
 		<div class="grid-container">
+			<!-- condition to only show page title if the page is NOT about/contact/cart -->
 			<?php if (get_the_title() != 'About Us' && get_the_title() != 'Contact Us' & get_the_title() != 'Cart') {
 			?> <h1> <?php echo get_the_title(); ?> </h1>
 				<hr class="eSeparator">
@@ -30,6 +32,7 @@ get_header();
 			while (have_posts()) :
 				the_post();
 
+				// loading page contents
 				get_template_part('template-parts/content', 'page');
 
 				// If comments are open or we have at least one comment, load up the comment template.

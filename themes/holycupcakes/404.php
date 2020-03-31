@@ -13,6 +13,7 @@ get_header();
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
+		<!-- grid container -->
 		<div class="grid-container grid-404">
 			<div class="grid-x align-center">
 
