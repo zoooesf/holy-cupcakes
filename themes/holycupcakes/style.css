@@ -292,7 +292,16 @@ screen and (min-width: 40em) {
         margin-left: 40px;
     }
 }
-
+/* for tablets */
+@media print,
+screen and (max-width:64em) {
+    #footer-sidebar h4{
+        font-size: 2.5vh;
+    }
+    #footer-sidebar label{
+        font-size: 1.5vh;
+    }
+}
 /* ***************************** Block Styling ***************************** */
 /* .wp-block-columns {
     width: 100;
@@ -890,8 +899,7 @@ span.posted_in {
 .woocommerce.columns-3 ul.products li.product h2,
 .woocommerce ul.products li.product .price,
 .woocommerce ul.products li.product .button {
-    /* margin: 0.25em 1em ; */
-    margin: auto 1em auto 1em;
+    margin: auto 0.5em auto 0.5em;
 }
 
 .woocommerce ul.products li.product .button {
