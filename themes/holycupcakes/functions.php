@@ -176,6 +176,7 @@ function holy_cupcakes_widgets_init()
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
+		'after_title'  => '<hr class="eSeparator">',
 	));
 	register_sidebar( array(
 		'name' => 'Footer Sidebar 1',
