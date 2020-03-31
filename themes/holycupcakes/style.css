@@ -264,7 +264,8 @@ button.wsf-button.wsf-button-primary {
 }
 
 /* ***************************** For Desktop Styling ***************************** */
-@media screen and (min-width: 40em) {
+@media print,
+screen and (min-width: 40em) {
     #footer-sidebar #primary-menu {
         display: flex;
         flex-direction: column;
@@ -806,9 +807,7 @@ span input,
     font-size: 20px;
     font-weight: bold;
 }
-.woocommerce ul.products li.product .price p{ 
-    margin: 0;
-}
+
 .product_meta {
     display: flex;
     flex-direction: column;
@@ -865,13 +864,13 @@ span.posted_in {
     flex-direction: column;
     justify-content: space-between;
 }
-
+.woocommerce ul.products li.product .price p,
 .woocommerce ul.products li.product .woocommerce-loop-product__title,
 .woocommerce.columns-3 ul.products li.product h2,
 .woocommerce ul.products li.product .price,
 .woocommerce ul.products li.product .button {
     /* margin: 0.25em 1em ; */
-    margin: auto 2vh auto 2vh;
+    margin: auto 1em auto 1em;
 }
 
 .woocommerce ul.products li.product .button {
@@ -879,7 +878,25 @@ span.posted_in {
     margin-bottom: 1em;
 }
 
-
+@media print,
+screen and (max-width:64em) {
+    .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+        margin: 0 5px 10px 0;
+    }
+    
+}
+@media print,
+screen and (max-width: 40em) {
+    .woocommerce ul.products li.product .woocommerce-loop-product__title,
+    .woocommerce.columns-3 ul.products li.product h2,
+    .woocommerce ul.products li.product .price,
+    .woocommerce ul.products li.product .button {
+        margin: auto 1vh 2vh 1vh;
+    }
+    .woocommerce ul.products li.product .price p{ 
+        margin: 0;
+    }
+}
 
 /*PRODUCTS DESCRIPTION TABS */
 
