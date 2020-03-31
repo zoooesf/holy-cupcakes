@@ -292,7 +292,9 @@ screen and (min-width: 40em) {
         margin-left: 40px;
     }
 }
-/* for tablets */
+
+/* ***************************** Footer Talets Styling ***************************** */
+
 @media print,
 screen and (max-width:64em) {
     #footer-sidebar h4{
@@ -734,8 +736,7 @@ span input,
     border-radius: 5px;
 }
 
-/* ******************** Woo Commercer Products Styling ****************** */
-/* BUTTON */
+/* ************************ Woo Commercer BUTTON Styling ************************ */
 .woocommerce button.button.alt:hover,
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
 .woocommerce #respond input#submit:hover,
