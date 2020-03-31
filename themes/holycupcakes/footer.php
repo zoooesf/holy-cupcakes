@@ -13,6 +13,58 @@
 ?>
 
 </div><!-- #content -->
+
+<div class="grid-container">
+<?php
+
+$args = array(
+	'post_type'      => 'holy_cupcakes_recipe',
+	'post__not_in' => array(
+		get_the_ID()
+	),
+	'posts_per_page' => 3,
+);
+$test_query = new WP_Query($args);
+
+
+if ($test_query->have_posts()) {
+	if (is_front_page()) :
+?>
+	<header class="large-12 medium-12 small-12">
+		<h1 class="page-title screen-reader-text">Recent Posts</h1>
+		<hr class="blogHr">
+	</header>
+	<div class="recent-posts-wrapper">
+		<div class="grid-container recent-post">
+			<div class="grid-x grid-margin-x">
+				<?php
+				while ($test_query->have_posts()) {
+					$test_query->the_post();
+
+				?>
+					<div class="cell small-12 medium-6 large-4 homeExcerpt">
+						<div id="post-<?php echo get_the_ID(); ?>" class="post-individual">
+
+							<p class="thumbnail-img"><?php echo get_the_post_thumbnail(); ?></p>
+							<a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
+							<hr class="eSeparator">
+							<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
+						</div>
+					</div>
+				<?php
+				}
+				?>
+			</div>
+		</div>
+	</div>
+	
+<?php
+	endif;
+}
+wp_reset_postdata();
+
+?>
+</div>
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
 		<div class="grid-container">
