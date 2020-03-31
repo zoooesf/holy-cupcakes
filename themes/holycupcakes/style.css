@@ -806,7 +806,9 @@ span input,
     font-size: 20px;
     font-weight: bold;
 }
-
+.woocommerce ul.products li.product .price p{ 
+    margin: 0;
+}
 .product_meta {
     display: flex;
     flex-direction: column;
@@ -864,6 +866,13 @@ span.posted_in {
     justify-content: space-between;
 }
 
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce.columns-3 ul.products li.product h2,
+.woocommerce ul.products li.product .price,
+.woocommerce ul.products li.product .button {
+    /* margin: 0.25em 1em ; */
+    margin: auto 2vh auto 2vh;
+}
 
 .woocommerce ul.products li.product .button {
     margin-top: 1em;
