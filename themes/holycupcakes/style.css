@@ -419,6 +419,10 @@ span input,
     background-color: #f9f6ec;
 }
 
+.recent-post {
+    overflow: hidden;
+}
+
 .homeExcerpt {
     background-color: #f9f6ec;
     padding: 10px 20px;
@@ -582,7 +586,8 @@ span input,
 /* ******************** Blog Styling ******************** */
 
 .blog {
-    padding-bottom: 20px;
+    /* padding: 20px; */
+    padding-top: 0px;
 }
 
 .blog .entry-meta {
@@ -591,6 +596,10 @@ span input,
 
 .blog .post-thumbnail {
     margin: 20px 0;
+}
+
+.blog li {
+    font-size: 21px;
 }
 
 .page-title {
@@ -1187,12 +1196,6 @@ li {
 
 .woocommerce-MyAccount-navigation ul {
     margin: 0;
-}
-
-/* ******************************* 404 Page styles ************************ */
-.grid-404 {
-    background-color: #f9f6ec;
-    padding-bottom: 40px;
 }
 
 /* RECIPE SINGLE PAGE STYLING */
