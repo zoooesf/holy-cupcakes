@@ -73,6 +73,8 @@ if (!function_exists('holy_cupcakes_setup')) :
 		
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
+		
+		// Add theme support for custom colours
 		add_theme_support( 'editor-color-palette', array(
 			array(
 				'name' => esc_html__( 'Light Cream', 'holycupcakes' ),
@@ -174,6 +176,7 @@ function holy_cupcakes_widgets_init()
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
+		'after_title'  => '<hr class="eSeparator">',
 	));
 	register_sidebar( array(
 		'name' => 'Footer Sidebar 1',
@@ -230,8 +233,11 @@ function holy_cupcakes_scripts()
 	// adding what-input js
 	wp_enqueue_script( 'holycupcakes-what-input', get_template_directory_uri() . '/assets/js/vendors/what-input.js', array('jquery'), '6.5.1', true );
 
-	// adding sample theme foundation js
+	// adding holycupcakes foundation js
 	wp_enqueue_script( 'holycupcakes-foundation', get_template_directory_uri() . '/assets/js/vendors/foundation.min.js', array('jquery', 'holycupcakes-what-input'), '6.5.1', true );
+	
+	// adding app.js
+	wp_enqueue_script( 'holycupcakes-script', get_template_directory_uri() . '/assets/js/app.js', array('jquery', 'holycupcakes-foundation'), '6.5.1', true );
 
 	// enqueue style.css
 	wp_enqueue_style('holycupcakes-style', get_stylesheet_uri());
@@ -296,7 +302,10 @@ add_filter( 'excerpt_length', 'holy_cupcakes_custom_excerpt_length', 999 );
  * WooCommerce
  */
 require get_template_directory() . '/inc/woocommerce.php';
-
+/**
+ * Registering custom post types.
+ */
+require get_template_directory() . '/inc/post-types.php';
 /** * Change number or products per row to 3
  */
 

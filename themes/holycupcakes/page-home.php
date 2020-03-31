@@ -33,44 +33,7 @@ get_header();
 
 			endwhile; // End of the loop.
 			?>
-		</div>
-		<?php
-
-		$args = array(
-			'post_type'      => 'post',
-			'posts_per_page' => 3,
-		);
-		$test_query = new WP_Query($args);
-
-
-		if ($test_query->have_posts()) {
-		?>
-			<div class="recent-posts-wrapper">
-				<div class="grid-container recent-post">
-					<div class="grid-x grid-margin-x">
-						<?php
-						while ($test_query->have_posts()) {
-							$test_query->the_post();
-						?>
-							<div class="cell small-12 medium-6 large-4 homeExcerpt">
-								<div id="post-<?php echo get_the_ID(); ?>" class="post-individual">
-
-									<p class="thumbnail-img"><?php echo get_the_post_thumbnail(); ?></p>
-									<a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
-									<hr class="eSeparator">
-									<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
-								</div>
-							</div>
-						<?php
-						}
-						?>
-					</div>
-				</div>
-			</div>
-		<?php
-		}
-		wp_reset_postdata();
-		?>
+		</div><!-- .grid-container -->
 	</main><!-- #main -->
 </section><!-- #primary -->
 

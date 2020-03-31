@@ -13,6 +13,58 @@
 ?>
 
 </div><!-- #content -->
+
+<div class="grid-container">
+<?php
+
+$args = array(
+	'post_type'      => 'holy_cupcakes_recipe',
+	'post__not_in' => array(
+		get_the_ID()
+	),
+	'posts_per_page' => 3,
+);
+$test_query = new WP_Query($args);
+
+
+if ($test_query->have_posts()) {
+	if (is_front_page()) :
+?>
+	<header class="large-12 medium-12 small-12">
+		<h1 class="page-title screen-reader-text">Recent Posts</h1>
+		<hr class="blogHr">
+	</header>
+	<div class="recent-posts-wrapper alignfull">
+		<div class="grid-container recent-post ">
+			<div class="grid-x grid-margin-x">
+				<?php
+				while ($test_query->have_posts()) {
+					$test_query->the_post();
+
+				?>
+					<div class="cell small-12 medium-6 large-4 homeExcerpt">
+						<div id="post-<?php echo get_the_ID(); ?>" class="post-individual">
+
+							<p class="thumbnail-img"><?php echo get_the_post_thumbnail(); ?></p>
+							<a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
+							<hr class="eSeparator">
+							<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
+						</div>
+					</div>
+				<?php
+				}
+				?>
+			</div>
+		</div>
+	</div>
+	
+<?php
+	endif;
+}
+wp_reset_postdata();
+
+?>
+</div>
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
 		<div class="grid-container">
@@ -25,6 +77,7 @@
 						}
 						?>
 						<h4>Quick links</h4>
+						<hr class="eSeparator">
 						<?php
 						wp_nav_menu(array(
 							'theme_location' => 'menu',
@@ -40,6 +93,7 @@
 					<div id="footer-sidebar2">
 						<div>
 							<h4>Subscribe to our newsletter!</h4>
+							<hr class="eSeparator">
 							<?php
 							if (is_active_sidebar('footer-sidebar-2')) {
 								dynamic_sidebar('footer-sidebar-2');
@@ -47,18 +101,18 @@
 							?>
 						</div>
 						<div>
+						<!-- Social Media Links -->
 							<?php if (get_theme_mod('holy_cupcakes_facebook_url') || get_theme_mod('holy_cupcakes_twitter_url')) { ?>
 								<div class="social-media">
 									<?php if (get_theme_mod('holy_cupcakes_facebook_url')) { ?>
-										<!-- <li class="facebook"> -->
+                  
+										<!-- dynamic social media links -->
 										<a href="<?php echo get_theme_mod('holy_cupcakes_facebook_url'); ?>"><?php echo esc_html__('', 'holy_cupcakes'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/facebook.svg'; ?>" title="<?php echo esc_html__('', 'holy_cupcakes'); ?>" height="50" width="50"> </a>
-										<!-- </li> -->
-										<!-- <li class="twitter"> -->
+										
 										<a href="<?php echo get_theme_mod('holy_cupcakes_twitter_url'); ?>"><?php echo esc_html__('', 'holy_cupcakes'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/twitter.svg'; ?>" title="<?php echo esc_html__('', 'holy_cupcakes'); ?>" height="50" width="50"> </a>
-										<!-- </li> -->
-										<!-- <li class="instagram"> -->
+										
 										<a href="<?php echo get_theme_mod('holy_cupcakes_instagram_url'); ?>"><?php echo esc_html__('', 'holy_cupcakes'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/instagram.svg'; ?>" title="<?php echo esc_html__('', 'holy_cupcakes'); ?>" height="50" width="50"> </a>
-										<!-- </li> -->
+										
 									<?php } ?>
 
 								<?php } ?>
@@ -74,8 +128,9 @@
 						}
 						?>
 						<h4>Contact</h4>
+						<hr class="eSeparator">
 						<?php if (get_theme_mod('holy_cupcakes_address_line1') || get_theme_mod('holy_cupcakes_address_line2') || get_theme_mod('holy_cupcakes_address_city') || get_theme_mod('holy_cupcakes_address_province') || get_theme_mod('holy_cupcakes_address_postal_code')) { ?>
-
+							<!-- dynamic address information -->
 							<?php if (get_theme_mod('holy_cupcakes_address_line1')) { ?>
 								<p class="address">
 									<?php echo get_theme_mod('holy_cupcakes_address_line1');
@@ -101,12 +156,14 @@
 						<?php } ?>
 
 						<?php if (get_theme_mod('holy_cupcakes_email_address') || get_theme_mod('holy_cupcakes_phone_number')) { ?>
+							<!-- Email Address -->
 							<?php if (get_theme_mod('holy_cupcakes_email_address')) { ?>
 								<p class="email">
 									<?php echo get_theme_mod('holy_cupcakes_email_address');
 									echo esc_html__('', 'holy_cupcakes'); ?>
 								</p>
 							<?php } ?>
+							<!-- Phone Number -->
 							<?php if (get_theme_mod('holy_cupcakes_phone_number')) { ?>
 								<p class="phone">
 									<?php echo get_theme_mod('holy_cupcakes_phone_number');
