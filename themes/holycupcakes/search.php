@@ -22,11 +22,11 @@ get_header();
 					?>
 				</div>
 
-				<?php
-				if (have_posts()) :
-				?>
-					<!-- .page-header -->
-					<div class="large-8 medium-12 grid-x align-justify blog-posts-box">
+				<!-- .page-header -->
+				<div class="large-8 medium-12 grid-x align-justify blog-posts-box">
+					<?php
+					if (have_posts()) :
+					?>
 						<header class="large-12 medium-12 small-12">
 							<h1 class="page-title screen-reader-text">Results for: <?php echo get_search_query(); ?></h1>
 							<hr class="blogHr">
@@ -64,8 +64,8 @@ get_header();
 											?>
 										</p>
 										<a class="blogBtn" href="<?php echo get_post_permalink(); ?>"><?php echo $link_text; ?></a>
-									</div>
-								</div>
+									</div><!-- .blogexcerpt -->
+								</div><!-- .blogCard -->
 						<?php
 							}
 							/**
@@ -81,13 +81,11 @@ get_header();
 							<?php the_posts_navigation(); ?>
 						</div>
 					<?php
-				else :
-
-					get_template_part('template-parts/content', 'none');
-
-				endif;
+					else :
+						get_template_part('template-parts/content', 'none');
+					endif;
 					?>
-					</div><!-- cell large-8 -->
+				</div><!-- .cell large-8 blog-posts-box-->
 			</div><!-- .grid-x -->
 		</div><!-- .grid-container -->
 	</main><!-- #main -->

@@ -47,9 +47,11 @@
 							?>
 						</div>
 						<div>
+						<!-- Social Media Links -->
 							<?php if (get_theme_mod('holy_cupcakes_facebook_url') || get_theme_mod('holy_cupcakes_twitter_url')) { ?>
 								<div class="social-media">
 									<?php if (get_theme_mod('holy_cupcakes_facebook_url')) { ?>
+                  
 										<!-- dynamic social media links -->
 										<a href="<?php echo get_theme_mod('holy_cupcakes_facebook_url'); ?>"><?php echo esc_html__('', 'holy_cupcakes'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/facebook.svg'; ?>" title="<?php echo esc_html__('', 'holy_cupcakes'); ?>" height="50" width="50"> </a>
 										
@@ -99,12 +101,14 @@
 						<?php } ?>
 
 						<?php if (get_theme_mod('holy_cupcakes_email_address') || get_theme_mod('holy_cupcakes_phone_number')) { ?>
+							<!-- Email Address -->
 							<?php if (get_theme_mod('holy_cupcakes_email_address')) { ?>
 								<p class="email">
 									<?php echo get_theme_mod('holy_cupcakes_email_address');
 									echo esc_html__('', 'holy_cupcakes'); ?>
 								</p>
 							<?php } ?>
+							<!-- Phone Number -->
 							<?php if (get_theme_mod('holy_cupcakes_phone_number')) { ?>
 								<p class="phone">
 									<?php echo get_theme_mod('holy_cupcakes_phone_number');
