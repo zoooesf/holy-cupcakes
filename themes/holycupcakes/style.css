@@ -366,7 +366,7 @@ a:hover {
 
 /* targets the seperator inserted under  */
 .hSeparator {
-    width: 100px;
+    width: 100%;
     border: 1px solid;
     color: #886248;
 }
