@@ -32,7 +32,7 @@ get_header();
 			the_post();
 		?>
 			<h1><?php echo get_the_title();?></h1>
-			<hr class="eSeparator">
+			<hr class="hSeparator">
 			<p><?php get_template_part( 'template-parts/content', get_post_type() );?><p><?php
 
 			the_post_navigation();

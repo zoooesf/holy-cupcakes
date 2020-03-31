@@ -26,7 +26,7 @@ body {
     display: none;
     clip: unset !important;
     height: auto;
-    overflow: auto;
+    /* overflow: auto; */
     position: unset !important;
     width: auto;
     word-wrap: normal !important;
@@ -172,6 +172,7 @@ footer .button.primary {
     background-color: #ffeeaa;
     /* border: 2px solid #886248; */
     color: #886248;
+    width: auto;
 }
 
 footer .button.primary:hover,
@@ -221,9 +222,17 @@ button.wsf-button.wsf-button-primary {
     color: #886248;
 }
 
+#footer-sidebar h4 {
+    font-weight: bold;
+}
+
 #footer-sidebar a,
 #footer-sidebar p {
-    font-size: 2vh;
+    font-size: 1rem;
+}
+
+#footer-sidebar p {
+    margin-bottom: 0;
 }
 
 #footer-sidebar a:hover {
@@ -231,12 +240,19 @@ button.wsf-button.wsf-button-primary {
 }
 
 #footer-sidebar {
-    margin: 1vh;
+    padding: 1rem;
     text-align: left;
 }
 #footer-sidebar h4{
     font-size: 3.5vh;
 }
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
 .social-media img {
     width: 24px;
     margin-right: 20px;
@@ -270,6 +286,10 @@ screen and (min-width: 40em) {
     #footer-sidebar #primary-menu {
         display: flex;
         flex-direction: column;
+    }
+
+    #footer-sidebar3 {
+        margin-left: 40px;
     }
 }
 
@@ -343,7 +363,7 @@ a:hover {
 
 /* targets the seperator inserted under  */
 .hSeparator {
-    width: 100px;
+    width: 100%;
     border: 1px solid;
     color: #886248;
 }
@@ -398,8 +418,8 @@ span input,
 
 .homeExcerpt {
     background-color: #f9f6ec;
-    padding: 20px;
-    margin: 50px auto;
+    padding: 10px 20px;
+    margin: 25px auto 10px;
 }
 
 .homeExcerpt a {
@@ -1233,6 +1253,12 @@ label{
 } 
 .social-media{
     margin: 2vh 0 1vh 0;
+}
+
+/* ******************************* 404 Page styles ************************ */
+.grid-404 {
+    background-color: #f9f6ec;
+    padding-bottom: 40px;
 }
 
 @media print,
