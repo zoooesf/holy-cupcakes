@@ -15,11 +15,14 @@ get_header();
 	<main id="main" class="site-main">
 		<div class="grid-container">
 			<div class="grid-x">
+				<!-- container for the sidebar -->
 				<div class="large-4 grid-margin-x show-for-large sidebar-box">
 					<?php
+					// loading the sidebar
 					get_sidebar();
 					?>
 				</div>
+				<!-- container bor the blog post -->
 				<section class="large-8 medium-12 grid-x align-justify blog">
 					<?php
 					while (have_posts()) :
@@ -29,6 +32,7 @@ get_header();
 						<hr class="hSeparator">
 						<?php get_template_part('template-parts/content', get_post_type()); ?>
 							<?php
+							// navigation for more posts next and previous
 							the_post_navigation(array(
 								'prev_text' => 'Previous: %title',
 								'next_text' => 'Next: %title',
