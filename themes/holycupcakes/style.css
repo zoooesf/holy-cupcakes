@@ -240,7 +240,10 @@ button.wsf-button.wsf-button-primary {
     width: 24px;
     margin-right: 20px;
 }
-
+#footer-sidebar h4{
+    margin: 3vh 0 1.5vh 0;
+    font-size: 3vh;
+}
 /* ***************************** For Footer Side Bar 1 ***************************** */
 #footer-sidebar1 {
     margin-bottom: 2vh;
@@ -618,9 +621,9 @@ span input,
     margin: 0px;
 }
 
-.eSeparator {
+/* .eSeparator {
     width: 100%;
-}
+} */
 
 .products a.button:hover,
 .coupon button:hover,
@@ -662,7 +665,7 @@ span input,
 }
 
 .widget-title {
-    border-bottom: 2px solid #9B6F52;
+    /* border-bottom: 2px solid #9B6F52; */
     margin: 1rem 0 1rem 0;
     display: inline-block;
     font-size: 3.5vh;

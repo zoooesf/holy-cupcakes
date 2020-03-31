@@ -77,6 +77,7 @@ wp_reset_postdata();
 						}
 						?>
 						<h4>Quick links</h4>
+						<hr class="eSeparator">
 						<?php
 						wp_nav_menu(array(
 							'theme_location' => 'menu',
@@ -92,6 +93,7 @@ wp_reset_postdata();
 					<div id="footer-sidebar2">
 						<div>
 							<h4>Subscribe to our newsletter!</h4>
+							<hr class="eSeparator">
 							<?php
 							if (is_active_sidebar('footer-sidebar-2')) {
 								dynamic_sidebar('footer-sidebar-2');
@@ -124,6 +126,7 @@ wp_reset_postdata();
 						}
 						?>
 						<h4>Contact</h4>
+						<hr class="eSeparator">
 						<?php if (get_theme_mod('holy_cupcakes_address_line1') || get_theme_mod('holy_cupcakes_address_line2') || get_theme_mod('holy_cupcakes_address_city') || get_theme_mod('holy_cupcakes_address_province') || get_theme_mod('holy_cupcakes_address_postal_code')) { ?>
 							<!-- dynamic address information -->
 							<?php if (get_theme_mod('holy_cupcakes_address_line1')) { ?>
