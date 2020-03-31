@@ -591,9 +591,12 @@ span input,
 
 
 /* ******************** Blog Styling ******************** */
+body.blog {
+    padding: 0;
+}
 
 .blog {
-    padding: 0px;
+    padding: 20px;
     padding-top: 0px;
 }
 
