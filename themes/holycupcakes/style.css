@@ -219,7 +219,6 @@ button.wsf-button.wsf-button-primary {
 #footer-sidebar h4 {
     text-align: left;
     padding: 0.5vh 0;
-    margin: 0;
     color: #886248;
 }
 
@@ -244,6 +243,9 @@ button.wsf-button.wsf-button-primary {
     padding: 1rem;
     text-align: left;
 }
+#footer-sidebar h4{
+    font-size: 3.5vh;
+}
 
 .social-media {
     display: flex;
@@ -255,12 +257,9 @@ button.wsf-button.wsf-button-primary {
     width: 24px;
     margin-right: 20px;
 }
-
-#footer-sidebar h4{
-    margin: 3vh 0 1.5vh 0;
-    font-size: 3vh;
+.woocommerce button.button{
+    margin: 0 0 1rem 0;
 }
-
 /* ***************************** For Footer Side Bar 1 ***************************** */
 #footer-sidebar1 {
     margin-bottom: 2vh;
@@ -295,7 +294,16 @@ screen and (min-width: 40em) {
         margin-left: 40px;
     }
 }
-
+/* for tablets */
+@media print,
+screen and (max-width:64em) {
+    #footer-sidebar h4{
+        font-size: 2.5vh;
+    }
+    #footer-sidebar label{
+        font-size: 1.5vh;
+    }
+}
 /* ***************************** Block Styling ***************************** */
 /* .wp-block-columns {
     width: 100;
@@ -898,10 +906,20 @@ span.posted_in {
 .woocommerce.columns-3 ul.products li.product h2,
 .woocommerce ul.products li.product .price,
 .woocommerce ul.products li.product .button {
-    /* margin: 0.25em 1em ; */
-    margin: auto 1em auto 1em;
+    margin: auto 0.5em auto 0.5em;
 }
-
+.woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce.columns-3 ul.products li.product h2{
+    font-size: 3vh;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title{
+    font-size: 2.5vh;
+}
+a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart{
+    font-size: 2vh;
+}
+span.woocommerce-Price-amount.amount{
+    margin-top: auto;
+}
 .woocommerce ul.products li.product .button {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -1252,10 +1270,30 @@ label{
     font-style: italic;
     color: #9B6F52;
     line-height: 1.6;
+} 
+.social-media{
+    margin: 2vh 0 1vh 0;
 }
 
 /* ******************************* 404 Page styles ************************ */
 .grid-404 {
     background-color: #f9f6ec;
     padding-bottom: 40px;
+}
+
+@media print,
+screen and (max-width: 40em) {
+    .form-error,
+    [type=checkbox]+label{
+        font-size: 2vh;
+    }
+    .form-error {
+        font-size: 2vh;
+        width: 100%;
+        margin-top: 3vh;
+    }
+    .wp-block-group__inner-container {
+        width: 100%;
+        margin: 0 auto;
+}
 }
