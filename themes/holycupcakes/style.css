@@ -877,7 +877,20 @@ span.posted_in {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+.woocommerce .woocommerce-result-count{
+    font-size: 2.5vh;
+}
 
+/* select order by */
+select{
+    border: 1px solid #9B6F52;
+    border-radius: 5px;
+    color: #9B6F52;
+}
+select:focus{
+    outline: 0;
+    box-shadow: none;
+}
 @media print,
 screen and (max-width:64em) {
     .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
