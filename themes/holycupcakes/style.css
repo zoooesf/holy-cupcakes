@@ -1106,6 +1106,9 @@ tbody tr:nth-child(even) {
     color: #886248;
     font-size: 18px;
 }
+.woocommerce .quantity .qty{
+    display: inline;
+}
 
 /* MY ACCOUNT */
 li {
