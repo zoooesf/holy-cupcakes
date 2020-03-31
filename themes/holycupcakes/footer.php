@@ -28,7 +28,7 @@ $test_query = new WP_Query($args);
 
 
 if ($test_query->have_posts()) {
-	if (is_home() && !is_front_page()) :
+	if (is_front_page()) :
 ?>
 	<header class="large-12 medium-12 small-12">
 		<h1 class="page-title screen-reader-text">Recent Posts</h1>
