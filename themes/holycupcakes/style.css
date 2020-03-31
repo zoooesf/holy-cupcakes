@@ -1198,6 +1198,16 @@ tbody tr:nth-child(even) {
     font-size: 16px;
 }
 
+/* error message */
+.woocommerce-error{
+    border-top-color: #FC9885;
+}
+.woocommerce-error::before{
+    color: #FC9885
+}
+strong{
+    color:#9B6F52
+}
 /* ******************** Woo Commercer My Account Styling ****************** */
 
 li {
@@ -1297,5 +1307,5 @@ screen and (max-width: 40em) {
     .wp-block-group__inner-container {
         width: 100%;
         margin: 0 auto;
-}
+    }
 }
