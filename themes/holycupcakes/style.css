@@ -1109,7 +1109,12 @@ tbody tr:nth-child(even) {
 .woocommerce .quantity .qty{
     display: inline;
 }
-
+[type=text]{
+    height: auto;
+}
+.woocommerce button.button{
+    font-size: 16px;
+}
 /* MY ACCOUNT */
 li {
     list-style: none;
