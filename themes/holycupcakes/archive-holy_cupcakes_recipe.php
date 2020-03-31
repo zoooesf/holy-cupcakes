@@ -66,7 +66,7 @@ get_header();
 
 						the_posts_navigation();
 						?>
-						<div>
+						</div>
 					</div><!-- cell large-8 -->
 				<?php
 				else :
@@ -81,5 +81,4 @@ get_header();
 </div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
