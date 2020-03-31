@@ -1164,3 +1164,9 @@ li {
     border: 1px solid #FC9885;
     color: #FC9885;
 }
+
+/* ******************************* 404 Page styles ************************ */
+.grid-404 {
+    background-color: #f9f6ec;
+    padding-bottom: 40px;
+}

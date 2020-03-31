@@ -33,8 +33,7 @@ get_header();
 
 			endwhile; // End of the loop.
 			?>
-		</div>
-		<!-- section to add three blog excerpts to bottom of home page -->
+		</div><!-- .grid-container -->
 	</main><!-- #main -->
 </section><!-- #primary -->
 
