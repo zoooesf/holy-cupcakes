@@ -872,7 +872,7 @@ span.posted_in {
 
 
 /* ******************** Woo Commercer Cart Page Check Out Form Styling ****************** */
-
+/* input text */
 .woocommerce form .form-row input.input-text,
 .woocommerce form .form-row textarea {
     background-color: #f9f6ec;
@@ -882,7 +882,6 @@ span.posted_in {
 .woocommerce-page ul.products {
     display: flex;
     flex-wrap: wrap;
-    ;
 }
 
 .woocommerce .products ul li,
@@ -893,6 +892,8 @@ span.posted_in {
     flex-direction: column;
     justify-content: space-between;
 }
+
+/** for product cards (title, price, add cart button) */
 .woocommerce ul.products li.product .price p,
 .woocommerce ul.products li.product .woocommerce-loop-product__title,
 .woocommerce.columns-3 ul.products li.product h2,
@@ -920,7 +921,7 @@ span.woocommerce-Price-amount.amount{
     font-size: 2.5vh;
 }
 
-/* select order by */
+/** select order by selection tab */
 select{
     border: 1px solid #9B6F52;
     border-radius: 5px;
@@ -930,6 +931,7 @@ select:focus{
     outline: 0;
     box-shadow: none;
 }
+/* for tablets */
 @media print,
 screen and (max-width:64em) {
     .woocommerce ul.products[class*=columns-] li.product,
@@ -938,6 +940,7 @@ screen and (max-width:64em) {
     }
     
 }
+/* for mobiles */
 @media print,
 screen and (max-width: 40em) {
     .woocommerce ul.products li.product .woocommerce-loop-product__title,
