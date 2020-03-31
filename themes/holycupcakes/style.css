@@ -805,10 +805,6 @@ span input,
     left: auto;
 }
 
-.blog-posts-box header {
-    max-height: 100px;
-}
-
 .products li {
     border: 1px solid #e6e6e6;
 }
