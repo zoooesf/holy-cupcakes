@@ -903,7 +903,9 @@ span.posted_in {
 .woocommerce ul.products li.product .button {
     margin: auto 0.5em auto 0.5em;
 }
-
+.woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce.columns-3 ul.products li.product h2{
+    font-size: 3vh;
+}
 .woocommerce ul.products li.product .button {
     margin-top: 1em;
     margin-bottom: 1em;
