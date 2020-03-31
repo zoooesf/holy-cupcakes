@@ -218,7 +218,6 @@ button.wsf-button.wsf-button-primary {
 #footer-sidebar h4 {
     text-align: left;
     padding: 0.5vh 0;
-    margin: 0;
     color: #886248;
 }
 
@@ -232,18 +231,17 @@ button.wsf-button.wsf-button-primary {
 }
 
 #footer-sidebar {
-    margin: 0;
+    margin: 1vh;
     text-align: left;
 }
-
+#footer-sidebar h4{
+    font-size: 3.5vh;
+}
 .social-media img {
     width: 24px;
     margin-right: 20px;
 }
-#footer-sidebar h4{
-    margin: 3vh 0 1.5vh 0;
-    font-size: 3vh;
-}
+
 /* ***************************** For Footer Side Bar 1 ***************************** */
 #footer-sidebar1 {
     margin-bottom: 2vh;
@@ -1232,4 +1230,24 @@ label{
     font-style: italic;
     color: #9B6F52;
     line-height: 1.6;
+} 
+.social-media{
+    margin: 2vh 0 1vh 0;
+}
+
+@media print,
+screen and (max-width: 40em) {
+    .form-error,
+    [type=checkbox]+label{
+        font-size: 2vh;
+    }
+    .form-error {
+        font-size: 2vh;
+        width: 100%;
+        margin-top: 3vh;
+    }
+    .wp-block-group__inner-container {
+        width: 100%;
+        margin: 0 auto;
+}
 }
