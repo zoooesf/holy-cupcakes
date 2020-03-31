@@ -18,17 +18,21 @@ get_header();
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
+		<!-- grid container for page contents -->
 		<div class="grid-container">
-		<?php if (get_the_title() != 'About Us' && get_the_title() != 'Contact Us' & get_the_title() != 'Cart'){
+			<!-- condition to only show page title if the page is NOT about/contact/cart -->
+			<?php if (get_the_title() != 'About Us' && get_the_title() != 'Contact Us' & get_the_title() != 'Cart') {
 			?> <h1> <?php echo get_the_title(); ?> </h1>
-			<hr class="eSeparator"> <?php
-		} 
-		?>
-		
+				<hr class="eSeparator">
+			<?php
+			}
+			?>
+
 			<?php
 			while (have_posts()) :
 				the_post();
-				
+
+				// loading page contents
 				get_template_part('template-parts/content', 'page');
 
 				// If comments are open or we have at least one comment, load up the comment template.
@@ -37,10 +41,9 @@ get_header();
 				endif;
 
 			endwhile; // End of the loop.
-			
+
 			?>
-			</div>
-		</div>
+		</div><!-- .grid-container -->
 
 	</main><!-- #main -->
 </div><!-- #primary -->

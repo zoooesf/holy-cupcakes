@@ -30,9 +30,12 @@
 
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
-
-				<div class="top-bar grid-container" id="site-navigation">
-					<div class="top-bar-left">
+				<!-- responsive header nav -->
+				<div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="large">
+					<!-- menu button -->
+					<button class="menu-icon" type="button" data-toggle="site-navigation"></button>
+					<!-- container for the logo - mobile/tablet only -->
+					<div class="title-bar-title">
 						<?php
 						// if there's no custom logo load the title text
 						if (!has_custom_logo()) :
@@ -45,17 +48,38 @@
 						endif;
 						?>
 					</div>
-					<div class="top-bar-left">
+				</div>
+				<div class="top-bar grid-container" id="site-navigation">
+					<!-- container for logo - desktop only -->
+					<div class="top-bar-left show-for-large">
 						<?php
-						wp_nav_menu(array(
-							'theme_location' => 'menu',
-							'menu_id'        => 'primary-menu',
-							'container'		 => 'ul',
-							'container_class' => 'menu',
-
-						));
+						// if there's no custom logo load the title text
+						if (!has_custom_logo()) :
+						?>
+							<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+						<?php
+						else :
+							// else if there is a custom logo load the logo
+							the_custom_logo();
+						endif;
 						?>
 					</div>
+					<!-- container for the menu -->
+					<div class="top-bar-left">
+						<ul class="dropdown menu" data-dropdown-menu>
+							<?php
+							// loading the menu
+							wp_nav_menu(array(
+								'theme_location' => 'menu',
+								'menu_id'        => 'primary-menu',
+								'container'		 => 'ul',
+								'menu_class' => 'menu vertical',
+
+							));
+							?>
+						</ul>
+					</div>
+					<!-- container for the search widget -->
 					<div class="top-bar-right">
 						<?php
 						if (is_active_sidebar('header-widget')) {
