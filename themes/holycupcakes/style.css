@@ -1118,3 +1118,49 @@ li {
     background-color: #f9f6ec;
     padding-bottom: 40px;
 }
+
+/* RECIPE SINGLE PAGE STYLING */
+#recipe{
+    color: #886248;
+}
+#recipe li{
+    list-style: unset;
+    margin-bottom: 10px;
+}
+#recipe blockquote{
+    background-color: #F9F6EC;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    /* color: #886248; */
+}
+#recipe blockquote p{
+    color: #886248;
+}
+
+/* RECIPE ARCHIVE PAGE STYLING */
+.recipeCard{
+    margin: 25px;
+    height: 500px;
+    position: relative;
+    background-color: #F9F6EC;
+
+}
+.recipeBtn {
+    width: 200px;
+    background-color: #FC9885;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 0px 15px 5px 15px;
+    font-size: large;
+    position: absolute;
+    left: 5%;
+    top: 90%;
+    text-align: center;
+    margin: 0px;
+}
+.recipeBtn:hover{
+    background-color: #F9F6EC;
+    border: 1px solid #FC9885;
+    color: #FC9885;
+}
