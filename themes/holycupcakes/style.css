@@ -39,7 +39,6 @@ body {
 /* ***************************** Header Styling **************************** */
 /* main header styling */
 .site-header {
-    /* max-height: 100px; */
     background-color: #886248;
 }
 
@@ -170,7 +169,6 @@ screen and (max-width:40em) {
 
 footer .button.primary {
     background-color: #ffeeaa;
-    /* border: 2px solid #886248; */
     color: #886248;
     width: auto;
 }
@@ -246,7 +244,6 @@ button.wsf-button.wsf-button-primary {
 #footer-sidebar h4{
     font-size: 3.5vh;
 }
-
 .social-media {
     display: flex;
     justify-content: center;
@@ -294,7 +291,9 @@ screen and (min-width: 40em) {
         margin-left: 40px;
     }
 }
-/* for tablets */
+
+/* ***************************** Footer Talets Styling ***************************** */
+
 @media print,
 screen and (max-width:64em) {
     #footer-sidebar h4{
@@ -305,10 +304,6 @@ screen and (max-width:64em) {
     }
 }
 /* ***************************** Block Styling ***************************** */
-/* .wp-block-columns {
-    width: 100;
-    padding: 60px 120px 60px 120px;
-} */
 
 .alignfull {
     margin-left: calc(50% - 50vw);
@@ -318,8 +313,6 @@ screen and (max-width:64em) {
 }
 
 .page-id-8 .wp-block-columns {
-    /* width: 100%; */
-    /* margin:  0 auto; */
     padding: 1vh 1vw;
 }
 
@@ -590,7 +583,7 @@ span input,
 /* ******************** Blog Styling ******************** */
 
 .blog {
-    padding: 20px;
+    padding: 0px;
     padding-top: 0px;
 }
 
@@ -642,7 +635,6 @@ span input,
 
 .blogBtn {
     width: 200px;
-    /* height: 36px; */
     background-color: #FC9885;
     border-radius: 5px;
     color: #ffffff;
@@ -743,8 +735,7 @@ span input,
     border-radius: 5px;
 }
 
-/* ******************** Woo Commercer Products Styling ****************** */
-/* BUTTON */
+/* ************************ Woo Commercer BUTTON Styling ************************ */
 .woocommerce button.button.alt:hover,
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
 .woocommerce #respond input#submit:hover,
@@ -788,7 +779,9 @@ span input,
     margin:0 1em 1em 1em;
     text-align: center;
 }
-/* PRODUCT PAGE */
+
+/* ******************** Woo Commercer Product Page Styling ****************** */
+
 .woocommerce span.onsale {
     background: #FC9885;
     border-radius: 50%;
@@ -858,7 +851,7 @@ span.posted_in {
     font-weight: bold;
 }
 
-
+/* ******************** Woo Commercer Cart Page Styling ****************** */
 /* CART IMAGE */
 .woocommerce table.cart img,
 .woocommerce-page #content table.cart img,
@@ -878,8 +871,8 @@ span.posted_in {
 }
 
 
-
-/* CHECKOUT FORM STYLING */
+/* ******************** Woo Commercer Cart Page Check Out Form Styling ****************** */
+/* input text */
 .woocommerce form .form-row input.input-text,
 .woocommerce form .form-row textarea {
     background-color: #f9f6ec;
@@ -889,18 +882,18 @@ span.posted_in {
 .woocommerce-page ul.products {
     display: flex;
     flex-wrap: wrap;
-    ;
 }
 
 .woocommerce .products ul li,
 .woocommerce ul.products li,
 .woocommerce.columns-3 ul.products li.product {
     background-color: #f9f6ec;
-    /* padding-bottom: 2em; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
+/** for product cards (title, price, add cart button) */
 .woocommerce ul.products li.product .price p,
 .woocommerce ul.products li.product .woocommerce-loop-product__title,
 .woocommerce.columns-3 ul.products li.product h2,
@@ -928,7 +921,7 @@ span.woocommerce-Price-amount.amount{
     font-size: 2.5vh;
 }
 
-/* select order by */
+/** select order by selection tab */
 select{
     border: 1px solid #9B6F52;
     border-radius: 5px;
@@ -938,13 +931,16 @@ select:focus{
     outline: 0;
     box-shadow: none;
 }
+/* for tablets */
 @media print,
 screen and (max-width:64em) {
-    .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+    .woocommerce ul.products[class*=columns-] li.product,
+    .woocommerce-page ul.products[class*=columns-] li.product {
         margin: 0 5px 10px 0;
     }
     
 }
+/* for mobiles */
 @media print,
 screen and (max-width: 40em) {
     .woocommerce ul.products li.product .woocommerce-loop-product__title,
@@ -958,11 +954,10 @@ screen and (max-width: 40em) {
     }
 }
 
-/*PRODUCTS DESCRIPTION TABS */
+/* ******************** Woo Commercer Product Description Products Styling ****************** */
 
 .tabs {
     border: none;
-
 }
 
 .woocommerce div.product .woocommerce-tabs ul {
@@ -1018,7 +1013,7 @@ screen and (max-width: 40em) {
     border-bottom-right-radius: 10px;
 }
 
-/* CART PAGE */
+/* ******************** Woo Commercer Cart Page Styling ****************** */
 
 thead tr {
     color: #9B6F52;
@@ -1090,8 +1085,15 @@ td.product-thumbnail {
 .woocommerce table.shop_table th {
     margin: 0;
 }
+/* ******************** Woo Commercer Cart Page (Removed Product)  Styling ****************** */
+.woocommerce-message{
+    border-top-color: #FC9885;
+}
+.woocommerce-message::before {
+    color: #FC9885;
+}
+/* ******************** Woo Commercer Billing Form  Styling ****************** */
 
-/* BILLING FORM STYLING */
 form #customer_details {
     background-color: #f9f6ec;
     padding: 0 2em 2em 2em;
@@ -1195,7 +1197,19 @@ tbody tr:nth-child(even) {
 .woocommerce button.button{
     font-size: 16px;
 }
-/* MY ACCOUNT */
+
+/* error message */
+.woocommerce-error{
+    border-top-color: #FC9885;
+}
+.woocommerce-error::before{
+    color: #FC9885
+}
+strong{
+    color:#9B6F52
+}
+/* ******************** Woo Commercer My Account Styling ****************** */
+
 li {
     list-style: none;
 }
@@ -1212,7 +1226,8 @@ li {
     margin: 0;
 }
 
-/* RECIPE SINGLE PAGE STYLING */
+/* ******************** Woo Commercer Recipe Single Page  Styling ****************** */
+
 #recipe{
     color: #886248;
 }
@@ -1225,13 +1240,13 @@ li {
     padding: 20px;
     text-align: center;
     margin: 20px;
-    /* color: #886248; */
 }
 #recipe blockquote p{
     color: #886248;
 }
 
-/* RECIPE ARCHIVE PAGE STYLING */
+/* ******************** Woo Commercer Recipe Archive Page Styling ****************** */
+
 .recipeCard{
     margin: 25px;
     height: 500px;
@@ -1258,7 +1273,7 @@ li {
     color: #FC9885;
 }
 
-/* contact us form */
+/* ******************************* Contact Us Form Styling ************************ */
 label{
     color: #886248;
     font-size: 18px;
@@ -1271,9 +1286,6 @@ label{
     color: #9B6F52;
     line-height: 1.6;
 } 
-.social-media{
-    margin: 2vh 0 1vh 0;
-}
 
 /* ******************************* 404 Page styles ************************ */
 .grid-404 {
@@ -1295,5 +1307,5 @@ screen and (max-width: 40em) {
     .wp-block-group__inner-container {
         width: 100%;
         margin: 0 auto;
-}
+    }
 }
