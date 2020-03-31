@@ -705,6 +705,7 @@ span input,
     margin: 1rem 0 1rem 0;
     display: inline-block;
     font-size: 3.5vh;
+    width: 100%;
 }
 
 .widget-area input[type=search] {
@@ -1318,4 +1319,83 @@ screen and (max-width: 40em) {
         width: 100%;
         margin: 0 auto;
     }
+}
+
+/* ******************************* Chat module styles ************************ */
+.wplc_agent_name {
+    font-size: 21px !important;
+}
+
+#wp-live-chat-header,
+#wplc_chatbox_header,
+#wp-live-chat-1,
+#wp-live-chat-2,
+#wplc_start_chat_btn,
+#speeching_button {
+    background-color: var(--pink) !important;
+    color: var(--main-brown) !important;
+}
+
+#speeching_button {
+    font-size: 18px !important;
+}
+
+.wplc-user-message {
+    background-color: var(--main-yellow) !important;
+    color: var(--main-brown) !important;
+    border: none;
+}
+
+.wplc-user-message::before {
+    border-color: transparent var(--main-yellow) !important;
+}
+
+.wplc-admin-message {
+    background-color: var(--darker-brown) !important;
+    color: var(--white) !important;
+    border: none;
+}
+
+.wplc-admin-message::before {
+    border-color: transparent var(--darker-brown) !important;
+}
+
+#wplc_chatmsg {
+    font-size: 18px !important;
+}
+
+#wp-live-chat-4 { 
+    background: var(--white);
+}
+
+/* ******************************* Chat module styles ************************ */
+#eo_events_agenda_widget-2_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.eo-agenda-widget-nav {
+    display: flex;
+    justify-content: space-between;
+    order: 1;
+}
+
+.eo-agenda-widget-nav-prev,
+.eo-agenda-widget-nav-next {
+    background-color: var(--white) !important;
+    color: var(--darker-brown) !important;
+}
+
+.eo-agenda-widget-nav-prev:hover,
+.eo-agenda-widget-nav-next:hover {
+    background-color: var(--light-yellow) !important;
+    color: var(--darker-brown) !important;
+}
+
+li.date {
+    color: var(--main-brown);
+}
+
+.eo-agenda-widget li.event {
+    background: var(--white) !important;
 }
