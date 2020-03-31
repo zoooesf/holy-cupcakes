@@ -51,11 +51,12 @@
 							<?php if (get_theme_mod('holy_cupcakes_facebook_url') || get_theme_mod('holy_cupcakes_twitter_url')) { ?>
 								<div class="social-media">
 									<?php if (get_theme_mod('holy_cupcakes_facebook_url')) { ?>
-										<!-- Dynamic Facebook Link -->
+                  
+										<!-- dynamic social media links -->
 										<a href="<?php echo get_theme_mod('holy_cupcakes_facebook_url'); ?>"><?php echo esc_html__('', 'holy_cupcakes'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/facebook.svg'; ?>" title="<?php echo esc_html__('', 'holy_cupcakes'); ?>" height="50" width="50"> </a>
-										<!-- Dynamic Twitter Link -->
+										
 										<a href="<?php echo get_theme_mod('holy_cupcakes_twitter_url'); ?>"><?php echo esc_html__('', 'holy_cupcakes'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/twitter.svg'; ?>" title="<?php echo esc_html__('', 'holy_cupcakes'); ?>" height="50" width="50"> </a>
-										<!-- Dynamic Instagram Link -->
+										
 										<a href="<?php echo get_theme_mod('holy_cupcakes_instagram_url'); ?>"><?php echo esc_html__('', 'holy_cupcakes'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/img/instagram.svg'; ?>" title="<?php echo esc_html__('', 'holy_cupcakes'); ?>" height="50" width="50"> </a>
 										
 									<?php } ?>
@@ -74,7 +75,7 @@
 						?>
 						<h4>Contact</h4>
 						<?php if (get_theme_mod('holy_cupcakes_address_line1') || get_theme_mod('holy_cupcakes_address_line2') || get_theme_mod('holy_cupcakes_address_city') || get_theme_mod('holy_cupcakes_address_province') || get_theme_mod('holy_cupcakes_address_postal_code')) { ?>
-							<!-- Physical Address -->
+							<!-- dynamic address information -->
 							<?php if (get_theme_mod('holy_cupcakes_address_line1')) { ?>
 								<p class="address">
 									<?php echo get_theme_mod('holy_cupcakes_address_line1');

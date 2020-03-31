@@ -73,6 +73,8 @@ if (!function_exists('holy_cupcakes_setup')) :
 		
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
+		
+		// Add theme support for custom colours
 		add_theme_support( 'editor-color-palette', array(
 			array(
 				'name' => esc_html__( 'Light Cream', 'holycupcakes' ),
@@ -299,7 +301,10 @@ add_filter( 'excerpt_length', 'holy_cupcakes_custom_excerpt_length', 999 );
  * WooCommerce
  */
 require get_template_directory() . '/inc/woocommerce.php';
-
+/**
+ * Registering custom post types.
+ */
+require get_template_directory() . '/inc/post-types.php';
 /** * Change number or products per row to 3
  */
 
