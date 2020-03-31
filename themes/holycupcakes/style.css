@@ -257,7 +257,9 @@ button.wsf-button.wsf-button-primary {
     width: 24px;
     margin-right: 20px;
 }
-
+.woocommerce button.button{
+    margin: 0 0 1rem 0;
+}
 /* ***************************** For Footer Side Bar 1 ***************************** */
 #footer-sidebar1 {
     margin-bottom: 2vh;
