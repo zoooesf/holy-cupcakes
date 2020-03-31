@@ -52,12 +52,10 @@ get_header();
 								<!-- recipe title -->
 								<div class="card-section recipeExcerpt">
 									<h3><?php the_title(); ?> </h3>
-									<p>
 										<!-- recipe excerpt -->
 										<?php
 										the_excerpt();
 										?>
-									</p>
 									<!-- button linking to recipe -->
 									<a class="recipeBtn" href="<?php echo get_post_permalink(); ?>">start baking</a>
 								</div>
