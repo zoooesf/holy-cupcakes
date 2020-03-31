@@ -1233,3 +1233,9 @@ label{
     color: #9B6F52;
     line-height: 1.6;
 }
+
+/* ******************************* 404 Page styles ************************ */
+.grid-404 {
+    background-color: #f9f6ec;
+    padding-bottom: 40px;
+}
