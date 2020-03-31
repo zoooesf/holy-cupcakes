@@ -437,7 +437,7 @@ span input,
 
 .homeExcerpt p {
     color: #9B6F52;
-    font-size: 2vh;
+    font-size: 18px;
 }
 
 .eSeparator {
@@ -448,10 +448,6 @@ span input,
 }
 
 /* setting size of thumbnail image for blog posts */
-/* .thumbnail-img {
-    width: 338px;
-    height: 190px;
-} */
 .thumbnail-img {
     display: flex;
     align-items: center;
@@ -586,7 +582,7 @@ span input,
 /* ******************** Blog Styling ******************** */
 
 .blog {
-    /* padding: 20px; */
+    padding: 20px;
     padding-top: 0px;
 }
 
