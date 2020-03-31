@@ -1085,7 +1085,13 @@ td.product-thumbnail {
 .woocommerce table.shop_table th {
     margin: 0;
 }
-
+/* ******************** Woo Commercer Cart Page (Removed Product)  Styling ****************** */
+.woocommerce-message{
+    border-top-color: #FC9885;
+}
+.woocommerce-message::before {
+    color: #FC9885;
+}
 /* ******************** Woo Commercer Billing Form  Styling ****************** */
 
 form #customer_details {
