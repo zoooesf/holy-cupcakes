@@ -34,8 +34,8 @@ if ($test_query->have_posts()) {
 		<h1 class="page-title screen-reader-text">Recent Posts</h1>
 		<hr class="blogHr">
 	</header>
-	<div class="recent-posts-wrapper">
-		<div class="grid-container recent-post">
+	<div class="recent-posts-wrapper alignfull">
+		<div class="grid-container recent-post ">
 			<div class="grid-x grid-margin-x">
 				<?php
 				while ($test_query->have_posts()) {
