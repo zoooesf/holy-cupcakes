@@ -907,11 +907,7 @@ span.posted_in {
     font-size: 3vh;
 }
 .woocommerce ul.products li.product .woocommerce-loop-product__title{
-    font-size: 2vh;
-    max-height: 7vh;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    font-size: 2.5vh;
 }
 a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart{
     font-size: 2vh;
